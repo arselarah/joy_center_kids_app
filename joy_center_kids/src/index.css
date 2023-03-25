@@ -1,7 +1,7 @@
-@import url('https://fonts.googleapis.com/css2?family=Fredoka:wght@400;500;600&family=Montserrat:wght@300;400;500;600;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Fredoka:wght@400;500;600&family=Poppins:wght@300;400;500;600;700&display=swap');
 
 :root {
-  --ff-body-text: 'Montserrat', sans-serif;
+  --ff-body-text: 'Poppins', sans-serif;
   --ff-weight-heading: 700;
   --ff-heading-text: 'Fredoka', sans-serif;
   --ff-heading-text-size: clamp(2rem, 2vw, 2.5rem);
@@ -666,7 +666,7 @@ footer {
     min-height: 900px;
   }
   .hero__text-container {
-    padding: 8rem 0;
+    padding: 6rem 0;
   }
   .hero__text-container h2 {
     font-size: 3.8rem;
@@ -744,14 +744,15 @@ footer {
 }
 
 @media (min-width: 1244px) {
-  .hero {
-    min-height: 1000px;
-  }
+  
 }
 
 @media (min-width: 1920px) {
   .coverpage__container.full-width {
     padding: 18rem 0rem 0rem;
+  }
+  .hero {
+    min-height: 900px;
   }
 }
 

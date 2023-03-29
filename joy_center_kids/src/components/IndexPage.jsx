@@ -7,7 +7,7 @@ export const IndexPage = () => {
   return (
     <>
     <HeroPage />
-    <section className='coverpage blue-bg'>
+    <section className='coverpage blue-bg colored-cage'>
         <div className="centered">
             <div className="coverpage__container flex">
                 <div className="coverpage__text-container">
@@ -22,7 +22,7 @@ export const IndexPage = () => {
                 </div>
             </div>
             <div className="coverpage__container full-width">
-                <div className="coverpage__text-container center-text">
+                <div className="coverpage__text-container center-text small">
                     <h3>We Meet <span className='yellow'>Kids</span> Where They Are</h3>
                     <p>Dream is often a child’s first introduction to school.</p>
                 </div>
@@ -60,7 +60,7 @@ export const IndexPage = () => {
         
         <div className="centered">
             <div className="coverpage__container full-width">
-                <div className="coverpage__text-container center-text">
+                <div className="coverpage__text-container center-text medium">
                     <h3>We Provide Your Child With An Opportunity</h3>
                     <p>We develop a love for learning from an early age. This is an important process that we perform using games.</p>
                 </div>

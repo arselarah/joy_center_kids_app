@@ -588,7 +588,7 @@ footer {
 
 .call-to-action {
   display: block;
-  padding: .7rem 2rem;
+  padding: .4rem 2rem;
   border-radius: 2rem;
   font-weight: var(--ff-weight-heading);
   font-size: 1rem;
@@ -597,6 +597,8 @@ footer {
   transition: all 0.3s cubic-bezier(.43,.34,.28,.91) .1s;
   border: 3px solid;
   background: transparent;
+  text-decoration: none;
+  width: fit-content;
 
   --solid-orange: var(--color-orange);
   --solid-blue: hsl(216, 100%, 60%);

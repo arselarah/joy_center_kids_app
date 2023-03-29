@@ -18,17 +18,17 @@ export const NavBar = () => {
             <div className='centered'> 
                     <nav className='desktop-main-nav'>
                         <div className='logo-container'>
-                            <a href="" className="logo-link"><img src={logo} alt="JOY center KIDS Logo"/></a>
+                            <a href="/" className="logo-link"><img src={logo} alt="JOY center KIDS Logo"/></a>
                         </div>
                         <div className='nav-container'>
                             <ul>
-                                <li><a href="http://">Joy center Kids</a></li>
-                                <li><a href="http://">Temas</a></li>
-                                <li><a href="http://">Programas</a></li>
+                                <li><a href="/">Joy center Kids</a></li>
+                                <li><a href="/themes">Temas</a></li>
+                                <li><a href="/programs">Programas</a></li>
                             </ul>
                         </div>
                         <div className="button-container top">
-                            <button className="contact call-to-action ghost blue">Contacto</button>
+                            <a href="/contact" className="contact call-to-action ghost blue">Contacto</a>
                         </div>
                         <div className="mobile-button-container">
                             <button className='button-mobile-toggle' aria-controls='mobile-menu' aria-expanded="false" onClick={showNavBar}>

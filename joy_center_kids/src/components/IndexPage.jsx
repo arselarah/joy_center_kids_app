@@ -1,17 +1,19 @@
 import React from 'react'
 import image_1 from '../assets/images/pexels-alexander-grey-1148998.jpg'
 import image_2 from '../assets/images/pexels-artem-podrez-6941672.jpg'
+import { HeroPage } from './HeroPage'
 
 export const IndexPage = () => {
   return (
     <>
+    <HeroPage />
     <section className='coverpage blue-bg'>
         <div className="centered">
             <div className="coverpage__container flex">
                 <div className="coverpage__text-container">
                     <h3>We Are <span className='bluish'>JOY</span> center <span className='yellow'>KIDS</span> And Childhood Is Our Passion</h3>
                     <p>We are excited and pleased to introduce you to the wonderful, passionate and committed educators who are working at Skole Learning Centre. Please take a moment to meet “Our Family!” We invited each of them to describe why they love working with children.</p>
-                    <button className="call-to-action solid orange">Aprende más</button>
+                    <a className="call-to-action solid orange">Aprende más</a>
                 </div>
                 <div className="coverpage__image-container">
                     <div className="clipped image">
@@ -124,7 +126,7 @@ export const IndexPage = () => {
                 <div className="coverpage__text-container">
                     <h3>Come Over And Look Around</h3>
                     <p>We will explain everything you are intereste. Join our new session. If you have any questions or enquiries please feel free to contact us on the following details provided below or alternatively you can complete our online enquiry form also located below and we will get back to you as soon as possible…</p>
-                    <button className="call-to-action solid blue">Aprende más</button>
+                    <a className="call-to-action solid blue">Aprende más</a>
                 </div>
                 <div className="coverpage__image-container">
                     <div className="clipped image">

@@ -1,11 +1,16 @@
 import React from 'react'
+import { motion as m } from 'framer-motion'
 import image_1 from '../assets/images/pexels-naomi-shi-1001914.jpg'
 import image_2 from '../assets/images/pexels-pavel-danilyuk-8422262.jpg'
 
 export const Themes = () => {
   return (
     <>
-    <div className="hero inner-page">
+    <m.div className="hero inner-page"
+    initial={{opacity: 0}}
+    animate={{opacity: 1}}
+    transition={{delay: .25, duration: .5, ease: 'linear' }}
+    >
         <div className="centered">
             <div className="hero__text-container">
               <h1>Temas</h1>
@@ -13,8 +18,12 @@ export const Themes = () => {
               
             </div>
         </div>
-    </div>
-    <section className="section-page colored-cage">
+    </m.div>
+    <m.section className="section-page colored-cage"
+    initial={{opacity: 0}}
+    animate={{opacity: 1}}
+    transition={{delay: .25, duration: .5, ease: 'linear' }}
+    >
       <div className='centered'>
         <div className="blue-cage section-box flex">
           <div className='flex'>
@@ -44,7 +53,7 @@ export const Themes = () => {
           </div>
         </div>
       </div>
-    </section>
+    </m.section>
     <section className="section-page">
       <div className="centered">
         <div className="coverpage__text-container center-text large">

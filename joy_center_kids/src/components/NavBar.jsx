@@ -1,5 +1,6 @@
 import React from 'react'
 import { useRef } from 'react'
+import { Link, NavLink } from 'react-router-dom'
 import logo from '../assets/logo.png'
 
 export const NavBar = () => {
@@ -22,13 +23,13 @@ export const NavBar = () => {
                         </div>
                         <div className='nav-container'>
                             <ul>
-                                <li><a href="/">Joy center Kids</a></li>
-                                <li><a href="/themes">Temas</a></li>
-                                <li><a href="/programs">Programas</a></li>
+                                <li><NavLink to="/">JOY center KIDS</NavLink></li>
+                                <li><NavLink to="/themes">Temas</NavLink></li>
+                                <li><NavLink to="/programs">Programas</NavLink></li>
                             </ul>
                         </div>
                         <div className="button-container top">
-                            <a href="/contact" className="contact call-to-action ghost blue">Contacto</a>
+                             <NavLink className="contact call-to-action ghost blue" to="/contact">Contacto</NavLink>
                         </div>
                         <div className="mobile-button-container">
                             <button className='button-mobile-toggle' aria-controls='mobile-menu' aria-expanded="false" onClick={showNavBar}>

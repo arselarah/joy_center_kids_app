@@ -1,31 +1,12 @@
 import { useState } from 'react'
 import './index.css'
 import { NavBar } from './components/NavBar'
-import { IndexPage } from './components/IndexPage'
+// import { IndexPage } from './components/IndexPage'
 import { Footer } from './components/Footer'
-import { Themes } from './components/Themes'
-import { Programs } from './components/Programs'
-import { Contact } from './components/Contact'
-import { createBrowserRouter, RouterProvider } from 'react-router-dom'
+import { Contents } from './pages/Contents'
+import ScrollToTop from './components/ScrollToTop'
 
-const router = createBrowserRouter([
-  { 
-    path: '/',
-    element: <IndexPage />
-  },
-  { 
-    path: '/themes',
-    element: <Themes />
-  },
-  { 
-    path: '/programs',
-    element: <Programs />
-  },
-  { 
-    path: '/contact',
-    element: <Contact />
-  },
-]); 
+
 
 function App() {
   const [count, setCount] = useState(0)
@@ -33,7 +14,9 @@ function App() {
   return (
     <div className="App">
       <NavBar />
-      <RouterProvider router={router} />
+      <ScrollToTop />
+      {/* <IndexPage /> */}
+      <Contents />
       <Footer />
     </div>
   )

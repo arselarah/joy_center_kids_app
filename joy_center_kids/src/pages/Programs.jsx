@@ -1,4 +1,5 @@
 import React from 'react'
+import { motion as m } from 'framer-motion'
 import image_1 from '../assets/images/pexels-naomi-shi-1001914.jpg'
 import image_2 from '../assets/images/pexels-pavel-danilyuk-8422262.jpg'
 import image_3 from '../assets/images/pexels-ksenia-chernaya-8537193.jpg'
@@ -8,7 +9,11 @@ import image_5 from '../assets/images/pexels-artem-podrez-6941689.jpg'
 export const Programs = () => {
   return (
     <>
-    <div className="hero inner-page">
+    <m.div className="hero inner-page"
+    initial={{opacity: 0}}
+    animate={{opacity: 1}}
+    transition={{delay: .25, duration: .5, ease: 'linear' }}
+    >
         <div className="centered">
             <div className="hero__text-container">
               <h1>Programas</h1>
@@ -16,8 +21,12 @@ export const Programs = () => {
               
             </div>
         </div>
-    </div>
-    <section className="section-page">
+    </m.div>
+    <m.section className="section-page"
+    initial={{opacity: 0}}
+    animate={{opacity: 1}}
+    transition={{delay: .25, duration: .5, ease: 'linear' }}
+    >
       <div className='centered'>
         <div className="section-box large-gap flex">
           <div className='flex'>
@@ -68,7 +77,7 @@ export const Programs = () => {
           </div>
         </div>
       </div>
-    </section>
+    </m.section>
     <section className="section-page">
       <div className="centered">
         {/* <div className="coverpage__text-container center-text large">

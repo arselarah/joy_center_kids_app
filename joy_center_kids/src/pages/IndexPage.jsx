@@ -1,13 +1,31 @@
 import React from 'react'
+import { motion as m } from 'framer-motion'
 import image_1 from '../assets/images/pexels-alexander-grey-1148998.jpg'
 import image_2 from '../assets/images/pexels-artem-podrez-6941672.jpg'
-import { HeroPage } from './HeroPage'
 
 export const IndexPage = () => {
   return (
     <>
-    <HeroPage />
-    <section className='coverpage blue-bg colored-cage'>
+    <m.div className="hero main"
+    initial={{opacity: 0}}
+    animate={{opacity: 1}}
+    transition={{delay: .25, duration: .5, ease: 'linear' }}
+    >
+            <div className="centered">
+                <div className="hero__text-container">
+                  <h1>JOY center KIDS</h1>
+                  <h2>El límite de tu imaginación es el cielo</h2>
+                  <a className='hero__learn-more call-to-action solid blue'>Aprende más</a>
+                </div>
+            </div>
+            
+            <div className="hero__rounded-bar"></div>
+        </m.div>
+    <m.section className='coverpage blue-bg colored-cage'
+    initial={{opacity: 0}}
+    animate={{opacity: 1}}
+    transition={{delay: .25, duration: .5, ease: 'linear' }}
+    >
         <div className="centered">
             <div className="coverpage__container flex">
                 <div className="coverpage__text-container">
@@ -54,7 +72,7 @@ export const IndexPage = () => {
                 </div>
             </div>
         </div>
-    </section>
+    </m.section>
     <section className='coverpage light-bg'>
         <div className="coverpage__rounded-bar"></div>
         

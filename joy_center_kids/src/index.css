@@ -1,10 +1,11 @@
 @import url('https://fonts.googleapis.com/css2?family=Fredoka:wght@400;500;600&family=Poppins:wght@300;400;500;600;700&display=swap');
 
 :root {
+  font-size: 16px;
   --ff-body-text: 'Poppins', sans-serif;
   --ff-weight-heading: 700;
   --ff-heading-text: 'Fredoka', sans-serif;
-  --ff-heading-text-size: clamp(2rem, 2vw, 2.5rem);
+  --ff-heading-text-size: clamp(1.9rem, 2vw, 2.5rem);
   --ff-subheading-text-size: clamp(1.75rem, 2vw, 1.875rem);
   --ff-body-text-size: clamp(0.9rem, 2vw, 1rem);
 
@@ -13,8 +14,11 @@
   --color-button-one: hsl(216, 100%, 60%);
   --color-darkblue: hsl(226, 46%, 46%);
   --color-bluish: hsl(182, 55%, 58%);
-  --color-footer: hsl(48, 45%, 86%);
+  /* --color-footer: hsl(48, 45%, 86%); */
+  --color-attenuated: hsl(46, 22%, 88%);
+  --color-footer: hsl(51, 39%, 74%);
   --color-hover: hsl(51, 39%, 74%);
+  --color-bridge: hsl(48, 45%, 86%);
   --color-menu-icon: hsl(48, 45%, 86%);
   --color-orange: hsl(28, 98%, 48%);
   --color-yellow: hsl(43, 100%, 50%);
@@ -45,16 +49,23 @@ h1, h2, h3, h4, h5, h6 {
 
 p {
   margin: 0;
+  letter-spacing: var(--ls-body);
 }
 
-header.header {
-  position: fixed;
-  padding: 1.5rem 0rem;
+.header {
+  position: sticky;
+  padding: 0.5rem 0rem;
   z-index: 9999;
   top: 0;
   left: 0;
   width: 100%;
-  background-color: var(--color-light);
+  background-color: transparent;
+  transition: all 0.5s linear;
+}
+
+.header.scrolled {
+  background-color: #ffffff;
+  transition: all 0.5s linear;
 }
 
 .centered {
@@ -107,20 +118,25 @@ nav.desktop-main-nav .button-container  {
 }
 
 nav.desktop-main-nav .logo-container {
-  max-width: 100px;
+  max-width: fit-content;
   min-width: 100px;
 }
 
 nav.desktop-main-nav .logo-container > a {
-  display: block;
-  text-align: center;
+  display: flex;
+  flex-direction: column;
   text-decoration: none;
+  text-align: center;
+  color: var(--color-regular);
+  font-weight: var(--ff-weight-heading);
+  align-items: center;
 }
 
 nav.desktop-main-nav .logo-container a > img {
   vertical-align: bottom;
   width: 100%;
   transition: all 0.3s cubic-bezier(.43,.34,.28,.91);
+  max-width: 100px;
 }
 
 .white-filter {
@@ -160,20 +176,23 @@ nav.desktop-main-nav .nav-container > ul li a {
   position: relative;
 }
 
+nav.desktop-main-nav .nav-container > ul li a.active,
 nav.desktop-main-nav .nav-container > ul li a:hover {
   color: var(--color-hover);
 }
 
+
 nav.desktop-main-nav .nav-container > ul li a::before {
   content: ' ';
   position: absolute;
-  bottom: 5px;
+  bottom: 12px;
   width: 0;
-  height: 3px;
+  height: 4px;
   background-color: var(--color-hover);
   transition: all 0.3s cubic-bezier(.43,.34,.28,.91) .1s;
 }
 
+nav.desktop-main-nav .nav-container > ul li a.active::before,
 nav.desktop-main-nav .nav-container > ul li a:hover::before {
   width:100%;
 }
@@ -255,7 +274,24 @@ nav.desktop-main-nav .button-mobile-toggle {
 }
 
 .blue-bg {
+  background-color: var(--color-button-one);
+}
+
+.dark-blue-bg {
   background-color: var(--color-darkblue);
+}
+
+.bridge-bg {
+  background-color: var(--color-attenuated);
+}
+.bridge-bg .centered > .section-box {
+  padding-top: 0;
+  padding-bottom: 0;
+}
+
+.section-page.last,
+.bridge-bg ~ .section-page.themes {
+  padding-bottom: 0;
 }
 
 .colored-cage p,
@@ -473,7 +509,7 @@ span.bluish {
 
 footer {
   position: relative;
-  background-color: var(--color-footer);
+  background-color: var(--color-bridge);
   padding: 4rem 0;
 }
 
@@ -617,10 +653,6 @@ footer {
   color: var(--color-hover);
 }
 
-.blue-cage {
-  background-color: var(--color-button-one);
-}
-
 .section-box {
   padding: 1rem;
   border-radius: 3rem;
@@ -628,7 +660,7 @@ footer {
 
 .section-box .image {
   overflow: hidden;
-  height: 580px;
+  height: 280px;
   border-radius: 2rem;
 }
 
@@ -708,10 +740,12 @@ footer {
   border-color:var(--solid-blue);
 }
 
+.call-to-action.ghost.blue.active,
 .call-to-action.ghost:hover {
   color: var(--solid-text)
 }
 
+.call-to-action.ghost.blue.active,
 .call-to-action.ghost.blue:hover {
   background-color: var(--solid-blue);
 }
@@ -727,8 +761,13 @@ footer {
 /*-------------- MEDIA QUERIES ------------------------------ */
 
 @media (min-width: 1024px) {
-  header.header {
+  .header {
+    position: relative;
+  }
+  .header.scrolled {
+    background-color: #ffffff;
     position: sticky;
+    transition: all 0.5s linear;
   }
   .mobile-menu {
     display: none;
@@ -825,6 +864,7 @@ footer {
   .section-box.flex {
     padding: 4rem;
     align-items: center;
+    gap: 6rem;
   }
   .section-box.flex .flex,
   .section-box.flex .flex:last-of-type {
@@ -839,13 +879,16 @@ footer {
     flex: 0 0 calc(50% - 1rem);
   }
   .section-page {
-    padding: 8rem 0 0;
+    padding: 8rem 0 8rem;
   }
   .section-page:last-of-type {
-    padding-bottom: 8rem;
+    padding-bottom: 0rem ;
   }
   .large-gap.flex .flex > div {
     flex: 0 0 calc(50% - 2rem);
+  }
+  .themes .image {
+    height: 380px;
   }
 }
 

@@ -1,4 +1,5 @@
 import React from 'react'
+import { Link } from 'react-router-dom'
 import logoFooter from '../assets/logo-footer.png'
 import facebookIcon from '../assets/images/iconos/facebook.svg'
 import instagramIcon from '../assets/images/iconos/instagram.svg'
@@ -18,9 +19,10 @@ export const Footer = () => {
           <div className="footer__nav">
             <div>
               <h5>Menú</h5>
-              <a href="http://">JOY center KIDS</a>
-              <a href="http://">Temas</a>
-              <a href="http://">Programas</a>
+              <Link to="/">Inicio</Link>
+              <Link to="/themes">Temas</Link>
+              <Link to="/programs">Programas</Link>
+              <Link to="/contact">Contacto</Link>
             </div>
           </div>
           <div className="footer__location">

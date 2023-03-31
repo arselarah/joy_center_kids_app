@@ -21,7 +21,7 @@ export const IndexPage = () => {
             
             <div className="hero__rounded-bar"></div>
         </m.div>
-    <m.section className='coverpage blue-bg colored-cage'
+    <m.section className='coverpage dark-blue-bg colored-cage'
     initial={{opacity: 0}}
     animate={{opacity: 1}}
     transition={{delay: .25, duration: .5, ease: 'linear' }}
@@ -29,7 +29,7 @@ export const IndexPage = () => {
         <div className="centered">
             <div className="coverpage__container flex">
                 <div className="coverpage__text-container">
-                    <h3>We Are <span className='bluish'>JOY</span> center <span className='yellow'>KIDS</span> And Childhood Is Our Passion</h3>
+                    <h3><span className='bluish'>JOY</span> center <span className='yellow'>KIDS</span><br/>Genius at play</h3>
                     <p>We are excited and pleased to introduce you to the wonderful, passionate and committed educators who are working at Skole Learning Centre. Please take a moment to meet “Our Family!” We invited each of them to describe why they love working with children.</p>
                     <a className="call-to-action solid orange">Aprende más</a>
                 </div>
@@ -79,7 +79,7 @@ export const IndexPage = () => {
         <div className="centered">
             <div className="coverpage__container full-width">
                 <div className="coverpage__text-container center-text medium">
-                    <h3>We Provide Your Child With An Opportunity</h3>
+                    <h3>Conoce la importancia de la gamificación</h3>
                     <p>We develop a love for learning from an early age. This is an important process that we perform using games.</p>
                 </div>
                 <div className='coverpage__activities-container flex'>

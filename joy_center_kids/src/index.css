@@ -988,9 +988,11 @@ footer {
 }
 
 .hexagon.object {
-  opacity: 0.5;
+  opacity: 1;
 }
-
+.object {
+  opacity: 1;
+}
 /* Creating pseudo-class */
 .hexagon:before, .hexagon:after {
   content: "";
@@ -1045,7 +1047,7 @@ that they form a hexagon */
 .star,
 .circle {
   position: absolute;
-  opacity: 0.5;
+  opacity: 1;
 }
 
 .object > svg {
@@ -1227,7 +1229,7 @@ that they form a hexagon */
     min-height: 900px;
   }
   .hero__text-container {
-    padding: 6rem 0;
+    padding: 0rem 0;
   }
   .hero__text-container h2 {
     font-size: 3.8rem;

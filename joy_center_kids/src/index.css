@@ -5,9 +5,11 @@
   --ff-body-text: 'Poppins', sans-serif;
   --ff-weight-heading: 700;
   --ff-heading-text: 'Fredoka', sans-serif;
-  --ff-heading-text-size: clamp(1.9rem, 2vw, 2.5rem);
+  --ff-heading-text-size: clamp(2.2rem, 6vw, 2.5rem);
   --ff-subheading-text-size: clamp(1.75rem, 2vw, 1.875rem);
-  --ff-body-text-size: clamp(0.9rem, 2vw, 1rem);
+  --ff-body-text-size: clamp(1rem, 4vw, 1rem);
+  --ff-xl-size: clamp(1.5rem, 8.5vw, 2.5rem);
+  --ff-xxl-size: clamp(1rem, 5vw, 2.2rem);
 
 
   --color-regular: hsl(183, 100%, 12%);
@@ -52,6 +54,14 @@ p {
   letter-spacing: var(--ls-body);
 }
 
+.coverpage__text-container h3.xl-word {
+  font-size: var(--ff-xl-size);
+}
+
+.form__content a.xxl-word {
+  font-size: var(--ff-xxl-size);
+}
+
 .header {
   position: sticky;
   padding: 0.5rem 0rem;
@@ -60,12 +70,12 @@ p {
   left: 0;
   width: 100%;
   background-color: transparent;
-  transition: all 0.5s linear;
+  transition: all 0.1s ease-in-out;
 }
 
 .header.scrolled {
   background-color: #ffffff;
-  transition: all 0.5s linear;
+  transition: all 0.1s ease-in-out;
 }
 
 .centered {
@@ -73,7 +83,6 @@ p {
   max-width: 95rem;
   position: relative;
   width: 100%;
-  padding: 0 1.5rem;
 }
 
 .mobile-menu {
@@ -105,11 +114,12 @@ nav.desktop-main-nav {
   align-items: center;
   flex-direction: row;
   gap: 1rem;
+  justify-content: space-between;
 }
 
-nav.desktop-main-nav > div {
+/* nav.desktop-main-nav > div {
   flex-grow: 1;
-}
+} */
 
 nav.desktop-main-nav .logo-container,
 nav.desktop-main-nav .nav-container,
@@ -240,6 +250,7 @@ nav.desktop-main-nav .button-mobile-toggle {
 .hero__text-container {
   position: relative;
   padding: 5rem 0;
+  z-index: 1;
 }
 
 .hero__text-container h1,
@@ -277,6 +288,10 @@ nav.desktop-main-nav .button-mobile-toggle {
   background-color: var(--color-button-one);
 }
 
+.orange-bg {
+  background-color: #df5038;
+}
+
 .dark-blue-bg {
   background-color: var(--color-darkblue);
 }
@@ -289,10 +304,10 @@ nav.desktop-main-nav .button-mobile-toggle {
   padding-bottom: 0;
 }
 
-.section-page.last,
+/* .section-page.last,
 .bridge-bg ~ .section-page.themes {
   padding-bottom: 0;
-}
+} */
 
 .colored-cage p,
 .colored-cage a,
@@ -321,13 +336,21 @@ nav.desktop-main-nav .button-mobile-toggle {
   vertical-align: bottom;
 }
 
-.coverpage__container.flex {
+.align-items {
   align-items: center;
+}
+
+.coverpage {
+  position: relative;
 }
 
 .coverpage__container.flex > div {
   flex-grow: 1;
   flex-basis: 100%;
+}
+
+.coverpage__text-container.center-text {
+  padding: 1rem;
 }
 
 .coverpage__container.flex .coverpage__text-container {
@@ -342,7 +365,7 @@ nav.desktop-main-nav .button-mobile-toggle {
 }
 
 .coverpage__text-container p {
-  padding: 2rem 2rem 2rem 0;
+  padding: 2rem 0rem;
   letter-spacing: var(--ls-body);
   line-height: 1.7rem;
   font-size: var(--ff-body-text-size);
@@ -487,11 +510,17 @@ span.bluish {
   gap: 1rem;
 }
 
-.activities__icon-container > div {
+/* .activities__icon-container > div {
   width: 70px;
   height: 70px;
   border-radius: 50%;
   background-color: aqua;
+} */
+
+.activities__icon-container {
+  width: 150px;
+  height: 100%;
+  position: relative;
 }
 
 .activities__text-container h4 {
@@ -654,8 +683,8 @@ footer {
 }
 
 .section-box {
-  padding: 1rem;
-  border-radius: 3rem;
+  /* padding: 1rem; */
+  border-radius: 1rem;
 }
 
 .section-box .image {
@@ -673,16 +702,16 @@ footer {
 
 .section-page {
   position: relative;
-  padding: 4rem 0;
+  /* padding: 4rem 0; */
 }
 
-.section-page:last-of-type {
+/* .section-page:last-of-type {
   padding-bottom: 4rem;
-}
+} */
 
-.section-box.flex .flex:last-of-type {
+/* .section-box.flex .flex:last-of-type {
   flex-direction: column-reverse;
-}
+} */
 
 .large-gap .flex {
   gap:4rem;
@@ -691,7 +720,382 @@ footer {
 .colored-cage h3,
 .large-gap h3 {
   padding-top: 2rem;
-} 
+}
+
+.section-box > .form__content {
+  z-index: 1;
+  padding: 1rem;
+}
+
+.form__content a,
+.form__content span {
+  display: block;
+  letter-spacing: var(--ls-heading);
+}
+
+.form__content a {
+  font-size: var(--ff-subheading-text-size);
+  font-weight: var(--ff-weight-heading);
+  word-break: break-all;
+}
+
+.form__content span {
+  color: var(--color-hover);
+  font-size: var(--ff-body-text-size);
+}
+
+.form__content h3 {
+  font-size: var(--ff-subheading-text-size);
+  letter-spacing: var(--ls-heading);
+}
+
+/* .form__content > div {
+  display: flex;
+  flex-direction: column;
+} */
+
+.form__content > div input,
+.form__content > div label {
+  display: block;
+}
+
+.form__content > div label {
+  color: var(--color-hover);
+  padding: 0.5rem 0;
+  letter-spacing: var(--ls-body);
+}
+
+.form__content > div input[type="email"],
+.form__content > div input[type="text"],
+.form__content > div input[type="tel"],
+.form__content > div textarea {
+  padding: 1.5rem 1rem;
+  border-radius: 0.5rem;
+  border: none;
+  color: var(--color-regular);
+  font-size: var(--ff-body-text-size);
+  width: 100%;
+}
+
+.form__content > div textarea {
+  resize: none;
+  height: 8rem;
+}
+
+.form .section-box.orange-bg {
+  position: relative;
+  overflow: hidden;
+}
+
+.form .section-box .image-bg {
+  position: relative;
+  width: 100%;
+  min-height: 320px;
+  background: url(assets/images/pexels-naomi-shi-1001914.jpg) no-repeat center center;
+  background-size: cover;
+}
+
+.form .section-box .image-bg::before {
+  position: absolute;
+  content: ' ';
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 100%;
+  background-color: hsla(0, 0%, 0%, 0.70);
+  z-index: -1;
+}
+
+/* .flex.terms {
+  flex-wrap: nowrap !important;
+  gap: 0.5rem !important;
+  margin-bottom: 2rem;
+} */
+
+.flex.terms > p {
+  font-size: 0.9rem;
+}
+
+/* ============================= Especiales ====================================*/
+.pv-none {
+  pointer-events: none;
+}
+
+.position-rel {
+  position: relative;
+}
+
+.overflow-hide {
+  overflow: hidden;
+}
+
+.zindex-1 {
+  z-index: 1;
+}
+
+.no-padding {
+  padding: 0 !important;
+}
+
+.no-gap {
+  gap: 0 !important;
+}
+
+.side-padding {
+  padding-left: 1rem;
+  padding-right: 1rem;
+}
+
+/* .l-side-padding {
+  padding-left: 2rem;
+  padding-right: 2rem;
+} */
+
+.xl-side-padding {
+  padding-left: 4rem;
+  padding-right: 4rem;
+}
+
+.vertical-padding {
+  padding-top: 1rem;
+  padding-bottom: 1rem;
+}
+
+/* .l-vertical-padding {
+  padding-top: 2rem;
+  padding-bottom: 2rem;
+} */
+
+.xl-vertical-padding {
+  padding-top: 4rem;
+  padding-bottom: 4rem;
+}
+
+.no-padding-bottom {
+  padding-bottom: 0;
+}
+
+.flex-columns-rows {
+  flex-direction: column;
+}
+
+.flex-rows {
+  flex-direction: row;
+}
+
+.flex-columns {
+  flex-direction: column;
+}
+
+.columns-reverse {
+  flex-direction: column-reverse;
+}
+
+.space-between {
+  justify-content: space-between;
+}
+
+.flex-wrap {
+  flex-wrap: wrap;
+}
+
+.xs-text {
+  font-size: .8rem;
+}
+
+
+.pattern.bluish {
+  content: ' ';
+  position: absolute;
+  width: 580px;
+  height: 580px;
+  background: radial-gradient(circle, var(--color-bluish) 40%, transparent 36%);
+  background-size: 2em 2em;
+  left: -5%;
+  top: 20%;
+  transform: rotate(45deg);
+  transform-origin: top left;
+  opacity: 0.15;
+}
+
+.pattern.footer {
+  content: ' ';
+  position: absolute;
+  width: 580px;
+  height: 580px;
+  background: radial-gradient(circle, var(--color-footer) 40%, transparent 36%);
+  background-size: 2em 2em;
+  transform: rotate(45deg);
+  transform-origin: top left;
+  opacity: 0.4;
+}
+
+.pattern.footer.top {
+  right: -25%;
+  top: -10%;
+}
+
+.pattern.footer.bottom {
+  left: -5%;
+  bottom: 20%;
+}
+
+/* -------------------------  SHAPES ----------- */
+
+.hexagon {
+  position: absolute;
+  margin: 0 auto;
+  border-radius: 10px;
+  width: 100px; 
+  height: 63px;
+  box-sizing: border-box;
+  border: 0.4vh solid transparent;
+}
+
+.hexagon.orange.object {
+  bottom: 30%;
+  left: 15%;
+}
+
+.hexagon.orange {
+  background-color: var(--color-orange);
+}
+
+.hexagon.red {
+  background-color: var(--color-red);
+}
+
+.hexagon.yellow {
+  background-color: var(--color-yellow);
+}
+
+.hexagon.bluish {
+  background-color: var(--color-bluish);
+}
+
+.hexagon.dark-blue {
+  background-color: var(--color-darkblue);
+}
+
+.hexagon.blue {
+  background-color: var(--color-button-one);
+}
+
+.hexagon.activities {
+  left: -1.5rem;
+  top: 0rem;
+  transform: scale(0.65);
+}
+
+.hexagon.object {
+  opacity: 0.5;
+}
+
+/* Creating pseudo-class */
+.hexagon:before, .hexagon:after {
+  content: "";
+  border: inherit;
+  position: absolute;
+  top: -0.5vh;
+  left: -0.5vh;
+  border-radius: inherit;
+  height: 100%;
+  width: 100%;
+}
+
+.hexagon.orange:before,
+.hexagon.orange:after {
+  background-color: var(--color-orange);
+}
+
+.hexagon.red:before,
+.hexagon.red:after {
+  background-color: var(--color-red);
+}
+
+.hexagon.yellow:before,
+.hexagon.yellow:after {
+  background-color: var(--color-yellow);
+}
+
+.hexagon.bluish:before,
+.hexagon.bluish:after {
+  background-color: var(--color-bluish);
+}
+
+.hexagon.dark-blue:before,
+.hexagon.dark-blue:after {
+  background-color: var(--color-darkblue);
+}
+
+.hexagon.blue:before,
+.hexagon.blue:after {
+  background-color: var(--color-button-one);
+}
+
+/* Align them in such a way
+that they form a hexagon */
+.hexagon:before {
+  transform: rotate(60deg);
+}
+.hexagon:after {
+  transform: rotate(-60deg);
+}
+
+.star,
+.circle {
+  position: absolute;
+  opacity: 0.5;
+}
+
+.object > svg {
+  transition: all 0.3s cubic-bezier(.43,.34,.28,.91);
+}
+
+.object > svg:hover {
+  transform: scale(0.9);
+}
+
+.star > svg {
+  width: 200px;
+  height: 200px;
+}
+
+.circle.bluish > svg {
+  width: 80px;
+  height: 80px;
+}
+
+.circle.yellow > svg {
+  width: 60px;
+  height: 60px;
+}
+
+.star.beige {
+  fill: var(--color-footer);
+}
+
+.star.red {
+  fill: var(--color-red);
+  right: 30%;
+  bottom: 15%;
+  z-index: 1;
+}
+
+.circle.bluish {
+  fill: var(--color-bluish);
+  left: 30%;
+  bottom: 10%;
+  z-index: 1;
+}
+
+.circle.yellow {
+  fill: var(--color-yellow);
+  right: 10%;
+  top: 10%;
+  z-index: 1;
+}
+
 /* ============================= CALL TO ACTION ====================================*/
 
 .call-to-action {
@@ -758,9 +1162,46 @@ footer {
 .centered-button {
   margin: 0 auto;
 }
+
+.even-flex {
+  flex: 1 1 50%;
+}
 /*-------------- MEDIA QUERIES ------------------------------ */
 
 @media (min-width: 1024px) {
+  .vertical-padding {
+    padding-top: 4rem;
+    padding-bottom: 4rem;
+  }
+  .side-padding {
+    padding-left: 4rem;
+    padding-right: 4rem;
+  }
+  /* .l-side-padding {
+    padding-left: 4rem;
+    padding-right: 4rem;
+  }
+  .l-vertical-padding {
+    padding-top: 4rem;
+    padding-bottom: 4rem;
+  } */
+  .xl-side-padding {
+    padding-left: 8rem;
+    padding-right: 8rem;
+  }
+  .xl-vertical-padding {
+    padding-top: 8rem;
+    padding-bottom: 8rem;
+  }
+  .flex-columns-rows {
+    flex-direction: row;
+  }
+  .section-box > .form__content {
+    padding: 4rem;
+  }
+  .centered {
+    padding: 0 1.5rem;
+  }
   .header {
     position: relative;
   }
@@ -797,6 +1238,9 @@ footer {
   .coverpage__container.flex {
     flex-direction: row;
     gap: 4rem;
+  }
+  .coverpage__text-container p {
+    padding: 2rem 2rem 2rem 0;
   }
   .clipped {
     height: 580px;
@@ -861,39 +1305,50 @@ footer {
   .footer__location {
     max-width: 205px;
   }
+  .section-box {
+    border-radius: 3rem;
+  }
   .section-box.flex {
-    padding: 4rem;
-    align-items: center;
+    /* padding: 4rem; */
+    align-items: stretch;
     gap: 6rem;
   }
-  .section-box.flex .flex,
+    /* .section-box.flex .flex,
   .section-box.flex .flex:last-of-type {
     flex-direction: row;
     flex-wrap: wrap;
-    align-items: center;
-  }
-  .section-box.flex .flex > div {
-    flex: 0 0 calc(50% - 1rem);
-  }
+  } */
+  /* .section-box.flex .flex > div {
+    flex: 1 1 calc(50% - 1rem);
+  } */
   .section-box.flex > div {
-    flex: 0 0 calc(50% - 1rem);
+    flex: 1 1 calc(50% - 1rem);
   }
-  .section-page {
+  .section-box.flex > .form__content {
+    flex: 1 1 50%;
+  }
+  /* .section-page {
     padding: 8rem 0 8rem;
-  }
-  .section-page:last-of-type {
+  } */
+  /* .section-page:last-of-type {
     padding-bottom: 0rem ;
-  }
+  } */
   .large-gap.flex .flex > div {
     flex: 0 0 calc(50% - 2rem);
   }
   .themes .image {
     height: 380px;
   }
+  .form .section-box.flex {
+    flex-direction: row;
+    flex-wrap: wrap;
+  }
 }
 
 @media (min-width: 1244px) {
-  
+  .bridge-bg .centered > .section-box {
+    padding: 0;
+  }
 }
 
 @media (min-width: 1920px) {

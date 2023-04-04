@@ -2,8 +2,23 @@ import React from 'react'
 import { motion as m } from 'framer-motion'
 import image_1 from '../assets/images/pexels-alexander-grey-1148998.jpg'
 import image_2 from '../assets/images/pexels-artem-podrez-6941672.jpg'
+import { Star } from '../shapes/star'
+import { Circle } from '../shapes/Circle'
+
+document.addEventListener("mousemove", parallax);
+function parallax(e){
+    document.querySelectorAll(".object").forEach(function(move){
+        var moving_value = move.getAttribute("data-value");
+        var x = (e.clientX * moving_value) / 190;
+        var y = (e.clientY * moving_value) / 190;
+
+        move.style.transform = "translateX(" + x + "px) translateY(" + y + "px)";
+
+    });
+}
 
 export const IndexPage = () => {
+
   return (
     <>
     <m.div className="hero main"
@@ -11,6 +26,19 @@ export const IndexPage = () => {
     animate={{opacity: 1}}
     transition={{delay: .25, duration: .5, ease: 'linear' }}
     >
+        <div className="star beige object" data-value="10">
+            <Star />
+        </div>
+        <div className="circle bluish object" data-value="2">
+            <Circle />
+        </div>
+        <div className="star red object" data-value="-3">
+            <Star />
+        </div>
+        <div className="circle yellow object" data-value="-9">
+            <Circle />
+        </div>
+        <div class="hexagon object orange" data-value="5"></div>
             <div className="centered">
                 <div className="hero__text-container">
                   <h1>JOY center KIDS</h1>
@@ -26,11 +54,12 @@ export const IndexPage = () => {
     animate={{opacity: 1}}
     transition={{delay: .25, duration: .5, ease: 'linear' }}
     >
-        <div className="centered">
-            <div className="coverpage__container flex">
+        <div className="pattern bluish"></div>
+        <div className="centered side-padding">
+            <div className="coverpage__container flex align-items">
                 <div className="coverpage__text-container">
-                    <h3><span className='bluish'>JOY</span> center <span className='yellow'>KIDS</span><br/>Genius at play</h3>
-                    <p>We are excited and pleased to introduce you to the wonderful, passionate and committed educators who are working at Skole Learning Centre. Please take a moment to meet “Our Family!” We invited each of them to describe why they love working with children.</p>
+                    <h3>¿Qué es <span className='yellow'>JOY</span>?</h3>
+                    <p>En JOY nos encanta ver a los niños aprender, para lograrlo  la motivación es fundamental, nuestra meta es obtener motivación 3.0. Nuestro sistema de aprendizaje enfocado a la Gamificación es mediante técnicas de juegos, que otorgan la motivación para que los niños incrementen sus capacidades intelectuales, mejoren sus resultados académicos, generen autodeterminación y su inteligencia emocional esté presente en su desarrollo.</p>
                     <a className="call-to-action solid orange">Aprende más</a>
                 </div>
                 <div className="coverpage__image-container">
@@ -40,9 +69,9 @@ export const IndexPage = () => {
                 </div>
             </div>
             <div className="coverpage__container full-width">
-                <div className="coverpage__text-container center-text small">
-                    <h3>We Meet <span className='yellow'>Kids</span> Where They Are</h3>
-                    <p>Dream is often a child’s first introduction to school.</p>
+                <div className="coverpage__text-container center-text medium">
+                    <h3>¿Por que el juego es tan importante en <span className="bluish">JOY</span>?</h3>
+                    <p>El juego es algo fundamental para la vida. Con técnicas de gamificación los niños obtienen de forma intrínseca lo necesario para potencializar conocimientos y habilidades. Se sentirán motivados e interesados en aprender.</p>
                 </div>
                 <div className="coverpage__cubes-container flex">
                     <div>
@@ -74,75 +103,77 @@ export const IndexPage = () => {
         </div>
     </m.section>
     <section className='coverpage light-bg'>
+    <div className="pattern footer top"></div>
+    <div className="pattern footer bottom"></div>
         <div className="coverpage__rounded-bar"></div>
         
-        <div className="centered">
+        <div className="centered side-padding">
             <div className="coverpage__container full-width">
                 <div className="coverpage__text-container center-text medium">
-                    <h3>Conoce la importancia de la gamificación</h3>
-                    <p>We develop a love for learning from an early age. This is an important process that we perform using games.</p>
+                    <h3>¿Beneficios en <span className="yellow">JOY</span> ?</h3>
+                    <p>El desarrollo de competencias es un requisito esencial para lograr el éxito personal y profesional, formar niños competentes es el primer paso para ayudar a los hijos en su desarrollo interno generando una confianza en ellos para el cumplimiento de objetivos.</p>
                 </div>
                 <div className='coverpage__activities-container flex'>
                     <div>
                         <div className='activities__icon-container'>
-                            <div></div>
+                        <div className='hexagon red activities'></div>
                         </div>
                         <div className="activities__text-container">
-                            <h4>Funny games</h4>
+                            <h4>Motivación para el aprendizaje</h4>
+                            <p>We develop a love for learning from an early age. This is an important process that we perform using games.</p>
+                        </div>
+                    </div>
+                    <div>
+                        <div className='activities__icon-container position-rel'>
+                            <div className='hexagon bluish activities'></div>
+                        </div>
+                        <div className="activities__text-container">
+                            <h4>Realización de objetivos</h4>
                             <p>We develop a love for learning from an early age. This is an important process that we perform using games.</p>
                         </div>
                     </div>
                     <div>
                         <div className='activities__icon-container'>
-                            <div></div>
+                        <div className='hexagon yellow activities'></div>
                         </div>
                         <div className="activities__text-container">
-                            <h4>Professional Teachers</h4>
+                            <h4>Desarrollo de habilidades</h4>
                             <p>We develop a love for learning from an early age. This is an important process that we perform using games.</p>
                         </div>
                     </div>
                     <div>
                         <div className='activities__icon-container'>
-                            <div></div>
+                        <div className='hexagon blue activities'></div>
                         </div>
                         <div className="activities__text-container">
-                            <h4>Education Program</h4>
+                            <h4>Incremento de conocimiento</h4>
                             <p>We develop a love for learning from an early age. This is an important process that we perform using games.</p>
                         </div>
                     </div>
                     <div>
                         <div className='activities__icon-container'>
-                            <div></div>
+                        <div className='hexagon orange activities'></div>
                         </div>
                         <div className="activities__text-container">
-                            <h4>All in One Place Together</h4>
+                            <h4>Capacidad de comunicación</h4>
                             <p>We develop a love for learning from an early age. This is an important process that we perform using games.</p>
                         </div>
                     </div>
                     <div>
                         <div className='activities__icon-container'>
-                            <div></div>
+                        <div className='hexagon dark-blue activities'></div>
                         </div>
                         <div className="activities__text-container">
-                            <h4>Easy To Learn</h4>
-                            <p>We develop a love for learning from an early age. This is an important process that we perform using games.</p>
-                        </div>
-                    </div>
-                    <div>
-                        <div className='activities__icon-container'>
-                        <div></div>
-                        </div>
-                        <div className="activities__text-container">
-                            <h4>Sport Program</h4>
+                            <h4>Manejo de emociones</h4>
                             <p>We develop a love for learning from an early age. This is an important process that we perform using games.</p>
                         </div>
                     </div>
 
                 </div>
             </div>
-            <div className="coverpage__container flex">
+            <div className="coverpage__container flex align-items">
                 <div className="coverpage__text-container">
-                    <h3>Come Over And Look Around</h3>
+                    <h3>Ven y conócenos</h3>
                     <p>We will explain everything you are intereste. Join our new session. If you have any questions or enquiries please feel free to contact us on the following details provided below or alternatively you can complete our online enquiry form also located below and we will get back to you as soon as possible…</p>
                     <a className="call-to-action solid blue">Aprende más</a>
                 </div>

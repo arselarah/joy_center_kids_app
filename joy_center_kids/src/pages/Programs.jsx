@@ -22,14 +22,14 @@ export const Programs = () => {
             </div>
         </div>
     </m.div>
-    <m.section className="section-page"
+    <m.section className="section-page xl-vertical-padding"
     initial={{opacity: 0}}
     animate={{opacity: 1}}
     transition={{delay: .25, duration: .5, ease: 'linear' }}
     >
-      <div className='centered'>
+      <div className='centered side-padding'>
         <div className="section-box large-gap flex">
-          <div className='flex'>
+          <div className='flex flex-columns-rows flex-wrap'>
             <div className="coverpage__text-container">
                 <div className="image">
                   <img src={image_1} />
@@ -79,7 +79,7 @@ export const Programs = () => {
       </div>
     </m.section>
     <section className="section-page">
-      <div className="centered">
+      <div className="centered side-padding">
         {/* <div className="coverpage__text-container center-text large">
           <h4>JOY center KIDS</h4>
           <h3>Nunc fringilla ex ligula, vel tempor ligula ultrices non</h3>

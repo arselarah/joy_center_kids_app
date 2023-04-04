@@ -32,7 +32,7 @@ export const NavBar = () => {
   return (
     <>
         <header ref={headerBgColorRef} className={header ? 'header scrolled' : 'header'}>
-            <div className='centered'> 
+            <div className='centered side-padding'> 
                     <nav className='desktop-main-nav'>
                         <div className='logo-container'>
                             <a href="/" className="logo-link"><img src={logo} alt="JOY center KIDS Logo"/>center KIDS</a>

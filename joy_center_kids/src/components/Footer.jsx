@@ -10,7 +10,7 @@ export const Footer = () => {
     <>
     <footer>
       <div className="centered">
-        <div className="footer__container flex">
+        <div className="footer__container flex flex-columns-rows gap-4">
           <div className="footer__logo">
             <div>
               <img src={logoFooter} alt="Joy center KIDS Logo Footer" />
@@ -30,7 +30,7 @@ export const Footer = () => {
               <h5>Dirección</h5>
               <p>B. Amsterdam B3 Johan Huizingalaan 400 1066 JS Amsterdam The Netherlands Kvk: 69305315</p>
             </div>
-            <div className="footer__social flex">
+            <div className="footer__social flex gap-2">
               <a href="http://"><img src={facebookIcon} alt="Facebook Icon" /></a>
               <a href="http://"><img src={instagramIcon} alt="Instagram Icon" /></a>
               <a href="http://"><img src={twitterIcon} alt="Twitter Icon" /></a>

@@ -20,9 +20,9 @@ export const Contact = () => {
 
     <section className="section-page form xl-vertical-padding">
       <div className="centered side-padding">
-        <div className="section-box flex colored-cage orange-bg no-padding no-gap">
+        <div className="section-box flex flex-columns-rows even-flex colored-cage orange-bg no-padding no-gap">
           <div className="form__content image-bg flex flex-columns space-between">
-            <div>
+            <div className='padding-bottom-4'>
              <span>Email</span>
              <a>hola@joycenterkids.com</a>
              <span>Teléfono</span>

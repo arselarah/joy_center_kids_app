@@ -7,31 +7,31 @@ export const NavBar = () => {
     const navRef = useRef();
     // const filterRef = useRef();
     // const buttonColorRef = useRef();
-    const headerBgColorRef = useRef();
+    //const headerBgColorRef = useRef();
 
     const showNavBar = () => {
         navRef.current.classList.toggle("display-menu-mobile");
         // filterRef.current.classList.toggle("white-filter");
         // buttonColorRef.current.classList.toggle("change-color");
-        headerBgColorRef.current.classList.add("scrolled");
+        //headerBgColorRef.current.classList.add("scrolled");
     }
 
-    const [header, setNavBar] = useState(false);
+    // const [header, setNavBar] = useState(false);
 
-    const changeBg = () => {
-        if(window.scrollY >= 120) {
-            setNavBar(true);
-        } else {
-            setNavBar(false);
-        }
-    }
+    // const changeBg = () => {
+    //     if(window.scrollY >= 120) {
+    //         setNavBar(true);
+    //     } else {
+    //         setNavBar(false);
+    //     }
+    // }
 
-    window.addEventListener('scroll', changeBg);
+    // window.addEventListener('scroll', changeBg);
 
     
   return (
     <>
-        <header ref={headerBgColorRef} className={header ? 'header scrolled' : 'header'}>
+        <header className="header">
             <div className='centered side-padding'> 
                     <nav className='desktop-main-nav'>
                         <div className='logo-container'>

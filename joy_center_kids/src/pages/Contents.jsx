@@ -16,7 +16,7 @@ const routes = [
 export const Contents = () => {
   return (
     <>
-    <section className="main">
+    <section className="main padding-bottom-4">
       <div className="triggers"></div>
         <Routes>
         <Route path={"/"} element={<IndexPage />}/>

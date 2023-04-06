@@ -2,7 +2,6 @@ import React from 'react'
 import { motion as m } from 'framer-motion'
 import image_1 from '../assets/images/pexels-alexander-grey-1148998.jpg'
 import image_2 from '../assets/images/pexels-artem-podrez-6941672.jpg'
-import { Slider } from '../components/Slider'
 // import { Star } from '../shapes/star'
 // import { Circle } from '../shapes/Circle'
 
@@ -17,21 +16,6 @@ import { Slider } from '../components/Slider'
 
 //     });
 // }
-
-const slides = [
-    {
-        url:"https://images.pexels.com/photos/9660876/pexels-photo-9660876.jpeg",
-        title: "Se un explorador",
-    },
-    {
-        url:"https://images.pexels.com/photos/5560513/pexels-photo-5560513.jpeg",
-        title: "Se un astronauta",
-    },
-    {
-        url:"https://images.pexels.com/photos/6203492/pexels-photo-6203492.jpeg",
-        title: "Se un superhéroe",
-    },
-];
 
 export const IndexPage = () => {
 
@@ -203,21 +187,8 @@ export const IndexPage = () => {
                     <a className="call-to-action solid blue">Aprende más</a>
                 </div>
                 <div className="coverpage__image-container">
-                    <div className="clipped image rounded-[2rem]">
-                    {/* <img src={image_2} /> */}
-                    {/* <Slider>
-                        {slides.map((s) => (<img src={s} />))}
-                    </Slider>     */}
-                    <Slider>
-                    {
-                    slides.map((s) => (
-                        <div className='prueba relative grow-image'>
-                            <img className="min-w-full object-cover object-center max-h-[550px] min-h-[550px]" src={s.url} />
-                            <p className="absolute p-4 inset-x-0 bottom-0 h-20 z-1 text-white font-semibold text-2xl text-center align-middle">{s.title} </p>
-                        </div>
-                    ))
-                    }
-                    </Slider>
+                    <div className="clipped image">
+                    <img src={image_2} />
                     </div>
                 </div>
             </div>

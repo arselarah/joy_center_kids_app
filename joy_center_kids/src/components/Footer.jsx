@@ -44,7 +44,7 @@ export const Footer = () => {
           <div>
             <a href="http://">Built with love by Ingetrol Marketing</a>
           </div>
-          <div className='flex'>
+          <div className='flex gap-2'>
             <a href="http://">Term of use</a>
             <a href="http://">Privacy Policy</a>
           </div>

@@ -13,10 +13,11 @@
 
 
   --color-regular: hsl(183, 100%, 12%);
-  --color-button-one: hsl(216, 100%, 60%);
+  --color-button-one: #3385ff;
   --color-darkblue: hsl(226, 46%, 46%);
   --color-bluish: hsl(182, 55%, 58%);
-  --color-third-blue: hsl(222, 50%, 29%);
+  --color-green: #17a3b0;
+  --color-magenta: #DE2C83;
   /* --color-footer: hsl(48, 45%, 86%); */
   --color-attenuated: hsl(46, 22%, 88%);
   --color-footer: hsl(51, 39%, 74%);
@@ -24,8 +25,8 @@
   --color-bridge: hsl(48, 45%, 86%);
   --color-menu-icon: hsl(48, 45%, 86%);
   /* --color-orange: hsl(28, 98%, 48%); */
-  --color-orange: hsl(9, 72%, 55%);
-  --color-yellow: hsl(43, 100%, 50%);
+  --color-orange: #df5038;
+  --color-yellow: #F2B441;
   --color-red: hsl(0, 88%, 53%);
   --color-light: hsl(51, 20%, 93%);
 
@@ -249,7 +250,7 @@ nav.desktop-main-nav .button-mobile-toggle {
 }
 
 .hero.main {
-  min-height: 650px;
+  /* min-height: 650px; */
   padding-top: 50px;
 }
 
@@ -282,7 +283,25 @@ nav.desktop-main-nav .button-mobile-toggle {
   margin: 0 auto;
 }
 
-.hero__rounded-bar::before {
+.hero__rounded-bar {
+  content: ' ';
+  position: relative;
+  bottom: 0;
+  left: 50%;
+  width: 120%;
+  height: 45vw;
+  max-height: 1000px;
+  background-color: var(--color-button-one);
+  transform: translateY(40%) translateX(-50%);
+  border-radius: 50%;
+}
+
+.container-shape {
+  position: relative;
+  overflow: hidden;
+}
+
+/* .hero__rounded-bar::before {
   content: ' ';
   position: absolute;
   bottom: 0;
@@ -290,17 +309,17 @@ nav.desktop-main-nav .button-mobile-toggle {
   width: 120%;
   height: 45vw;
   max-height: 1000px;
-  background-color: var(--color-darkblue);
+  background-color: var(--color-button-one);
   transform: translateY(50%) translateX(-50%);
   border-radius: 50%;
-}
+} */
 
 .blue-bg {
   background-color: var(--color-button-one);
 }
 
 .orange-bg {
-  background-color: #df5038;
+  background-color: var(--color-orange);
 }
 
 .dark-blue-bg {
@@ -310,6 +329,15 @@ nav.desktop-main-nav .button-mobile-toggle {
 .bridge-bg {
   background-color: var(--color-third-blue);
 }
+
+.green-bg {
+  background-color: var(--color-green);
+}
+
+.magenta-bg {
+  background-color: var(--color-magenta);
+}
+
 .bridge-bg .centered > .section-box {
   padding-top: 0;
   padding-bottom: 0;
@@ -347,9 +375,44 @@ nav.desktop-main-nav .button-mobile-toggle {
   align-items: center;
 }
 
-.coverpage {
+/* .coverpage {
   position: relative;
+  min-height: 100vw;
+} */
+
+.coverpage.world-canvas {
+  position: relative;
+  min-height: 100vw;
 }
+
+.world-canvas::before {
+  content: ' ';
+  position: absolute;
+  top: 0;
+  left: 50%;
+  width: 150%;
+  height: 100%;
+  background-image: url(./assets/images/world-map.svg);
+  background-position: center center;
+  background-repeat: no-repeat;
+  background-size: contain;
+  opacity: 1;
+  border-radius: 50%;
+  transform: translateX(-50%);
+  background-color: var(--color-button-one);
+}
+
+/* .coverpage.world-canvas::before {
+  content: '';
+  position: absolute;
+  min-height: 75vw;
+  min-width:  100vw;
+  left: 0;
+  top: 0;
+  background-color: #17a3b0;
+  border-radius: 50%;
+  transform: scale(1.5);
+} */
 
 /* .coverpage__container.flex > div {
   flex-grow: 1;
@@ -489,17 +552,29 @@ span.bluish {
   background-color: var(--color-light);
 }
 
-.coverpage__rounded-bar::before {
+/* .coverpage__rounded-bar::before {
   content: ' ';
-position: absolute;
-top: 0;
-left: 50%;
-width: 120%;
-height:25vw;
-max-height: 500px;
-background-color: var(--color-darkblue);
-transform: translateY(-70%) translateX(-50%);
-border-radius: 50%;
+  position: absolute;
+  top: 0;
+  left: 50%;
+  width: 120%;
+  height: 45vw;
+  max-height: 1000px;
+  background-color: var(--color-button-one);
+  transform: translateY(-75%) translateX(-50%);
+  border-radius: 50%;
+} */
+
+.coverpage__rounded-bar{
+  position: relative;
+  bottom: 0;
+  left: 50%;
+  width: 120%;
+  height: 45vw;
+  max-height: 1000px;
+  background-color: var(--color-button-one);
+  transform: translateY(-40%) translateX(-50%);
+  border-radius: 50%;
 }
 
 .coverpage__text-container.center.text h3,
@@ -604,7 +679,7 @@ footer {
   content: ' ';
   width: 0;
   height: 3px;
-  background-color: var(--color-hover);
+  background-color: var(--color-button-one);
   transition: all 0.3s cubic-bezier(.43,.34,.28,.91) .1s;
   left: 0;
   bottom: 0;
@@ -687,7 +762,7 @@ footer {
 
 .footer__brand a:hover,
 .footer__container a:hover {
-  color: var(--color-hover);
+  color: var(--color-button-one);
 }
 
 .section-box {
@@ -706,6 +781,7 @@ footer {
   height: 100%;
   object-fit: cover;
   vertical-align: bottom;
+  transition: all 0.3s cubic-bezier(.43,.34,.28,.91) .1s;
 }
 
 .section-page {
@@ -825,6 +901,23 @@ footer {
 }
 
 /* ============================= Especiales ====================================*/
+.negative-translate {
+  transform: translateY(0rem);
+}
+
+.negative-margin-top-15 {
+  margin-top: 0rem;
+}
+
+.negative-margin-top-20 {
+  margin-top: 0rem;
+}
+
+.margin-bottom-5 {
+  margin-bottom: 5rem;
+}
+
+
 .pv-none {
   pointer-events: none;
 }
@@ -836,6 +929,11 @@ footer {
 .overflow-hide {
   overflow: hidden;
 }
+
+/* .overflowX-hide {
+  overflow-y:visible;
+  overflow-x: hidden;
+} */
 
 .zindex-1 {
   z-index: 1;
@@ -859,6 +957,14 @@ footer {
 
 .padding-top-2 {
   padding-top: 2rem;
+}
+
+.padding-2 {
+  padding: 2rem;
+}
+
+.border-radius {
+  border-radius: 1rem;
 }
 
 .no-gap {
@@ -922,6 +1028,10 @@ footer {
   justify-content: center;
 }
 
+.justify-end {
+  justify-content: flex-end;
+}
+
 .even-flex > div {
   flex: 1 1 calc(50% - 2rem);
 }
@@ -979,6 +1089,9 @@ footer {
   font-size: .8rem;
 }
 
+.grow-image:hover > img {
+  transform: scale(1.05);
+}
 
 .pattern.bluish {
   content: ' ';
@@ -1016,6 +1129,21 @@ footer {
   bottom: 20%;
 }
 
+.joy > i {
+  font-style: normal;
+}
+
+.joy > i:nth-child(1) {
+  color: var(--color-red);
+}
+
+.joy > i:nth-child(2) {
+  color: var(--color-bluish);
+}
+
+.joy > i:nth-child(3) {
+  color: var(--color-yellow);
+}
 /* -------------------------  SHAPES ----------- */
 
 .hexagon {
@@ -1182,7 +1310,18 @@ that they form a hexagon */
 	-moz-border-radius: 200px;
 	-webkit-border-radius: 200px;
 	position: absolute; 
-  box-shadow: 0px 0px 29px 18px hsla(183, 100%, 12%, 5%);
+  box-shadow: -6px -2px 60px 20px hsla(183, 100%, 12%, 6%);
+}
+
+.cloud-big {
+	width: 350px;
+  height: 140px;
+	background: #fff;
+	border-radius: 200px;
+	-moz-border-radius: 200px;
+	-webkit-border-radius: 200px;
+	position: absolute; 
+  box-shadow: -6px -2px 60px 20px hsla(183, 100%, 12%, 6%);
 }
 
 @keyframes cloudsMove {
@@ -1199,31 +1338,38 @@ that they form a hexagon */
 }
 
 .cloud-1 {
-  right: 19%;
-  top: 18%;
+  right: 22%;
+  top: 12rem;
 
   animation: cloudsMove 2s ease 0s infinite normal forwards;
 }
 
 .cloud-2 {
-  left: 20%;
-  top: 15%;
+  right: 17%;
+  top: 8rem;
 
   animation: cloudsMove 2s ease 0.5s infinite normal forwards;
 }
 
 .cloud-3 {
-  right: 23%;
-  top: 12%;
+  left: 15%;
+  top: 8rem;
 
   animation: cloudsMove 2.5s ease 0.5s infinite normal forwards;
 }
 
 .cloud-4 {
   left: 25%;
-  top: 21%;
+  top: 12rem;
 
   animation: cloudsMove 2.5s ease 0s infinite normal forwards;
+}
+
+.cloud-5 {
+  left: 15%;
+  top: 12rem;
+
+  animation: cloudsMove 3.5s ease 0.3s infinite normal forwards;
 }
 
 .cloud.cloud-1:before,
@@ -1290,6 +1436,36 @@ that they form a hexagon */
   height: 120px;
 	bottom: 10px;
   left: 10px;
+	-webkit-transform: rotate(30deg);
+	transform: rotate(30deg);
+	-moz-transform: rotate(30deg);
+}
+
+.cloud-big.cloud-5:before,
+.cloud-big.cloud-5:after {
+	content: '';
+	position: absolute; 
+	background: #fff;
+	border-radius: 100px;
+	-moz-border-radius: 100px;
+	-webkit-border-radius: 100px;
+}
+
+.cloud-big.cloud-5:before {
+	width: 200px;
+  height: 180px;
+  bottom: 50px;
+  right: 10px;
+	-webkit-transform: rotate(140deg);
+	transform: rotate(140deg);
+	-moz-transform: rotate(140deg);
+}
+
+.cloud-big.cloud-5:after {
+	width: 200px;
+  height: 160px;
+	bottom: 40px;
+  left: 60px;
 	-webkit-transform: rotate(30deg);
 	transform: rotate(30deg);
 	-moz-transform: rotate(30deg);
@@ -1364,6 +1540,21 @@ that they form a hexagon */
 /*-------------- MEDIA QUERIES ------------------------------ */
 
 @media (min-width: 1024px) {
+  .negative-margin-top-20 {
+    margin-top: -20rem;
+  }
+  .negative-margin-top-15 {
+    margin-top: -15rem;
+  }
+  .negative-translate {
+    transform: translateY(-23rem);
+  }
+  .border-radius {
+    border-radius: 3rem;
+  }
+  .padding-2 {
+    padding: 4rem;
+  }
   .flex-columns-to-rows-reverse {
     flex-direction: row-reverse;
   }
@@ -1424,9 +1615,9 @@ that they form a hexagon */
     opacity: 1;
     pointer-events: all;
   }
-  .hero.main {
+  /* .hero.main {
     min-height: 900px;
-  }
+  } */
   .hero__text-container {
     padding: 0rem 0;
   }

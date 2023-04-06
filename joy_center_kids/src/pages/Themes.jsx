@@ -1,11 +1,11 @@
 import React from 'react'
 import { motion as m } from 'framer-motion'
 import { Link } from 'react-router-dom'
-import image_1 from '../assets/images/pexels-julia-m-cameron-4144099.jpg'
-import image_2 from '../assets/images/pexels-gustavo-fring-5621933.jpeg'
-import image_3 from '../assets/images/pexels-keira-burton-6623833.jpg'
-import image_4 from '../assets/images/pexels-ksenia-chernaya-8535236.jpg'
-import image_5 from '../assets/images/pexels-yan-krukau-8613169.jpg'
+import image_1 from '../assets/images/pexels-amina-filkins-5561177.jpg'
+import image_2 from '../assets/images/pexels-ekaterina-bolovtsova-4868562.jpg'
+import image_3 from '../assets/images/pexels-monstera-5063394.jpg'
+import image_4 from '../assets/images/pexels-hannah-grapp-9660876.jpg'
+import image_5 from '../assets/images/pexels-cottonbro-studio-6203476.jpg'
 
 export const Themes = () => {
   return (
@@ -38,7 +38,7 @@ export const Themes = () => {
               <a className="call-to-action solid orange">Aprende más</a>
           </div>
             <div className="coverpage__image-container">
-              <div className="image">
+              <div className="image grow-image">
                 <img src={image_1} />
                </div>
             </div>
@@ -46,7 +46,7 @@ export const Themes = () => {
           </div>
           <div className='flex align-items flex-columns-rows even-flex gap-4 zindex-1'>
             <div className="coverpage__image-container">
-              <div className="image">
+              <div className="image grow-image">
                 <img src={image_3} />
                </div>
             </div>
@@ -60,27 +60,27 @@ export const Themes = () => {
         
       </div>
     </m.section>
-    <section className="section-page themes bridge-bg xl-vertical-padding overflow-hide colored-cage">
+    <section className="section-page themes overflow-hide">
     
       <div className="centered side-padding">
       <div className="pattern footer top"></div>
-      <div className=" section-box flex wrap gap-4">
-          <div className='flex align-items flex-columns-rows even-flex gap-4 zindex-1'>
+      <div className=" section-box flex flex-columns-rows nowrap gap-4 even-flex">
+          <div className='flex flex-columns gap-4 zindex-1 green-bg padding-2 border-radius colored-cage'>
           <div className="coverpage__text-container">
              <h3>Desarrollo de competencias</h3>
              <p>Dejar que descubran y  hagan cosas por sí mismos incrementa las capacidades generales que potencian el conocimiento. Mantener presente la búsqueda  de crecimiento en las habilidades SOFT - KILLS es clave para ejercer un liderazgo en el transcurso de la vida.</p>
               <a className="call-to-action solid orange">Aprende más</a>
           </div>
             <div className="coverpage__image-container">
-              <div className="image">
+              <div className="image grow-image">
                 <img src={image_2} />
                </div>
             </div>
 
           </div>
-          <div className='flex align-items flex-columns-rows columns-reverse even-flex gap-4 position-rel zindex-1'>
+          <div className='flex flex-columns columns-reverse even-flex gap-4 position-rel zindex-1 green-bg padding-2 border-radius colored-cage'>
             <div className="coverpage__image-container">
-              <div className="image">
+              <div className="image grow-image">
                 <img src={image_4} />
                </div>
             </div>
@@ -96,16 +96,16 @@ export const Themes = () => {
     </section>
     <section className="section-page themes xl-vertical-padding">
       <div className="centered side-padding">
-      <div className=" section-box flex colored-cage dark-blue-bg side-padding vertical-padding overflow-hide position-rel">
+      <div className=" section-box flex colored-cage magenta-bg side-padding vertical-padding overflow-hide position-rel">
       <div className="pattern bluish"></div>
           <div className='flex align-items flex-columns-rows even-flex gap-4 position-rel zindex-1'>
           <div className="coverpage__text-container">
              <h3>Inteligencia emocional</h3>
              <p>Capacidad de ser inteligente con respecto a los sentimientos, los propios y los de otras personas.  Al estar en constante aprendizaje, un niño se enfrenta a retos todo el tiempo; a nivel escolar y personal, la inteligencia emocional ayudará al niño a que enfrente dichos retos de manera positiva y con un gran manejo de la frustración. La inteligencia emocional favorece el conocimiento de las emociones, ayudando a expresarlas de manera efectiva y así, encontrar soluciones.</p>
-              <a className="call-to-action solid orange">Aprende más</a>
+              <a className="call-to-action solid blue">Aprende más</a>
           </div>
             <div className="coverpage__image-container">
-              <div className="image">
+              <div className="image grow-image">
                 <img src={image_5} />
                </div>
             </div>

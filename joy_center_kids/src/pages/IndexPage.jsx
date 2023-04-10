@@ -48,7 +48,8 @@ export const IndexPage = () => {
     initial={{opacity: 0}}
     animate={{opacity: 1}}
     transition={{delay: .25, duration: .5, ease: 'linear' }}
-    > <Rocket />
+    >
+        <Rocket />
         {/* <div className="star beige object" data-value="10">
             <Star />
         </div>

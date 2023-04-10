@@ -7,7 +7,7 @@ export const Rocket = () => {
     const [launch, setLaunchRocket] = useState(false);
 
     const launchRocket = () => {
-        if(window.scrollY >= 100) {
+        if(window.scrollY >= 300) {
             setLaunchRocket(true);
         }
     }

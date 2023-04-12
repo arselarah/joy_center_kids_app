@@ -1,7 +1,9 @@
 import React from 'react'
-import { useRef, useState } from 'react'
+import { useRef, useState, useEffect } from 'react'
 import { Link, NavLink } from 'react-router-dom'
 import logo from '../assets/logo.png'
+
+
 
 export const NavBar = () => {
     const navRef = useRef();

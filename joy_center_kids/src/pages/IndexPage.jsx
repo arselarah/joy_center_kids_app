@@ -1,7 +1,10 @@
 import React from 'react'
 import { motion as m } from 'framer-motion'
-import image_1 from '../assets/images/pexels-alexander-grey-1148998.jpg'
-import image_2 from '../assets/images/pexels-artem-podrez-6941672.jpg'
+import mayas from '../assets/images/mayas.png'
+import fosil from '../assets/images/fosil.png'
+import arqueologo from '../assets/images/arqueologo.png'
+import doctora from '../assets/images/doctora.png'
+import tomografia from '../assets/images/tomografia.png'
 import { Slider } from '../components/Slider'
 import { Rocket } from '../components/Rocket'
 import { useState } from 'react'
@@ -90,6 +93,21 @@ export const IndexPage = () => {
         
         
         <div className="centered side-padding">
+            <div className="mayas absolute w-60 xm:top-[100%] lg:top-[220%]">
+            <img className='bouncing-object' src={mayas} alt="Mayas" />
+            </div>
+            <div className="arqueologia absolute w-60 xm:top-[100%] lg:top-[270%] right-[30%]">
+            <img className='bouncing-object' src={fosil} alt="Mayas" />
+            </div>
+            <div className="arqueologia absolute w-60 xm:top-[100%] lg:top-[280%] right-[20%]">
+            <img className='bouncing-object max-w-[50%] ' src={arqueologo} alt="Mayas" />
+            </div>
+            <div className="medicina absolute w-60 xm:top-[100%] lg:top-[140%] right-[30%]">
+            <img className='bouncing-object' src={tomografia} alt="Mayas" />
+            </div>
+            <div className="medicina absolute w-60 xm:top-[100%] lg:top-[145%] right-[17%]">
+            <img className='bouncing-object max-w-[50%] ' src={doctora} alt="Mayas" />
+            </div>
        
             
         {/* <div className="pattern bluish"></div> */}
@@ -112,6 +130,7 @@ export const IndexPage = () => {
     
         {/* <div className="coverpage__rounded-bar position-rel zindex-1"></div> */}
         <div className="coverpage__container full-width xm:pt-[4rem] md:pt-[6rem] lg:pt-[12rem] z-[1]">
+            
             <div className="centered">
 
                 <div className="coverpage__text-container center-text medium">

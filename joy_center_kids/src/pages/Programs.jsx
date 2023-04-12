@@ -1,10 +1,10 @@
 import React from 'react'
 import { motion as m } from 'framer-motion'
-import image_1 from '../assets/images/pexels-naomi-shi-1001914.jpg'
-import image_2 from '../assets/images/pexels-pavel-danilyuk-8422262.jpg'
-import image_3 from '../assets/images/pexels-ksenia-chernaya-8537193.jpg'
-import image_4 from '../assets/images/pexels-porapak-apichodilok-346779.jpg'
-import image_5 from '../assets/images/pexels-artem-podrez-6941689.jpg'
+import image_1 from '../assets/images/pexels-cottonbro-studio-3661353.jpg'
+import image_2 from '../assets/images/pexels-nikita-grishin-16114766.jpg'
+import image_3 from '../assets/images/pexels-cottonbro-studio-4835434.jpg'
+// import image_4 from '../assets/images/pexels-porapak-apichodilok-346779.jpg'
+// import image_5 from '../assets/images/pexels-artem-podrez-6941689.jpg'
 
 export const Programs = () => {
   return (
@@ -34,7 +34,7 @@ export const Programs = () => {
                 <div className="image">
                   <img src={image_1} />
                 </div>
-              <h3 className='padding-top-2'>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</h3>
+              <h3 className='padding-top-2'>Edades de 3 a 6</h3>
                 <p>Donec magna odio, dictum nec commodo in, lacinia non massa. Nam bibendum ante finibus nunc ultrices ultrices. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia curae; Integer nulla enim, ultricies et sapien quis, blandit vestibulum dolor.</p>
                 <a className="call-to-action solid orange">Aprende más</a>
             </div>
@@ -44,7 +44,7 @@ export const Programs = () => {
               <div className="image">
                 <img src={image_2} />
                </div>
-               <h3 className='padding-top-2'>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</h3>
+               <h3 className='padding-top-2'>Edades de 7 a 10</h3>
               <p>Donec magna odio, dictum nec commodo in, lacinia non massa. Nam bibendum ante finibus nunc ultrices ultrices. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia curae; Integer nulla enim, ultricies et sapien quis, blandit vestibulum dolor.</p>
               <a className="call-to-action solid orange">Aprende más</a>
             </div>
@@ -55,30 +55,30 @@ export const Programs = () => {
                 <div className="image">
                   <img src={image_3} />
                 </div>
-              <h3 className='padding-top-2'>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</h3>
+              <h3 className='padding-top-2'>Edades de 11 a 13</h3>
                 <p>Donec magna odio, dictum nec commodo in, lacinia non massa. Nam bibendum ante finibus nunc ultrices ultrices. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia curae; Integer nulla enim, ultricies et sapien quis, blandit vestibulum dolor.</p>
                 <a className="call-to-action solid orange">Aprende más</a>
             </div>
           {/* </div>
           <div className='flex align-items flex-columns-rows even-flex gap-4 zindex-1'>   */}
-            <div className="coverpage__text-container">
+            {/* <div className="coverpage__text-container">
               <div className="image">
                 <img src={image_4} />
                </div>
                <h3 className='padding-top-2'>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</h3>
               <p>Donec magna odio, dictum nec commodo in, lacinia non massa. Nam bibendum ante finibus nunc ultrices ultrices. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia curae; Integer nulla enim, ultricies et sapien quis, blandit vestibulum dolor.</p>
               <a className="call-to-action solid orange">Aprende más</a>
-            </div>
+            </div> */}
           {/* </div>
           <div className='flex align-items flex-columns-rows even-flex gap-4 zindex-1'> */}
-            <div className="coverpage__text-container">
+            {/* <div className="coverpage__text-container">
               <div className="image">
                 <img src={image_5} />
                </div>
                <h3 className='padding-top-2'>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</h3>
               <p>Donec magna odio, dictum nec commodo in, lacinia non massa. Nam bibendum ante finibus nunc ultrices ultrices. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia curae; Integer nulla enim, ultricies et sapien quis, blandit vestibulum dolor.</p>
               <a className="call-to-action solid orange">Aprende más</a>
-            </div>
+            </div> */}
 
           </div>
         </div>

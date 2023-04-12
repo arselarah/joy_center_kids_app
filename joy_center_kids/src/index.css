@@ -909,7 +909,7 @@ footer {
 }
 
 .even-flex-0 > div {
-  flex: 0 1 calc(50% - 2rem);
+  flex: 0 1 calc(33% - 3rem);
 }
 
 
@@ -1347,6 +1347,29 @@ that they form a hexagon */
 	transform: rotate(30deg);
 	-moz-transform: rotate(30deg);
 }
+
+/*------------- BOUNCE -------------*/
+
+.bouncing-object {
+  animation: bouncing .7s ease 0.2s infinite normal forwards;
+}
+
+@keyframes bouncing {
+	0%{
+		transform: translateY(0);
+	}
+  50% {
+		transform: translateY(5px);
+	}
+  100% {
+		transform: translateY(0px);
+	}
+
+}
+
+
+
+
 /* ============================= CALL TO ACTION ====================================*/
 
 .call-to-action {
@@ -1840,4 +1863,24 @@ that they form a hexagon */
 
 
 
+/*---------------- POST ----------------------*/
+.post__content p {
+  padding-bottom: 2rem;
+  letter-spacing: var(--ls-body);
+  line-height: 1.7rem;
+}
 
+.post__content h2 {
+  padding-bottom: 2rem;
+  letter-spacing: var(--ls-heading);
+  font-size: var(--ff-subheading-text-size);
+}
+
+.post__content ul  {
+  padding: 0rem 0rem 2rem 2rem;
+}
+
+.post__content ul li {
+  list-style: disc;
+  padding-bottom: 0.5rem;
+}

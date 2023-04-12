@@ -18,7 +18,11 @@ export const Contact = () => {
         </div>
     </m.div>
 
-    <section className="section-page form xl-vertical-padding">
+    <m.section className="section-page form xl-vertical-padding"
+    initial={{opacity: 0}}
+    animate={{opacity: 1}}
+    transition={{delay: .25, duration: .5, ease: 'linear' }}
+    >
       <div className="centered side-padding">
         <div className="section-box flex flex-columns-rows even-flex colored-cage orange-bg no-padding no-gap">
           <div className="form__content image-bg flex flex-columns space-between">
@@ -66,7 +70,7 @@ export const Contact = () => {
           </div>
         </div>
       </div>
-    </section>
+    </m.section>
     </>
   )
 }

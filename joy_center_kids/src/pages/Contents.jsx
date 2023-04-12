@@ -5,13 +5,15 @@ import { IndexPage } from '../pages/IndexPage'
 import { Themes } from '../pages/Themes'
 import { Programs } from '../pages/Programs'
 import { Contact } from '../pages/Contact'
+import { News } from './News'
 
-const routes = [
-    {path: "/", name: "Inicio", component: IndexPage},
-    {path: "/themes", name: "Temas", component: Themes},
-    {path: "/programs", name: "Programas", component: Programs},
-    {path: "/contact", name: "Contacto", component: Contact}
-];
+// const routes = [
+//     {path: "/", name: "Inicio", component: IndexPage},
+//     {path: "/themes", name: "Temas", component: Themes},
+//     {path: "/programs", name: "Programas", component: Programs},
+//     {path: "/contact", name: "Contacto", component: Contact},
+//     {path: "/news/*", name: "News", component: Contact}
+// ];
 
 export const Contents = () => {
   return (
@@ -23,6 +25,7 @@ export const Contents = () => {
         <Route path={"/themes"} element={<Themes />}/>
         <Route path={"/programs"} element={<Programs />}/>
         <Route path={"/contact"} element={<Contact />}/>
+        <Route path={"/news/*"} element={<News />} />
         </Routes>
     </section>
     </>

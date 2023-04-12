@@ -93,10 +93,10 @@ export const IndexPage = () => {
         
         
         <div className="centered side-padding">
-            <div className="mayas absolute w-60 xm:top-[100%] lg:top-[220%]">
+            <div className="mayas absolute w-60 xm:top-[100%] md:top-[180%] lg:top-[220%]">
             <img className='bouncing-object' src={mayas} alt="Mayas" />
             </div>
-            <div className="arqueologia absolute w-60 xm:top-[100%] lg:top-[270%] right-[30%]">
+            <div className="arqueologia absolute w-60 xm:top-[100%] md:top-[240%] lg:top-[270%] right-[30%]">
             <img className='bouncing-object' src={fosil} alt="Mayas" />
             </div>
             <div className="arqueologia absolute w-60 xm:top-[100%] lg:top-[280%] right-[20%]">

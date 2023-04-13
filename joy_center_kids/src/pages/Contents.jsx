@@ -18,7 +18,7 @@ import { News } from './News'
 export const Contents = () => {
   return (
     <>
-    <section className="main padding-bottom-4">
+    <section className="main padding-bottom-4 overflow-x-hidden">
       <div className="triggers"></div>
         <Routes>
         <Route path={"/"} element={<IndexPage />}/>

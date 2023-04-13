@@ -72,7 +72,7 @@ export const IndexPage = () => {
         <div className="cloud object cloud-3 z-[3]" data-value="1"></div>
         <div className="cloud object cloud-4 z-[4]" data-value="4"></div>
             <div className="centered">
-                <div className="hero__text-container">
+                <div className="hero__text-container z-[4]">
                   <h1>JOY center KIDS</h1>
                   <h2>El único límite es tu imaginación</h2>
                   <a className='hero__learn-more call-to-action solid orange'>Aprende más</a>
@@ -307,7 +307,7 @@ export const IndexPage = () => {
             <div className="coverpage__container flex align-items flex-columns-to-rows-reverse left-flex-xs gap-4 even-flex  position-rel zindex-1">
                 <div className="coverpage__text-container">
                     <h3>Vive la experiencia <span className='joy'><i>J</i><i>O</i><i>Y</i></span></h3>
-                    <p>Comparte estos mismos valores y que quiere vivir en familia de una manera divertida y estimulante.</p>
+                    <p>Donde compartiremos los valores que permiten en familia el desarrollo constante en los niños. De una manera divertida y estimulante obtendrán la seguridad necesaria en cada paso que den.</p>
                     <a className="call-to-action solid blue">Aprende más</a>
                 </div>
                 <div className="coverpage__image-container">

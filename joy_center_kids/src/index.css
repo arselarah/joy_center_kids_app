@@ -99,7 +99,7 @@ p {
   height: 0;
   bottom: 0;
   left: 0;
-  background-color: hsla(216, 100%, 60%, 80%);
+  background-color: hsla(216, 100%, 60%, 100%);
   backdrop-filter: blur(1rem);
   z-index: 10;
   transition: all 0.2s cubic-bezier(.43,.34,.28,.91) .1s;
@@ -116,7 +116,7 @@ nav.desktop-main-nav {
   align-items: center;
   flex-direction: row;
   gap: 1rem;
-  justify-content: space-between;
+  justify-content: space-evenly;
 }
 
 nav.desktop-main-nav .logo-container,
@@ -221,6 +221,7 @@ nav.desktop-main-nav .button-mobile-toggle {
   gap: 5px;
   justify-content: center;
   align-items: center;
+  transition: all .5s;
 }
 
 .button-mobile-toggle span {
@@ -230,6 +231,9 @@ nav.desktop-main-nav .button-mobile-toggle {
   background-color: var(--color-regular);
   display: block;
   border-radius: 2px;
+  transition: all .5s;
+  top: 0;
+  bottom: 0;
 }
 
 .hero {
@@ -408,15 +412,14 @@ span.bluish {
 .cube {
   border-radius: 2rem;
   padding: 2rem;
-  width: 90%;
+  width: 100%;
   height: 250px;
-  max-width: 300px;
   margin: 0 auto;
-  position: relative;
+  /* position: relative; */
   overflow: hidden;
 }
 
-.cube:hover::after {
+/* .cube:hover::after {
   opacity: 1;
 }
 
@@ -428,24 +431,54 @@ span.bluish {
   bottom: 0;
   left: 0;
   transition: all 0.3s cubic-bezier(.43,.34,.28,.91) .1s;
-}
+} */
 
-.cube.yellow::after {
+.cube.yellow {
   background-color: var(--color-yellow);
 }
 
-.cube.orange::after {
+.cube.orange {
   background-color: var(--color-orange);
 }
 
-.cube.red::after {
+.cube.red {
   background-color: var(--color-red);
 }
 
-.cube.blue::after {
+.cube.blue {
   background-color: var(--color-bluish);
 }
 
+/*------------ CARD --------------*/
+.card {
+  position: relative;
+  min-height: 250px;
+}
+.card__content {
+  transition: transform .7s;
+  transform-style: preserve-3d;
+}
+
+.card:hover .card__content {
+  transform: rotateY(180deg);
+}
+
+.front,
+.back {
+  backface-visibility: hidden;
+  transform-style: preserve-3d;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.front {
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+.back {
+  transform: rotateY(180deg);
+}
 .coverpage__cubes-container {
   padding: 4rem 0;
 }
@@ -621,7 +654,7 @@ footer {
   border-radius: 50%;
   transition: all 0.3s cubic-bezier(.43,.34,.28,.91) .1s;
   background-color: var(--color-light);
-  bottom: -1px;
+  bottom: -7.8px;
   left: -8px;
   opacity: 0;
   transform: scale(.5);
@@ -670,7 +703,7 @@ footer {
 
 .section-box .image {
   overflow: hidden;
-  height: 280px;
+  height: 400px;
   border-radius: 2rem;
 }
 
@@ -1199,6 +1232,7 @@ that they form a hexagon */
 	-webkit-border-radius: 200px;
 	position: absolute; 
   box-shadow: -6px -2px 60px 20px hsla(183, 100%, 12%, 6%);
+  opacity: 0;
 }
 
 @keyframes cloudsMove {
@@ -1215,29 +1249,29 @@ that they form a hexagon */
 }
 
 .cloud-1 {
-  right: 22%;
-  top: 12rem;
+  right: -15%;
+  top: 7rem;
 
   animation: cloudsMove 2s ease 0s infinite normal forwards;
 }
 
 .cloud-2 {
-  right: 17%;
-  top: 8rem;
+  right: -17%;
+  top: 28rem;
 
   animation: cloudsMove 2s ease 0.5s infinite normal forwards;
 }
 
 .cloud-3 {
-  left: 15%;
+  left: -15%;
   top: 8rem;
 
   animation: cloudsMove 2.5s ease 0.5s infinite normal forwards;
 }
 
 .cloud-4 {
-  left: 25%;
-  top: 12rem;
+  left: -25%;
+  top: 25rem;
 
   animation: cloudsMove 2.5s ease 0s infinite normal forwards;
 }
@@ -1352,6 +1386,7 @@ that they form a hexagon */
 
 .bouncing-object {
   animation: bouncing .7s ease 0.2s infinite normal forwards;
+  position: relative;
 }
 
 @keyframes bouncing {
@@ -1404,6 +1439,11 @@ that they form a hexagon */
   border-color:var(--solid-blue);
 }
 
+.call-to-action.solid.bluish {
+  background-color: var(--color-bluish);
+  border-color:var(--color-bluish);
+}
+
 .call-to-action.solid.orange {
   background-color: var(--solid-orange);
   border-color:var(--solid-orange);
@@ -1438,6 +1478,31 @@ that they form a hexagon */
 }
 
 /*-------------- MEDIA QUERIES ------------------------------ */
+@media (min-width: 756px) {
+  .cloud-big {
+    opacity: 1;
+  }
+  .cloud-1 {
+    right: 22%;
+    top: 12rem;
+  }
+  
+  .cloud-2 {
+    right: 17%;
+    top: 8rem;
+  }
+  
+  .cloud-3 {
+    left: 15%;
+    top: 8rem;
+  }
+  
+  .cloud-4 {
+    left: 25%;
+    top: 12rem;
+  }
+  
+}
 
 @media (min-width: 1024px) {
   .negative-margin-top-20 {
@@ -1510,7 +1575,6 @@ that they form a hexagon */
   
   .cube {
     width: 100%;
-    max-width: 400px;
   }
   .coverpage.light-bg :last-child > .flex {
     flex-direction: row-reverse;
@@ -1560,6 +1624,9 @@ that they form a hexagon */
   .themes .image {
     height: 380px;
   }
+  .map-item {
+    max-width: 200px !important;
+  }
 }
 
 @media (min-width: 1244px) {
@@ -1588,7 +1655,7 @@ that they form a hexagon */
   /* transform: translateX(-50%); */
   /* transform: translateY(0%); */
   border-radius: 50% 50% 25% 25% / 50% 50% 40% 40%;
-  background-color: #dadada;
+  background-color: transparent;
   /* box-shadow: 0 -3px 0 #FFF; */
   transform-style: preserve-3d;
   
@@ -1603,14 +1670,14 @@ that they form a hexagon */
 .rocket::before {
   width: 55%;
   height: 10px;
-  background-color: #d43e07;
+  background-color: transparen;
   bottom: -10px;
   border-radius: 0% 0% 25% 25% / 50% 50% 40% 40%;
 }
 .rocket:after {
   height: 55px;
   width: 155%;
-  background-color: #9e554f;
+  background-color: transparent;
   bottom: 0;
   z-index: -10;
   transform: translateX(-50%) translateZ(-1px);
@@ -1743,7 +1810,7 @@ that they form a hexagon */
   min-height: 0px;
   width: 32px;
   /* bottom: 0px; */
-  top: 190px;
+  top: 140px;
   left: 24px;
   /* transform: translateX(-50%); */
   position: absolute;
@@ -1883,4 +1950,65 @@ that they form a hexagon */
 .post__content ul li {
   list-style: disc;
   padding-bottom: 0.5rem;
+}
+
+.pop-up {
+  opacity: 0;
+  pointer-events: none;
+  box-shadow: 0px 10px 15px -3px rgba(0,0,0,0.1);
+  transform: translateY(1rem);
+  transition: all 0.5s cubic-bezier(0.68, -0.55, 0.265, 1.55) .2s;
+  background-color: #fff;
+}
+
+.pop-up p {
+  color: var(--color-regular);
+  font-weight: 600;
+}
+
+.map-item { 
+  z-index: 2;
+  cursor: pointer;
+  background-color: transparent;
+  padding: 2rem 0rem;
+  border-radius: 10px;
+  transition: all 0.5s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+  width: 80%;
+  max-width: 100px;
+}
+
+.map-item:hover > .pop-up {
+  opacity: 1;
+  pointer-events: all;
+  transform: translateY(0rem);
+}
+
+/* .map-item:hover {
+  background-color: var(--color-darkblue);
+  box-shadow: 0px 10px 15px -3px rgba(0,0,0,0.1);
+} */
+
+.close.button-mobile-toggle span {
+  background-color: var(--color-light);
+}
+
+.close.button-mobile-toggle span:first-child {
+  transform: rotate(45deg);
+  top: 8px;
+  transform-origin: center;
+}
+
+.close.button-mobile-toggle span:last-child {
+  transform: rotate(-45deg);
+  top: -8px;
+  transform-origin: center;
+}
+
+.close.button-mobile-toggle span:nth-child(2) {
+  width: 0;
+  transform-origin: center;
+}
+
+nav.desktop-main-nav .close.button-mobile-toggle {
+  background-color: var(--color-darkblue);
 }

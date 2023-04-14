@@ -1,5 +1,6 @@
 import React from 'react'
 import { useState } from 'react';
+import rocket from '../assets/images/rocket.png'
 
 
 
@@ -19,7 +20,10 @@ export const Rocket = () => {
     <div className={launch ? ' draw z-[2] animated' : 'draw z-[2]'}>
    
 		<div className="rocket">
-			<div className="window"></div>
+			{/* <div className="window"></div> */}
+        <div className="rocket-image">
+          <img src={rocket} alt="" />
+        </div>
             <div className="smoke-rocket"></div>
 		</div>
     

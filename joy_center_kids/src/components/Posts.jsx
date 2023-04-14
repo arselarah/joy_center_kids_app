@@ -9,9 +9,9 @@ export const Posts = ({posts}) => {
       {
         posts?.map(post => (
           <div className="posts__card flex-0 xm:basis-[100%] md:basis-[50%] lg:basis-[33%] px-[1rem] pb-[2rem]" key={post.id}>
-            <div className="posts__coverPhoto">
+            <div className="posts__coverPhoto rounded-[2rem] overflow-hidden ">
               <Link to={`/news/article/${post.slug}`}>
-                <img className='min-w-full object-cover object-center max-h-[300px] min-h-[300px]' src={post.coverPhoto.url} alt={post.slug} />
+                <img className='min-w-full object-cover object-center max-h-[300px] min-h-[350px]' src={post.coverPhoto.url} alt={post.slug} />
               </Link>
             </div>
 

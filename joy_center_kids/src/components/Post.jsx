@@ -5,9 +5,9 @@ export const Post = ({post}) => {
    // console.log(post)
   return (
     <>
-    <div className="centered ">
+    <div className="centered side-padding">
         <article className='max-w-4xl ml-[auto] mr-[auto]'>
-            <div className='pt-[4rem]'>
+            <div className='mt-[4rem] overflow-hidden rounded-[2rem]'>
                 <img src={post.coverPhoto.url} />
             </div>
             <div>

@@ -33,7 +33,7 @@ export const Footer = () => {
             <div className="footer__social flex gap-2">
               <a href="http://"><img src={facebookIcon} alt="Facebook Icon" /></a>
               <a href="http://"><img src={instagramIcon} alt="Instagram Icon" /></a>
-              <a href="http://"><img src={twitterIcon} alt="Twitter Icon" /></a>
+              {/* <a href="http://"><img src={twitterIcon} alt="Twitter Icon" /></a> */}
             </div>
           </div>
         </div>

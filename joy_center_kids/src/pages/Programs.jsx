@@ -1,6 +1,6 @@
 import React from 'react'
 import { motion as m } from 'framer-motion'
-import image_1 from '../assets/images/pexels-cottonbro-studio-3661353.jpg'
+import image_1 from '../assets/images/pexels-cottonbro-studio-3661388.jpg'
 import image_2 from '../assets/images/pexels-nikita-grishin-16114766.jpg'
 import image_3 from '../assets/images/pexels-cottonbro-studio-4835434.jpg'
 // import image_4 from '../assets/images/pexels-porapak-apichodilok-346779.jpg'
@@ -14,7 +14,7 @@ export const Programs = () => {
     animate={{opacity: 1}}
     transition={{delay: .25, duration: .5, ease: 'linear' }}
     >
-        <div className="centered">
+        <div className="centered side-padding">
             <div className="hero__text-container">
               <h1>Programas</h1>
               <h2>¿Quieres conocer nuestros programas de trabajo?</h2>
@@ -36,7 +36,7 @@ export const Programs = () => {
                 </div>
               <h3 className='padding-top-2'>Edades de 3 a 6</h3>
                 <p>Donec magna odio, dictum nec commodo in, lacinia non massa. Nam bibendum ante finibus nunc ultrices ultrices. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia curae; Integer nulla enim, ultricies et sapien quis, blandit vestibulum dolor.</p>
-                <a className="call-to-action solid orange">Aprende más</a>
+                <a className="call-to-action solid orange">Aprende jugando</a>
             </div>
           {/* </div>
           <div className='flex align-items flex-columns-rows even-flex gap-4 zindex-1'>   */}
@@ -46,7 +46,7 @@ export const Programs = () => {
                </div>
                <h3 className='padding-top-2'>Edades de 7 a 10</h3>
               <p>Donec magna odio, dictum nec commodo in, lacinia non massa. Nam bibendum ante finibus nunc ultrices ultrices. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia curae; Integer nulla enim, ultricies et sapien quis, blandit vestibulum dolor.</p>
-              <a className="call-to-action solid orange">Aprende más</a>
+              <a className="call-to-action solid orange">Aprende jugando</a>
             </div>
           {/* </div>
 
@@ -57,7 +57,7 @@ export const Programs = () => {
                 </div>
               <h3 className='padding-top-2'>Edades de 11 a 13</h3>
                 <p>Donec magna odio, dictum nec commodo in, lacinia non massa. Nam bibendum ante finibus nunc ultrices ultrices. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia curae; Integer nulla enim, ultricies et sapien quis, blandit vestibulum dolor.</p>
-                <a className="call-to-action solid orange">Aprende más</a>
+                <a className="call-to-action solid orange">Aprende jugando</a>
             </div>
           {/* </div>
           <div className='flex align-items flex-columns-rows even-flex gap-4 zindex-1'>   */}

@@ -3,8 +3,9 @@ import { motion as m } from 'framer-motion'
 import mayas from '../assets/images/mayas.png'
 import fosil from '../assets/images/fosil.png'
 import arqueologo from '../assets/images/arqueologo.png'
-import doctora from '../assets/images/doctora.png'
-import tomografia from '../assets/images/tomografia.png'
+import bears from '../assets/images/osos.png'
+import artist from '../assets/images/artist.png'
+import sports from '../assets/images/deportes.png'
 import { Slider } from '../components/Slider'
 import { Rocket } from '../components/Rocket'
 import { useState } from 'react'
@@ -31,15 +32,15 @@ import { useState } from 'react'
 const slides = [
     {
         url:"https://images.pexels.com/photos/9660876/pexels-photo-9660876.jpeg",
-        title: "Se un explorador",
+        title: "Conviértete en explorador",
     },
     {
-        url:"https://images.pexels.com/photos/5560513/pexels-photo-5560513.jpeg",
-        title: "Se un astronauta",
+        url:"https://images.pexels.com/photos/5560522/pexels-photo-5560522.jpeg",
+        title: "Conviértete en astronauta",
     },
     {
-        url:"https://images.pexels.com/photos/6203492/pexels-photo-6203492.jpeg",
-        title: "Se un superhéroe",
+        url:"https://images.pexels.com/photos/8223960/pexels-photo-8223960.jpeg",
+        title: "Conviértete en un gran deportista",
     },
 ];
 
@@ -53,19 +54,7 @@ export const IndexPage = () => {
     transition={{delay: .25, duration: .5, ease: 'linear' }}
     >
         <Rocket />
-        {/* <div className="star beige object" data-value="10">
-            <Star />
-        </div>
-        <div className="circle bluish object" data-value="2">
-            <Circle />
-        </div>
-        <div className="star red object" data-value="-3">
-            <Star />
-        </div>
-        <div className="circle yellow object" data-value="-9">
-            <Circle />
-        </div>
-        <div class="hexagon object orange" data-value="5"></div> */}
+        
         <div className="cloud-big object cloud-5" data-value="7"></div>
         <div className="cloud object cloud-1" data-value="19"></div>
         <div className="cloud object cloud-2" data-value="23"></div>
@@ -74,17 +63,13 @@ export const IndexPage = () => {
             <div className="centered">
                 <div className="hero__text-container z-[4]">
                   <h1>JOY center KIDS</h1>
-                  <h2>El único límite es tu imaginación</h2>
+                  <h2 className='px-[.5rem]'>El único límite es tu imaginación</h2>
                   <a className='hero__learn-more call-to-action solid orange'>Aprende más</a>
                 </div>
             </div>
             
            
         </m.div>
-        {/* <div className='container-shape negative-margin-top-15'>
-        <div className="hero__rounded-bar"></div>
-
-        </div> */}
     <m.section className='coverpage colored-cage world-canvas overflow-y-visible overflow-x-clip padding-top-2'
     initial={{opacity: 0}}
     animate={{opacity: 1}}
@@ -93,26 +78,57 @@ export const IndexPage = () => {
         
         
         <div className="centered side-padding">
-            <div className="mayas absolute w-60 xm:top-[100%] md:top-[180%] lg:top-[220%]">
-            <img className='bouncing-object' src={mayas} alt="Mayas" />
+            <div className="map-item osos absolute xm:top-[30%] lg:top-[40%] left-[25%] z-[1]">
+                <div className="pop-up absolute z-[1] p-[2rem] right-[0%] top-[-8rem] rounded-tl-lg rounded-tr-lg rounded-br-lg rounded-bl-lg">
+                    <p className='pb-[2rem]'>Completa la misión</p>
+                    <button className='call-to-action solid bluish ms-[auto] me-[auto]'>Jugar</button>
+                </div>
+            <img className='bouncing-object max-w-[80%] ms-[auto] me-[auto] z-[-1]' src={bears} alt="Osos" />
             </div>
-            <div className="arqueologia absolute w-60 xm:top-[100%] md:top-[240%] lg:top-[270%] right-[30%]">
-            <img className='bouncing-object' src={fosil} alt="Mayas" />
+
+
+            <div className="map-item artistas absolute xm:top-[200%] md:top-[970%] lg:top-[140%] right-[30%] z-[2]">
+                <div className="pop-up absolute z-[1] p-[2rem] right-[0%] top-[-8rem] rounded-tl-lg rounded-tr-lg rounded-br-lg rounded-bl-lg">
+                    <p className='pb-[2rem]'>Completa la misión</p>
+                    <button className='call-to-action solid bluish ms-[auto] me-[auto]'>Jugar</button>
+                </div>
+            <img className='bouncing-object max-w-[80%] ms-[auto] me-[auto]' src={artist} alt="Artistas" />
             </div>
-            <div className="arqueologia absolute w-60 xm:top-[100%] lg:top-[280%] right-[20%]">
-            <img className='bouncing-object max-w-[50%] ' src={arqueologo} alt="Mayas" />
+
+
+            <div className="map-item mayas absolute xm:top-[350%] sm:top-[1000%] md:top-[1400%] lg:top-[190%]">
+                <div className="pop-up absolute z-[1] p-[2rem] xm:right-[-100%] top-[-8rem] rounded-tl-lg rounded-tr-lg rounded-br-lg rounded-bl-lg ">
+                    <p className='pb-[2rem]'>Completa la misión</p>
+                    <button className='call-to-action solid bluish ms-[auto] me-[auto]'>Jugar</button>
+                </div>
+            <img className='bouncing-object max-w-[80%] ms-[auto] me-[auto] z-[-1]' src={mayas} alt="Mayas" />
             </div>
-            <div className="medicina absolute w-60 xm:top-[100%] lg:top-[140%] right-[30%]">
-            <img className='bouncing-object' src={tomografia} alt="Mayas" />
+
+            
+            
+            
+
+            
+            <div className="map-item deportes absolute xm:top-[160%] md:top-[900%] lg:top-[170%] right-[0%] z-[3]">
+                <div className="pop-up absolute z-[1] p-[2rem] right-[0%] top-[-8rem] rounded-tl-lg rounded-tr-lg rounded-br-lg rounded-bl-lg">
+                    <p className='pb-[2rem]'>Completa la misión</p>
+                    <button className='call-to-action solid bluish ms-[auto] me-[auto]'>Jugar</button>
+                </div>
+            <img className='bouncing-object max-w-[80%] ms-[auto] me-[auto]' src={sports} alt="Deportes" />
             </div>
-            <div className="medicina absolute w-60 xm:top-[100%] lg:top-[145%] right-[17%]">
-            <img className='bouncing-object max-w-[50%] ' src={doctora} alt="Mayas" />
+            
+            <div className="map-item arqueologia absolute xm:top-[550%] md:top-[2000%] lg:top-[220%] right-[30%]">
+                <div className="pop-up absolute z-[1] p-[2rem] right-[0%] top-[-8rem] rounded-tl-lg rounded-tr-lg rounded-br-lg rounded-bl-lg">
+                    <p className='pb-[2rem]'>Completa la misión</p>
+                    <button className='call-to-action solid bluish ms-[auto] me-[auto]'>Jugar</button>
+                </div>
+            <img className='bouncing-object max-w-[80%] ms-[auto] me-[auto]' src={fosil} alt="Fosil" />
             </div>
        
             
         {/* <div className="pattern bluish"></div> */}
             <div className="coverpage__container flex flex-columns-rows left-flex-xs gap-4 zindex-1 position-rel padding-top-2 justify-end">
-                <div className="coverpage__text-container even-flex">
+                <div className="coverpage__text-container even-flex xm:hidden lg:block">
                     <h3>¿Qué es <span className='joy'><i>J</i><i>O</i><i>Y</i></span>?</h3>
                     <p>En JOY nos encanta ver a los niños aprender, para lograrlo  la motivación es fundamental, nuestra meta es obtener motivación 3.0. Nuestro sistema de aprendizaje enfocado a la Gamificación es mediante técnicas de juegos, que otorgan la motivación para que los niños incrementen sus capacidades intelectuales, mejoren sus resultados académicos, generen autodeterminación y su inteligencia emocional esté presente en su desarrollo.</p>
                     <a className="call-to-action solid orange">Aprende más</a>
@@ -128,34 +144,57 @@ export const IndexPage = () => {
     </m.section>
     <section className='coverpage position-rel overflow-hide'>
     
-        {/* <div className="coverpage__rounded-bar position-rel zindex-1"></div> */}
+        
         <div className="coverpage__container full-width xm:pt-[4rem] md:pt-[6rem] lg:pt-[12rem] z-[1]">
             
-            <div className="centered">
+            <div className="centered side-padding">
+
+                <div className="coverpage__text-container pb-[8rem] pt-[2rem] md:hidden">
+                <h3>¿Qué es <span className='joy'><i>J</i><i>O</i><i>Y</i></span>?</h3>
+                    <p>En JOY nos encanta ver a los niños aprender, para lograrlo  la motivación es fundamental, nuestra meta es obtener motivación 3.0. Nuestro sistema de aprendizaje enfocado a la Gamificación es mediante técnicas de juegos, que otorgan la motivación para que los niños incrementen sus capacidades intelectuales, mejoren sus resultados académicos, generen autodeterminación y su inteligencia emocional esté presente en su desarrollo.</p>
+                    <a className="call-to-action solid orange">Aprende más</a>
+                </div>
 
                 <div className="coverpage__text-container center-text medium">
                     <h3>¿Por que el juego es tan importante en <span className='joy'><i>J</i><i>O</i><i>Y</i></span>?</h3>
                     <p>El juego es algo fundamental para la vida. Con técnicas de gamificación los niños obtienen de forma intrínseca lo necesario para potencializar conocimientos y habilidades. Se sentirán motivados e interesados en aprender.</p>
                 </div>
-                <div className="coverpage__cubes-container flex flex-columns-rows three-flex gap-4">
-                    <div>
-                        <div className='cube orange colored-cage'>
-                            <h4>Edades de 3 a 6</h4>
-                            <p>Children anywhere from birth to 1 year old.</p>
+
+                <div className="coverpage__cubes-container flex flex-columns-rows three-flex gap-4 relative">
+                    <div className="card">
+                        <div className='card__content relative'>
+                            <div className='cube front orange colored-cage absolute top-0'>
+                                <h4>Edades de 3 a 6</h4>
+                                <p>Children anywhere from birth to 1 year old.</p>
+                            </div>
+                            <div className='cube back orange colored-cage align-middle grid absolute top-0'>
+                                <button className='call-to-action solid blue my-[auto] mx-[auto]'>Aprende más</button>
+                            </div>
                         </div>
-                    </div>
-                    <div>
-                    <div className='cube blue colored-cage'>
-                            <h4>Edades de 7 a 10</h4>
-                            <p>Children anywhere from 1 to 3 year old.</p>
+                     </div>
+                     <div className="card">
+                        <div className='card__content relative'>
+                            <div className='cube front blue colored-cage absolute top-0'>
+                                <h4>Edades de 7 a 10</h4>
+                                <p>Children anywhere from birth to 1 year old.</p>
+                            </div>
+                            <div className='cube back blue colored-cage align-middle grid absolute top-0'>
+                                <button className='call-to-action solid orange my-[auto] mx-[auto]'>Aprende más</button>
+                            </div>
                         </div>
-                    </div>
-                    <div>
-                    <div className='cube yellow colored-cage'>
-                            <h4>Edades de 11 a 13</h4>
-                            <p>Children anywhere from 3 to 5 year old.</p>
+                     </div>
+                    
+                     <div className="card">
+                        <div className='card__content relative'>
+                            <div className='cube front yellow colored-cage absolute top-0'>
+                                <h4>Edades de 7 a 10</h4>
+                                <p>Children anywhere from birth to 1 year old.</p>
+                            </div>
+                            <div className='cube back yellow colored-cage align-middle grid absolute top-0'>
+                                <button className='call-to-action solid blue my-[auto] mx-[auto]'>Aprende más</button>
+                            </div>
                         </div>
-                    </div>
+                     </div>
             </div>
                 </div>
             </div>
@@ -168,6 +207,7 @@ export const IndexPage = () => {
                     <h3>¿Beneficios en <span className='joy'><i>J</i><i>O</i><i>Y</i></span>?</h3>
                     <p>El desarrollo de competencias es un requisito esencial para lograr el éxito personal y profesional, formar niños competentes es el primer paso para ayudar a los hijos en su desarrollo interno generando una confianza en ellos para el cumplimiento de objetivos.</p>
                 </div>
+                
                 <div className='coverpage__activities-container flex padding-bottom-4 flex-columns-rows three-flex wrap'>
                     <div className='flex even-flex padding-bottom-2'>
                         <div className='activities__icon-container'>

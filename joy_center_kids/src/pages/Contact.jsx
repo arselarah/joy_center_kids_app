@@ -11,8 +11,8 @@ export const Contact = () => {
     >
         <div className="centered">
             <div className="hero__text-container">
-              <h1>Contacto</h1>
-              <h2>Hola ¿Quiseres conocer más de JOY center KIDS?</h2>
+              <h1 className='text-[var(--color-yellow)]'>Contacto</h1>
+              <h2>Ponte en contacto con JOY</h2>
               
             </div>
         </div>

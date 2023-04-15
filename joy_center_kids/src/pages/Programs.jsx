@@ -15,11 +15,13 @@ export const Programs = () => {
     transition={{delay: .25, duration: .5, ease: 'linear' }}
     >
         <div className="centered side-padding">
-            <div className="hero__text-container">
-              <h1>Programas</h1>
-              <h2>¿Quieres conocer nuestros programas de trabajo?</h2>
+            <div className="hero__text-container z-[1]">
+              <h1 className='text-[var(--color-button-one)]'>Programas</h1>
+              <h2>Conoce nuestros programas</h2>
               
             </div>
+            <div className="pattern bluish"></div>
+            <div className="pattern footer righty"></div>
         </div>
     </m.div>
     <m.section className="section-page xl-vertical-padding"

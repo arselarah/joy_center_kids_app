@@ -22,6 +22,7 @@ export const Footer = () => {
               <Link to="/">Inicio</Link>
               <Link to="/themes">Temas</Link>
               <Link to="/programs">Programas</Link>
+              <Link to="/news">News</Link>
               <Link to="/contact">Contacto</Link>
             </div>
           </div>

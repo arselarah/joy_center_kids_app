@@ -9,6 +9,7 @@ import sports from '../assets/images/deportes.png'
 import { Slider } from '../components/Slider'
 import { Rocket } from '../components/Rocket'
 import { useState } from 'react'
+import { Link, NavLink } from 'react-router-dom'
 
 
 
@@ -64,7 +65,7 @@ export const IndexPage = () => {
                 <div className="hero__text-container z-[4]">
                   <h1>JOY center KIDS</h1>
                   <h2 className='px-[.5rem]'>El único límite es tu imaginación</h2>
-                  <a className='hero__learn-more call-to-action solid orange'>Aprende más</a>
+                  <Link to={'/themes'} className='hero__learn-more call-to-action solid orange'>Aprende más</Link>
                 </div>
             </div>
             
@@ -131,7 +132,7 @@ export const IndexPage = () => {
                 <div className="coverpage__text-container even-flex xm:hidden lg:block">
                     <h3>¿Qué es <span className='joy'><i>J</i><i>O</i><i>Y</i></span>?</h3>
                     <p>En JOY nos encanta ver a los niños aprender, para lograrlo  la motivación es fundamental, nuestra meta es obtener motivación 3.0. Nuestro sistema de aprendizaje enfocado a la Gamificación es mediante técnicas de juegos, que otorgan la motivación para que los niños incrementen sus capacidades intelectuales, mejoren sus resultados académicos, generen autodeterminación y su inteligencia emocional esté presente en su desarrollo.</p>
-                    <a className="call-to-action solid orange">Aprende más</a>
+                    <Link to={'/themes'} className="call-to-action solid orange">Aprende más</Link>
                 </div>
                 <div className="coverpage__image-container even-flex">
                     {/* <div className="clipped image">
@@ -152,7 +153,7 @@ export const IndexPage = () => {
                 <div className="coverpage__text-container pb-[8rem] pt-[2rem] md:hidden">
                 <h3>¿Qué es <span className='joy'><i>J</i><i>O</i><i>Y</i></span>?</h3>
                     <p>En JOY nos encanta ver a los niños aprender, para lograrlo  la motivación es fundamental, nuestra meta es obtener motivación 3.0. Nuestro sistema de aprendizaje enfocado a la Gamificación es mediante técnicas de juegos, que otorgan la motivación para que los niños incrementen sus capacidades intelectuales, mejoren sus resultados académicos, generen autodeterminación y su inteligencia emocional esté presente en su desarrollo.</p>
-                    <a className="call-to-action solid orange">Aprende más</a>
+                    <Link to={'/themes'} className="call-to-action solid orange">Aprende más</Link>
                 </div>
 
                 <div className="coverpage__text-container center-text medium">
@@ -348,7 +349,7 @@ export const IndexPage = () => {
                 <div className="coverpage__text-container">
                     <h3>Vive la experiencia <span className='joy'><i>J</i><i>O</i><i>Y</i></span></h3>
                     <p>Donde compartiremos los valores que permiten en familia el desarrollo constante en los niños. De una manera divertida y estimulante obtendrán la seguridad necesaria en cada paso que den.</p>
-                    <a className="call-to-action solid blue">Aprende más</a>
+                    <Link to={'/programs'} className="call-to-action solid blue">Aprende más</Link>
                 </div>
                 <div className="coverpage__image-container">
                     <div className="clipped image rounded-[2rem]">
@@ -361,7 +362,7 @@ export const IndexPage = () => {
                     slides.map((s) => (
                         <div className='prueba relative grow-image'>
                             <img className="min-w-full object-cover object-center max-h-[550px] min-h-[550px]" src={s.url} />
-                            <p className="absolute p-4 inset-x-0 bottom-0 h-20 z-[2] text-white font-semibold text-2xl text-center align-middle ">{s.title} </p>
+                            <p className="absolute p-4 inset-x-0 bottom-0 h-[120px] z-[2] text-white font-semibold text-2xl text-center align-middle ">{s.title} </p>
                         </div>
                     ))
                     }

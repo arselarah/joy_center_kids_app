@@ -12,11 +12,11 @@ export const NavBar = () => {
     const navRef = useRef();
     const iconRef = useRef();
     
-    const hideNavBar = () => {
-        navRef.current.classList.remove("display-menu-mobile");
-        iconRef.current.classList.remove("close");
+    // const hideNavBar = () => {
+    //     navRef.current.classList.remove("display-menu-mobile");
+    //     iconRef.current.classList.remove("close");
         
-    }
+    // }
 
     const [navHide, setNavHide] = useState();
 
@@ -26,6 +26,7 @@ export const NavBar = () => {
             //console.log('Hola')
     };
 
+    
 
 
     // const navLinkEls = document.querySelectorAll('.nav__link');
@@ -56,7 +57,7 @@ export const NavBar = () => {
             <div className='centered side-padding'> 
                     <nav className='desktop-main-nav'>
                         <div className='logo-container'>
-                            <Link to="/" className="logo-link"><img src={logo} alt="JOY center KIDS Logo"/>center KIDS</Link>
+                            <a href="/" className="logo-link"><img src={logo} alt="JOY center KIDS Logo"/>center KIDS</a>
                         </div>
                         <div className='nav-container'>
                             <ul>
@@ -67,7 +68,7 @@ export const NavBar = () => {
                             </ul>
                         </div>
                         <div className="button-container top xm:hidden md:block">
-                             <NavLink onClick={hideNavBar} className="contact call-to-action ghost blue" to="/contact">Contacto</NavLink>
+                             <NavLink className="contact call-to-action ghost blue" to="/contact">Contacto</NavLink>
                         </div>
                         <div className="mobile-button-container">
                             <button className='button-mobile-toggle' aria-controls='mobile-menu' aria-expanded="false" onClick={hideNav} ref={iconRef}>
@@ -81,13 +82,13 @@ export const NavBar = () => {
         </header>
         {/* <div ref={navRef} className={navHide ? "mobile-menu " : "mobile-menu display-menu-mobile"}> */}
         <div ref={navRef} className={navHide ? "mobile-menu display-menu-mobile" : "mobile-menu "}>
-            <div className='nav-container flex justify-center content-center relative h-[100%] pt-[10rem]'>
-               <ul className='w-[100%] flex flex-col'>
-                    <li className='px-[2rem] py-[1rem]'><Link onClick={hideNav} className="nav__link block text-3xl font-semibold text-[#ffffff] tracking-[var(--ls-heading)]" to="/">Inicio</Link></li>
-                    <li className='px-[2rem] py-[1rem]'><Link onClick={hideNav} className="nav__link block text-3xl font-semibold text-[#ffffff] tracking-[var(--ls-heading)]" to="/themes">Temas</Link ></li>
-                    <li className='px-[2rem] py-[1rem]'><Link onClick={hideNav} className="nav__link block text-3xl font-semibold text-[#ffffff] tracking-[var(--ls-heading)]" to="/programs">Programas</Link></li>
-                    <li className='px-[2rem] py-[1rem]'><Link onClick={hideNav} className="nav__link block text-3xl font-semibold text-[#ffffff] tracking-[var(--ls-heading)]" to="/news">News</Link></li>
-                    <li className='px-[2rem] py-[1rem]'><Link onClick={hideNav} className="nav__link block text-3xl font-semibold text-[#ffffff] tracking-[var(--ls-heading)]" to="/contact">Contacto</Link></li>
+            <div className='nav-container flex justify-center content-center relative h-[100%] pt-[8rem]'>
+               <ul className='relative w-[100%] flex flex-col menu-objects'>
+                    <li className='px-[2rem] pt-[1rem]'><NavLink onClick={hideNav} className="nav__link block text-3xl font-bold text-[#ffffff] tracking-[var(--ls-heading)]" to="/">Inicio</NavLink></li>
+                    <li className='px-[2rem] pt-[1rem]'><NavLink onClick={hideNav} className="nav__link block text-3xl font-bold text-[#ffffff] tracking-[var(--ls-heading)]" to="/themes">Temas</NavLink ></li>
+                    <li className='px-[2rem] pt-[1rem]'><NavLink onClick={hideNav} className="nav__link block text-3xl font-bold text-[#ffffff] tracking-[var(--ls-heading)]" to="/programs">Programas</NavLink></li>
+                    <li className='px-[2rem] pt-[1rem]'><NavLink onClick={hideNav} className="nav__link block text-3xl font-bold text-[#ffffff] tracking-[var(--ls-heading)]" to="/news">News</NavLink></li>
+                    <li className='px-[2rem] pt-[1rem]'><NavLink onClick={hideNav} className="nav__link block text-3xl font-bold text-[#ffffff] tracking-[var(--ls-heading)]" to="/contact">Contacto</NavLink></li>
                 </ul>
             </div>
         </div>

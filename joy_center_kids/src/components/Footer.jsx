@@ -4,12 +4,13 @@ import logoFooter from '../assets/logo-footer.png'
 import facebookIcon from '../assets/images/iconos/facebook.svg'
 import instagramIcon from '../assets/images/iconos/instagram.svg'
 import twitterIcon from '../assets/images/iconos/twitter.svg'
+import { Newsletter } from './Newsletter/Newsletter'
 
 export const Footer = () => {
   return (
     <>
     <footer>
-      <div className="centered">
+      <div className="centered side-padding">
         <div className="footer__container flex flex-columns-rows gap-4">
           <div className="footer__logo">
             <div>
@@ -37,6 +38,9 @@ export const Footer = () => {
               {/* <a href="http://"><img src={twitterIcon} alt="Twitter Icon" /></a> */}
             </div>
           </div>
+        </div>
+        <div className="newsletter">
+          <Newsletter />
         </div>
         <div className="footer__brand flex">
           <div>

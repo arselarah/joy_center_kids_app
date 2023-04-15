@@ -81,7 +81,7 @@ export const NavBar = () => {
             </div>
         </header>
         {/* <div ref={navRef} className={navHide ? "mobile-menu " : "mobile-menu display-menu-mobile"}> */}
-        <div ref={navRef} className={navHide ? "mobile-menu display-menu-mobile" : "mobile-menu "}>
+        <div className={navHide ? "mobile-menu display-menu-mobile" : "mobile-menu "}>
             <div className='nav-container flex justify-center content-center relative h-[100%] pt-[8rem]'>
                <ul className='relative w-[100%] flex flex-col menu-objects'>
                     <li className='px-[2rem] pt-[1rem]'><NavLink onClick={hideNav} className="nav__link block text-3xl font-bold text-[#ffffff] tracking-[var(--ls-heading)]" to="/">Inicio</NavLink></li>

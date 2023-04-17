@@ -2,10 +2,8 @@ import React, { useState } from 'react'
 import { motion as m } from 'framer-motion'
 import { useFormik } from 'formik'
 import * as Yup from 'yup';
-import axios from 'axios';
 
 export const Contact = () => {
-  const msgcontact = document.getElementById('msgcontact');
   //Formik Logics
   const formik = useFormik({
     initialValues: {
@@ -26,37 +24,16 @@ export const Contact = () => {
     }),
 
   //Submit Form
-    onSubmit: (values, {resetForm}) => {
-
-      const data = {
-        Name: formik.values.name, 
-        Phone: formik.values.phone,
-        Email: formik.values.email,
-        Message: formik.values.message,
-        Terms: formik.values.terms
-      }
-      console.log('DATA', data);
-       axios.post('https://sheet.best/api/sheets/07b93730-6529-4f0c-ab95-76c4790f057d', data).then((response) => {
-       console.log(data);
-       console.log(response);
-       
-       msgcontact.innerHTML = "Gracias por suscribirte. Pronto recibirás toda la información en tu email"
-       setTimeout(function(){
-        msgcontact.innerHTML = ""
-       }, 2000)
-       })
-
-      resetForm({values: ''});
-      console.log(values);
-      
-    }
     
 
+    // onSubmit: (values) => {
+    //   console.log(values);
+      
+    // },
   });
-
   
 
-  
+  //console.log(formik.errors);
 
   return (
     <>
@@ -80,7 +57,7 @@ export const Contact = () => {
     transition={{delay: .25, duration: .5, ease: 'linear' }}
     >
       <div className="centered side-padding">
-        <div className="section-box flex flex-columns-rows even-flex colored-cage green-bg no-padding no-gap overflow-hidden">
+        <div className="section-box flex flex-columns-rows even-flex colored-cage green-bg no-padding no-gap">
           <div className="form__content image-bg flex flex-columns space-between">
             <div className='padding-bottom-4'>
              <span>Email</span>
@@ -95,7 +72,7 @@ export const Contact = () => {
           </div>
           <div className="form__content">
             <form
-            onSubmit={formik.handleSubmit} 
+            onSubmit={formik.handleSubmit}
             >
               <div className='form__content flex flex-columns'>
                 <h3>Envíanos un mensaje</h3>
@@ -108,7 +85,7 @@ export const Contact = () => {
                     </label>
                     <input
                       type="text"
-                      name='name'
+                      name="name"
                       placeholder='Tu nombre'
                       value={formik.values.name}
                       onChange={formik.handleChange}
@@ -119,7 +96,7 @@ export const Contact = () => {
                     <label className={`${formik.touched.phone && formik.errors.phone ? "label-orange font-bold" : ""}`} htmlFor="phone">{formik.touched.phone && formik.errors.phone ? formik.errors.phone : "Teléfono"}</label>
                     <input
                       type="tel"
-                      name='phone'
+                      name="phone"
                       placeholder='Tu número de teléfono'
                       value={formik.values.phone}
                       onChange={formik.handleChange}
@@ -164,7 +141,6 @@ export const Contact = () => {
                     </div>
                   </div>
                   <button className='call-to-action solid orange' type='submit'>Enviar mensaje</button>
-                  <span id='msgcontact'></span>
               </div>
             </form>
           </div>

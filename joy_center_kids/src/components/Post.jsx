@@ -7,8 +7,9 @@ export const Post = ({post}) => {
   return (
     <>
     <div className="centered side-padding">
-        <Link className='back-icon relative' to={'/news'}>Regresar</Link>
+       
         <article className='max-w-4xl ml-[auto] mr-[auto]'>
+        <Link className='back-icon relative' to={'/news'}>Regresar</Link>
             <div className='mt-[4rem] overflow-hidden rounded-[2rem]'>
                 <img src={post.coverPhoto.url} />
             </div>

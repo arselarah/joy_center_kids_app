@@ -6,12 +6,14 @@ export const Search = () => {
     const [search, setSearch] = useState('');
 
 function handleSearch(e){
-    e.preventDefault();
-    console.log({search})
+   
+      e.preventDefault();
+    //console.log({search})
     setSearch("")
     let value = search.trim().replace(/\s+/g, '-').toLocaleLowerCase();
-    console.log({value})
+    //console.log({value})
     navigate(`/news/search/${value}`)
+    
 }
 
 

@@ -17,10 +17,10 @@ export const Categos = () => {
     <> 
     <div className="categories py-[2rem]">
       <div className="centered side-padding flex flex-wrap items-center justify-center ">
-      <h4 className='px-[2rem] py-[1rem]'>Categorías:</h4>
+      <h3 className='px-[2rem] py-[1rem]'>Buscar por categorías:</h3>
         <ul className='flex flex-wrap'>
             <li className='px-[1rem] py-[0.5rem]'>
-                <NavLink className='hover:text-[var(--color-button-one)]' to="/news">Todas</NavLink>
+                <NavLink className='hover:text-[var(--color-button-one)]' to="/news">Todas las categorías</NavLink>
             </li>
             {
               categories?.map(category => (

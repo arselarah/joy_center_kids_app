@@ -11,9 +11,11 @@ export const SearchResult = () => {
     
     useEffect(() => {
         graphcms.request(QUERY_SEARCH_POSTS, { slug })
-        .then(res => setPosts(res.posts))
-        // console.log(slug)
+        .then(res => setPosts(res.posts));
+        console.log()
     }, [slug])
+
+    
 
   return (
     <React.Fragment>

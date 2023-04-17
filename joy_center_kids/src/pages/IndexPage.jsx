@@ -81,7 +81,7 @@ export const IndexPage = () => {
         <div className="centered side-padding">
             <div className="map-item osos absolute xm:top-[30%] lg:top-[40%] left-[25%] z-[1]">
                 <div className="pop-up absolute z-[1] p-[2rem] right-[0%] top-[-8rem] rounded-tl-lg rounded-tr-lg rounded-br-lg rounded-bl-lg">
-                    <p className='pb-[2rem]'>Completa la misión</p>
+                    <p className=''>Completa la misión</p>
                     <button className='call-to-action solid bluish ms-[auto] me-[auto]'>Jugar</button>
                 </div>
             <img className='bouncing-object max-w-[80%] ms-[auto] me-[auto] z-[-1]' src={bears} alt="Osos" />
@@ -90,7 +90,7 @@ export const IndexPage = () => {
 
             <div className="map-item artistas absolute xm:top-[200%] md:top-[970%] lg:top-[140%] right-[30%] z-[2]">
                 <div className="pop-up absolute z-[1] p-[2rem] right-[0%] top-[-8rem] rounded-tl-lg rounded-tr-lg rounded-br-lg rounded-bl-lg">
-                    <p className='pb-[2rem]'>Completa la misión</p>
+                    <p className=''>Completa la misión</p>
                     <button className='call-to-action solid bluish ms-[auto] me-[auto]'>Jugar</button>
                 </div>
             <img className='bouncing-object max-w-[80%] ms-[auto] me-[auto]' src={artist} alt="Artistas" />
@@ -99,7 +99,7 @@ export const IndexPage = () => {
 
             <div className="map-item mayas absolute xm:top-[350%] sm:top-[1000%] md:top-[1400%] lg:top-[190%]">
                 <div className="pop-up absolute z-[1] p-[2rem] xm:right-[-100%] top-[-8rem] rounded-tl-lg rounded-tr-lg rounded-br-lg rounded-bl-lg ">
-                    <p className='pb-[2rem]'>Completa la misión</p>
+                    <p className=''>Completa la misión</p>
                     <button className='call-to-action solid bluish ms-[auto] me-[auto]'>Jugar</button>
                 </div>
             <img className='bouncing-object max-w-[80%] ms-[auto] me-[auto] z-[-1]' src={mayas} alt="Mayas" />
@@ -112,7 +112,7 @@ export const IndexPage = () => {
             
             <div className="map-item deportes absolute xm:top-[160%] md:top-[900%] lg:top-[170%] right-[0%] z-[3]">
                 <div className="pop-up absolute z-[1] p-[2rem] right-[0%] top-[-8rem] rounded-tl-lg rounded-tr-lg rounded-br-lg rounded-bl-lg">
-                    <p className='pb-[2rem]'>Completa la misión</p>
+                    <p className=''>Completa la misión</p>
                     <button className='call-to-action solid bluish ms-[auto] me-[auto]'>Jugar</button>
                 </div>
             <img className='bouncing-object max-w-[80%] ms-[auto] me-[auto]' src={sports} alt="Deportes" />
@@ -120,7 +120,7 @@ export const IndexPage = () => {
             
             <div className="map-item arqueologia absolute xm:top-[550%] md:top-[2000%] lg:top-[220%] right-[30%]">
                 <div className="pop-up absolute z-[1] p-[2rem] right-[0%] top-[-8rem] rounded-tl-lg rounded-tr-lg rounded-br-lg rounded-bl-lg">
-                    <p className='pb-[2rem]'>Completa la misión</p>
+                    <p className=''>Completa la misión</p>
                     <button className='call-to-action solid bluish ms-[auto] me-[auto]'>Jugar</button>
                 </div>
             <img className='bouncing-object max-w-[80%] ms-[auto] me-[auto]' src={fosil} alt="Fosil" />

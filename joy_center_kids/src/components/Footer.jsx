@@ -33,8 +33,8 @@ export const Footer = () => {
               <p>B. Amsterdam B3 Johan Huizingalaan 400 1066 JS Amsterdam The Netherlands Kvk: 69305315</p>
             </div>
             <div className="footer__social flex gap-2">
-              <a href="http://"><img src={facebookIcon} alt="Facebook Icon" /></a>
-              <a href="http://"><img src={instagramIcon} alt="Instagram Icon" /></a>
+              <a target='_blank' href="https://www.facebook.com/JOYcenterKids/"><img src={facebookIcon} alt="Facebook Icon" /></a>
+              <a target='_blank' href="https://www.instagram.com/joycenterkids/"><img src={instagramIcon} alt="Instagram Icon" /></a>
               {/* <a href="http://"><img src={twitterIcon} alt="Twitter Icon" /></a> */}
             </div>
           </div>

@@ -3,7 +3,6 @@ import { Link } from 'react-router-dom'
 import logoFooter from '../assets/logo-footer.png'
 import facebookIcon from '../assets/images/iconos/facebook.svg'
 import instagramIcon from '../assets/images/iconos/instagram.svg'
-import twitterIcon from '../assets/images/iconos/twitter.svg'
 import { Newsletter } from './Newsletter/Newsletter'
 
 export const Footer = () => {

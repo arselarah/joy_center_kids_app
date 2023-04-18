@@ -1,8 +1,7 @@
 import React from 'react'
 import { useRef, useState, useEffect } from 'react'
-import { Link, NavLink } from 'react-router-dom'
+import { NavLink } from 'react-router-dom'
 import logo from '../assets/logo.png'
-import { useReducedMotion } from 'framer-motion'
 
 
 
@@ -11,6 +10,7 @@ import { useReducedMotion } from 'framer-motion'
 export const NavBar = () => {
     const navRef = useRef();
     const iconRef = useRef();
+    const logoFilter = useRef();
     
     // const hideNavBar = () => {
     //     navRef.current.classList.remove("display-menu-mobile");
@@ -23,6 +23,7 @@ export const NavBar = () => {
     const hideNav = () => {
         setNavHide(prevValue  => !prevValue);
         iconRef.current.classList.toggle("close");
+        logoFilter.current.classList.toggle("filter");
             //console.log('Hola')
     };
 
@@ -38,26 +39,29 @@ export const NavBar = () => {
     //     });
     // });
     
-    // const [header, setNavBar] = useState(false);
+    const [header, setNavBar] = useState(false);
 
-    // const changeBg = () => {
-    //     if(window.scrollY >= 120) {
-    //         setNavBar(true);
-    //     } else {
-    //         setNavBar(false);
-    //     }
-    // }
+    const changeBg = () => {
+        if(window.scrollY >= 120) {
+            setNavBar(true);
+        } else {
+            setNavBar(false);
+        }
+    }
 
-    // window.addEventListener('scroll', changeBg);
+    window.addEventListener('scroll', changeBg);
 
     
   return (
     <>
+        {/* <header className="header"> */}
+        {/* <header className={header ? 'header scrolled' : 'header'}> */}
+        <div className={header ? 'base-header scrolled' : 'base-header'}></div>
         <header className="header">
             <div className='centered side-padding'> 
                     <nav className='desktop-main-nav'>
                         <div className='logo-container'>
-                            <a href="/" className="logo-link"><img src={logo} alt="JOY center KIDS Logo"/>center KIDS</a>
+                            <a ref={logoFilter} href="/" className="logo-link"><img src={logo} alt="JOY center KIDS Logo"/>center KIDS</a>
                         </div>
                         <div className='nav-container'>
                             <ul>
@@ -70,7 +74,7 @@ export const NavBar = () => {
                         <div className="button-container top xm:hidden md:block">
                              <NavLink className="contact call-to-action ghost blue" to="/contact">Contacto</NavLink>
                         </div>
-                        <div className="mobile-button-container">
+                        <div className="mobile-button-container select-none">
                             <button className='button-mobile-toggle' aria-controls='mobile-menu' aria-expanded="false" onClick={hideNav} ref={iconRef}>
                                 <span></span>
                                 <span></span>
@@ -82,7 +86,7 @@ export const NavBar = () => {
         </header>
         {/* <div ref={navRef} className={navHide ? "mobile-menu " : "mobile-menu display-menu-mobile"}> */}
         <div className={navHide ? "mobile-menu display-menu-mobile" : "mobile-menu "}>
-            <div className='nav-container flex justify-center content-center relative h-[100%] pt-[8rem]'>
+            <div className='nav-container flex flex-col gap-[2rem] justify-between content-center relative h-[100%] pt-[8rem] overflow-hidden'>
                <ul className='relative w-[100%] flex flex-col menu-objects'>
                     <li className='px-[2rem] pt-[1rem]'><NavLink onClick={hideNav} className="nav__link block text-3xl font-bold text-[#ffffff] tracking-[var(--ls-heading)]" to="/">Inicio</NavLink></li>
                     <li className='px-[2rem] pt-[1rem]'><NavLink onClick={hideNav} className="nav__link block text-3xl font-bold text-[#ffffff] tracking-[var(--ls-heading)]" to="/themes">Temas</NavLink ></li>
@@ -90,6 +94,10 @@ export const NavBar = () => {
                     <li className='px-[2rem] pt-[1rem]'><NavLink onClick={hideNav} className="nav__link block text-3xl font-bold text-[#ffffff] tracking-[var(--ls-heading)]" to="/news">News</NavLink></li>
                     <li className='px-[2rem] pt-[1rem]'><NavLink onClick={hideNav} className="nav__link block text-3xl font-bold text-[#ffffff] tracking-[var(--ls-heading)]" to="/contact">Contacto</NavLink></li>
                 </ul>
+                <div className='social-networks relative px-[2rem] pt-[2rem]'>
+                <a className='facebook mr-[2rem]' target='_blank' href="https://www.facebook.com/JOYcenterKids/"></a>
+                <a className='instagram ' target='_blank' href="https://www.instagram.com/joycenterkids/"></a>
+                </div>
             </div>
         </div>
     </>

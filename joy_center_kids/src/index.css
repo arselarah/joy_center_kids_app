@@ -80,13 +80,32 @@ p {
   top: 0;
   left: 0;
   width: 100%;
+  /* background-color: #ffffff; */
+  transition: all 0.1s ease-in-out;
+}
+
+.base-header{
+  position: fixed;
+  height: 86.75px;
+  padding: 0.5rem 0;
+  width: 100%;
+  top: 0;
+  left: 0;
+  z-index: 9;
+}
+
+.base-header.scrolled {
   background-color: #ffffff;
   transition: all 0.1s ease-in-out;
 }
 
-.header.scrolled {
-  background-color: #ffffff;
-  transition: all 0.1s ease-in-out;
+.logo-link {
+  transition: all 0.5s ease-in-out;
+}
+
+.logo-link.filter {
+  filter: brightness(0) invert(1);
+  transition: all 0.5s ease-in-out;
 }
 
 .centered {
@@ -150,13 +169,14 @@ nav.desktop-main-nav .logo-container > a {
   color: var(--color-regular);
   font-weight: var(--ff-weight-heading);
   align-items: center;
+  font-size: 13px;
 }
 
 nav.desktop-main-nav .logo-container a > img {
   vertical-align: bottom;
   width: 100%;
   transition: all 0.3s cubic-bezier(.43,.34,.28,.91);
-  max-width: 100px;
+  max-width: 75px;
 }
 
 .white-filter {
@@ -198,7 +218,7 @@ nav.desktop-main-nav .nav-container > ul li a {
 
 nav.desktop-main-nav .nav-container > ul li a.active,
 nav.desktop-main-nav .nav-container > ul li a:hover {
-  color: var(--color-bluish);
+  color: var(--color-button-one);
 }
 
 
@@ -208,7 +228,7 @@ nav.desktop-main-nav .nav-container > ul li a::before {
   bottom: 12px;
   width: 0;
   height: 4px;
-  background-color: var(--color-bluish);
+  background-color: var(--color-button-one);
   transition: all 0.3s cubic-bezier(.43,.34,.28,.91) .1s;
 }
 
@@ -222,7 +242,7 @@ nav.desktop-main-nav .button-container {
 }
 
 nav.desktop-main-nav .button-mobile-toggle {
-  background-color: var(--color-menu-icon);
+  background-color: #ffffff;
   border: none;
   cursor: pointer;
   width: 50px;
@@ -2119,7 +2139,7 @@ that they form a hexagon */
 }
 
 nav.desktop-main-nav .close.button-mobile-toggle {
-  background-color: var(--color-darkblue);
+  background-color: var(--color-yellow);
 }
 
 .back-icon {
@@ -2240,4 +2260,85 @@ nav.desktop-main-nav .close.button-mobile-toggle {
   100% {
     transform: rotate(15Deg);
   }
+}
+
+.social-networks::before {
+  content: 'SÍGUENOS EN:';
+  position: absolute;
+  top: 0.3rem;
+  left: 2rem;
+  font-weight: 700;
+  color: var(--color-bluish);
+  opacity: 0.5;
+  letter-spacing: var(--ls-heading);
+}
+
+.social-networks a {
+  display: inline-block;
+  width:40px;
+  height: 40px;
+  filter: brightness(0) invert(1);
+}
+
+.social-networks a:hover {
+  filter: invert(0);
+}
+
+.social-networks .facebook::before {
+  content: ' ';
+  position: absolute;
+  background-color: #ffffff;
+  width: 31px;
+  height: 31px;
+  filter: invert(0);
+  top: 24px;
+  left: 38px;
+  pointer-events: none;
+  border-radius: 50%;
+  top: 5px;
+  left: 5px;
+  z-index: -1;
+  opacity: 0;
+}
+
+.social-networks a.facebook:hover::before {
+  opacity: 1;
+}
+
+.social-networks .facebook::after {
+  content: ' ';
+  position: absolute;
+  background-image: url(./assets/images/iconos/svg/facebook.svg);
+  background-position: center center;
+  background-repeat: no-repeat;
+  background-size: 32px;
+  width: 33px;
+  height: 33px;
+  top: 4px;
+  left: 4px;
+  pointer-events: none;
+  border-radius: 50%;
+  z-index: -1;
+  opacity: 1;
+}
+
+.social-networks a.facebook:hover::after {
+  opacity: 1;
+}
+
+.social-networks .facebook,
+.social-networks .instagram {
+  background-position: center center;
+  background-repeat: no-repeat;
+  background-size: 32px;
+  position: relative;
+}
+
+.social-networks .facebook {
+  /* background-image: url(./assets/images/iconos/svg/facebook.svg);
+  z-index: 1; */
+}
+
+.social-networks .instagram {
+  background-image: url(./assets/images/iconos/instagram.svg);
 }

@@ -18,7 +18,7 @@ export const Themes = () => {
         <div className="centered side-padding">
             <div className="hero__text-container">
               <h1 className='text-[var(--color-orange)]'>Temas</h1>
-              <h2>Hablemos de lo que nos importa en JOY center KIDS</h2>
+              <h2>¿Cómo funcionan nuestras clases?</h2>
               
             </div>
         </div>

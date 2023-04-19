@@ -131,7 +131,7 @@ export const IndexPage = () => {
             <div className="coverpage__container flex flex-columns-rows left-flex-xs gap-4 zindex-1 position-rel padding-top-2 justify-end">
                 <div className="coverpage__text-container even-flex xm:hidden lg:block">
                     <h3>¿Qué es <span className='joy'><i>J</i><i>O</i><i>Y</i></span>?</h3>
-                    <p>En JOY nos encanta ver a los niños aprender, para lograrlo  la motivación es fundamental, nuestra meta es obtener motivación 3.0. Nuestro sistema de aprendizaje enfocado a la Gamificación es mediante técnicas de juegos, que otorgan la motivación para que los niños incrementen sus capacidades intelectuales, mejoren sus resultados académicos, generen autodeterminación y su inteligencia emocional esté presente en su desarrollo.</p>
+                    <p>Es un centro de aprendizaje y motivación 3.0 donde nos encanta ver a los niños aprender. Nuestro sistema de trabajo enfocado a la Gamificación emplea técnicas de juegos, que otorgan la motivación necesaria para que los niños incrementen sus capacidades intelectuales, desarrollen autodeterminación, inteligencia emocional, pensamiento lógico y creativo. Todo de una manera divertida y muy emocionante.</p>
                     <Link to={'/themes'} className="call-to-action solid orange">Aprende más</Link>
                 </div>
                 <div className="coverpage__image-container even-flex">
@@ -152,7 +152,7 @@ export const IndexPage = () => {
 
                 <div className="coverpage__text-container pb-[8rem] pt-[2rem] md:hidden">
                 <h3>¿Qué es <span className='joy'><i>J</i><i>O</i><i>Y</i></span>?</h3>
-                    <p>En JOY nos encanta ver a los niños aprender, para lograrlo  la motivación es fundamental, nuestra meta es obtener motivación 3.0. Nuestro sistema de aprendizaje enfocado a la Gamificación es mediante técnicas de juegos, que otorgan la motivación para que los niños incrementen sus capacidades intelectuales, mejoren sus resultados académicos, generen autodeterminación y su inteligencia emocional esté presente en su desarrollo.</p>
+                    <p>Es un centro de aprendizaje y motivación 3.0 donde nos encanta ver a los niños aprender. Nuestro sistema de trabajo enfocado a la Gamificación emplea técnicas de juegos, que otorgan la motivación necesaria para que los niños incrementen sus capacidades intelectuales, desarrollen autodeterminación, inteligencia emocional, pensamiento lógico y creativo. Todo de una manera divertida y muy emocionante.</p>
                     <Link to={'/themes'} className="call-to-action solid orange">Aprende más</Link>
                 </div>
 
@@ -188,7 +188,7 @@ export const IndexPage = () => {
                      <div className="card">
                         <div className='card__content relative'>
                             <div className='cube front yellow colored-cage absolute top-0'>
-                                <h4>Edades de 7 a 10</h4>
+                                <h4>Edades de 11 a 14</h4>
                                 <p>Children anywhere from birth to 1 year old.</p>
                             </div>
                             <div className='cube back yellow colored-cage align-middle grid absolute top-0'>
@@ -229,7 +229,7 @@ export const IndexPage = () => {
                         </div>
                         <div className="activities__text-container">
                             <h4>Motivación para el aprendizaje</h4>
-                            <p>We develop a love for learning from an early age. This is an important process that we perform using games.</p>
+                            {/* <p>We develop a love for learning from an early age. This is an important process that we perform using games.</p> */}
                         </div>
                     </div>
                     <div className='flex even-flex padding-bottom-2'>
@@ -251,7 +251,7 @@ export const IndexPage = () => {
                         </div>
                         <div className="activities__text-container">
                             <h4>Realización de objetivos</h4>
-                            <p>We develop a love for learning from an early age. This is an important process that we perform using games.</p>
+                            {/* <p>We develop a love for learning from an early age. This is an important process that we perform using games.</p> */}
                         </div>
                     </div>
                     <div className='flex even-flex padding-bottom-2'>
@@ -273,7 +273,7 @@ export const IndexPage = () => {
                         </div>
                         <div className="activities__text-container">
                             <h4>Desarrollo de habilidades</h4>
-                            <p>We develop a love for learning from an early age. This is an important process that we perform using games.</p>
+                            {/* <p>We develop a love for learning from an early age. This is an important process that we perform using games.</p> */}
                         </div>
                     </div>
                     <div className='flex even-flex padding-bottom-2'>
@@ -295,7 +295,7 @@ export const IndexPage = () => {
                         </div>
                         <div className="activities__text-container">
                             <h4>Incremento de conocimiento</h4>
-                            <p>We develop a love for learning from an early age. This is an important process that we perform using games.</p>
+                            {/* <p>We develop a love for learning from an early age. This is an important process that we perform using games.</p> */}
                         </div>
                     </div>
                     <div className='flex even-flex padding-bottom-2'>
@@ -317,7 +317,7 @@ export const IndexPage = () => {
                         </div>
                         <div className="activities__text-container">
                             <h4>Capacidad de comunicación</h4>
-                            <p>We develop a love for learning from an early age. This is an important process that we perform using games.</p>
+                            {/* <p>We develop a love for learning from an early age. This is an important process that we perform using games.</p> */}
                         </div>
                     </div>
                     <div className='flex even-flex padding-bottom-2'>
@@ -339,7 +339,7 @@ export const IndexPage = () => {
                         </div>
                         <div className="activities__text-container">
                             <h4>Manejo de emociones</h4>
-                            <p>We develop a love for learning from an early age. This is an important process that we perform using games.</p>
+                            {/* <p>We develop a love for learning from an early age. This is an important process that we perform using games.</p> */}
                         </div>
                     </div>
 

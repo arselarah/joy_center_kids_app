@@ -57,7 +57,7 @@ export const Programs = () => {
                 <div className="image">
                   <img src={image_3} />
                 </div>
-              <h3 className='padding-top-2'>Edades de 11 a 13</h3>
+              <h3 className='padding-top-2'>Edades de 11 a 14</h3>
                 <p>Donec magna odio, dictum nec commodo in, lacinia non massa. Nam bibendum ante finibus nunc ultrices ultrices. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia curae; Integer nulla enim, ultricies et sapien quis, blandit vestibulum dolor.</p>
                 <a className="call-to-action solid orange">Aprende jugando</a>
             </div>

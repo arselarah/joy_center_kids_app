@@ -13,7 +13,8 @@ export const Newsletter = () => {
      const data = {
       Email: email
      }
-     axios.post('https://sheet.best/api/sheets/dbd8632e-c20c-43da-a224-237f376cee18',data).then((response)=>{
+     console.log(data)
+     axios.post('https://sheet.best/api/sheets/1dbe9b30-adb2-4ba8-bc5d-bc73a63f6962',data).then((response)=>{
       console.log(data);
        console.log(response);
      //console.log(response);

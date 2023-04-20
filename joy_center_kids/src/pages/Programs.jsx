@@ -37,7 +37,7 @@ export const Programs = () => {
                   <img src={image_1} />
                 </div>
               <h3 className='padding-top-2'>Edades de 3 a 6</h3>
-                <p>Donec magna odio, dictum nec commodo in, lacinia non massa. Nam bibendum ante finibus nunc ultrices ultrices. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia curae; Integer nulla enim, ultricies et sapien quis, blandit vestibulum dolor.</p>
+                <p>Potencializa la manera en que generan su propia opinión del mundo,  ampliando su desarrollo sensorial, motor y cognitivo.</p>
                 <a className="call-to-action solid orange">Aprende jugando</a>
             </div>
           {/* </div>
@@ -47,7 +47,7 @@ export const Programs = () => {
                 <img src={image_2} />
                </div>
                <h3 className='padding-top-2'>Edades de 7 a 10</h3>
-              <p>Donec magna odio, dictum nec commodo in, lacinia non massa. Nam bibendum ante finibus nunc ultrices ultrices. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia curae; Integer nulla enim, ultricies et sapien quis, blandit vestibulum dolor.</p>
+              <p>Ampliar su campo de asertividad con un plano afectivo - emocional  contribuyendo al éxito en su desarrollo.</p>
               <a className="call-to-action solid orange">Aprende jugando</a>
             </div>
           {/* </div>
@@ -58,7 +58,7 @@ export const Programs = () => {
                   <img src={image_3} />
                 </div>
               <h3 className='padding-top-2'>Edades de 11 a 14</h3>
-                <p>Donec magna odio, dictum nec commodo in, lacinia non massa. Nam bibendum ante finibus nunc ultrices ultrices. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia curae; Integer nulla enim, ultricies et sapien quis, blandit vestibulum dolor.</p>
+                <p>El  autocontrol y el  liderazgo estarán presentes como un factor resolutivo durante toda su vida.</p>
                 <a className="call-to-action solid orange">Aprende jugando</a>
             </div>
           {/* </div>

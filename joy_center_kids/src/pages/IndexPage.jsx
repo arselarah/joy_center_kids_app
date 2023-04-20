@@ -166,10 +166,10 @@ export const IndexPage = () => {
                         <div className='card__content relative'>
                             <div className='cube front orange colored-cage absolute top-0'>
                                 <h4>Edades de 3 a 6</h4>
-                                <p>Children anywhere from birth to 1 year old.</p>
+                                <p>Potencializa la manera en que generan su propia opinión del mundo,  ampliando su desarrollo sensorial, motor y cognitivo.</p>
                             </div>
                             <div className='cube back orange colored-cage align-middle grid absolute top-0'>
-                                <button className='call-to-action solid blue my-[auto] mx-[auto]'>Aprende más</button>
+                                <Link to="/programs" className='call-to-action solid blue my-[auto] mx-[auto]'>Aprende más</Link>
                             </div>
                         </div>
                      </div>
@@ -177,10 +177,10 @@ export const IndexPage = () => {
                         <div className='card__content relative'>
                             <div className='cube front blue colored-cage absolute top-0'>
                                 <h4>Edades de 7 a 10</h4>
-                                <p>Children anywhere from birth to 1 year old.</p>
+                                <p>Ampliar su campo de asertividad con un plano afectivo - emocional  contribuyendo al éxito en su desarrollo.</p>
                             </div>
                             <div className='cube back blue colored-cage align-middle grid absolute top-0'>
-                                <button className='call-to-action solid orange my-[auto] mx-[auto]'>Aprende más</button>
+                                <Link to="/programs" className='call-to-action solid orange my-[auto] mx-[auto]'>Aprende más</Link>
                             </div>
                         </div>
                      </div>
@@ -189,10 +189,10 @@ export const IndexPage = () => {
                         <div className='card__content relative'>
                             <div className='cube front yellow colored-cage absolute top-0'>
                                 <h4>Edades de 11 a 14</h4>
-                                <p>Children anywhere from birth to 1 year old.</p>
+                                <p>El  autocontrol y el  liderazgo estarán presentes como un factor resolutivo durante toda su vida.</p>
                             </div>
                             <div className='cube back yellow colored-cage align-middle grid absolute top-0'>
-                                <button className='call-to-action solid blue my-[auto] mx-[auto]'>Aprende más</button>
+                                <Link to="/programs" className='call-to-action solid blue my-[auto] mx-[auto]'>Aprende más</Link>
                             </div>
                         </div>
                      </div>

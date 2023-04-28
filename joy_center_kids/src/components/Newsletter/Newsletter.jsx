@@ -37,7 +37,7 @@ export const Newsletter = () => {
             <div className='flex xm:flex-col md:flex-row py-[4rem] justify-center items-center gap-[4rem]'>
                 <div className='flex-1'>
                     <h3 className='text-center text-3xl'>Suscríbete</h3>
-                    <p className='text-center py-[1rem] px-[1rem]'>No pierdas oportunidad de obtener la valiosa información que tenemos para tí y para tus niños</p>
+                    <p className='text-center py-[1rem] px-[1rem] text-[var(--color-regular)]'>No pierdas oportunidad de obtener la valiosa información que tenemos para tí y para tus niños</p>
                 </div>
                 <div className='flex-1 flex flex-row relative'>
                     <input id="email" name="email" type="email" className='block xm:basis-[50%] md:basis-[70%] rounded-l-[0.5rem] py-[1rem] px-[2rem] xm:w-[50%] md:w-[90%]' placeholder='tuemail@email.com' required onChange={(e)=>setEmail(e.target.value)} value={email} />

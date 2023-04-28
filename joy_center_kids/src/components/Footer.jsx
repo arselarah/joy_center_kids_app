@@ -29,7 +29,8 @@ export const Footer = () => {
           <div className="footer__location">
             <div>
               <h5>Dirección</h5>
-              <p>B. Amsterdam B3 Johan Huizingalaan 400 1066 JS Amsterdam The Netherlands Kvk: 69305315</p>
+              <p className='text-[var(--color-regular)]'>Distrito Viñedos. Torreón, Coahuila. México</p>
+              <p className='text-[var(--color-regular)]'>Teléfono: 871 234 8792</p>
             </div>
             <div className="footer__social flex gap-2">
               <a target='_blank' href="https://www.facebook.com/JOYcenterKids/"><img src={facebookIcon} alt="Facebook Icon" /></a>
@@ -46,7 +47,7 @@ export const Footer = () => {
             <a href="http://">© 2023 JOY center KIDS</a>
           </div>
           <div>
-            <a href="http://">Built with love by Ingetrol Marketing</a>
+            <a href="http://">Built with love by Echoes Marketing</a>
           </div>
           <div className='flex gap-2'>
             <a href="http://">Term of use</a>

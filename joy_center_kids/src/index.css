@@ -387,7 +387,7 @@ nav.desktop-main-nav .button-mobile-toggle {
   left: 50%;
   width: 150%;
   height: 100%;
-  background-image: url(./assets/images/world-map.svg);
+  background-image: url(./assets/images/world-map.png);
   background-position: center center;
   background-repeat: no-repeat;
   background-size: contain;
@@ -395,6 +395,10 @@ nav.desktop-main-nav .button-mobile-toggle {
   border-radius: 50%;
   transform: translateX(-50%);
   background-color: var(--color-button-one);
+}
+
+svg {
+  filter: url(#shadow);
 }
 
 .coverpage__text-container h3 {
@@ -2117,6 +2121,7 @@ that they form a hexagon */
   width: 80%;
   max-width: 100px;
   user-select: none;
+  filter: drop-shadow(5px 5px 8px rgba(19, 16, 173, 0.5));
 }
 
 .map-item img {

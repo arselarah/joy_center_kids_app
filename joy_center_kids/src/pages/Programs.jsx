@@ -36,7 +36,7 @@ export const Programs = () => {
                 <div className="image">
                   <img src={image_1} />
                 </div>
-              <h3 className='padding-top-2'>Edades de 3 a 6</h3>
+              <h3 className='padding-top-2'>Edades de 3 a 5</h3>
                 <p>Potencializa la manera en que generan su propia opinión del mundo,  ampliando su desarrollo sensorial, motor y cognitivo.</p>
                 <a className="call-to-action solid orange">Aprende jugando</a>
             </div>
@@ -46,7 +46,7 @@ export const Programs = () => {
               <div className="image">
                 <img src={image_2} />
                </div>
-               <h3 className='padding-top-2'>Edades de 7 a 10</h3>
+               <h3 className='padding-top-2'>Edades de 6 a 9</h3>
               <p>Ampliar su campo de asertividad con un plano afectivo - emocional  contribuyendo al éxito en su desarrollo.</p>
               <a className="call-to-action solid orange">Aprende jugando</a>
             </div>
@@ -57,7 +57,7 @@ export const Programs = () => {
                 <div className="image">
                   <img src={image_3} />
                 </div>
-              <h3 className='padding-top-2'>Edades de 11 a 14</h3>
+              <h3 className='padding-top-2'>Edades de 10 a 12</h3>
                 <p>El  autocontrol y el  liderazgo estarán presentes como un factor resolutivo durante toda su vida.</p>
                 <a className="call-to-action solid orange">Aprende jugando</a>
             </div>

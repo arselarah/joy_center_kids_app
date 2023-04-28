@@ -2,13 +2,14 @@ import React from 'react'
 import { motion as m } from 'framer-motion'
 import mayas from '../assets/images/mayas.png'
 import fosil from '../assets/images/fosil.png'
-import arqueologo from '../assets/images/arqueologo.png'
 import bears from '../assets/images/osos.png'
 import artist from '../assets/images/artist.png'
 import sports from '../assets/images/deportes.png'
+import observatorio from '../assets/images/observatorio.png'
+import submarino from '../assets/images/submarino.png'
+import expedicion from '../assets/images/expedicion.png'
 import { Slider } from '../components/Slider'
 import { Rocket } from '../components/Rocket'
-import { useState } from 'react'
 import { Link, NavLink } from 'react-router-dom'
 
 
@@ -82,7 +83,7 @@ export const IndexPage = () => {
             <div className="map-item osos absolute xm:top-[30%] lg:top-[40%] left-[25%] z-[1]">
                 <div className="pop-up absolute z-[1] p-[2rem] right-[0%] top-[-8rem] rounded-tl-lg rounded-tr-lg rounded-br-lg rounded-bl-lg">
                     <p className=''>Completa la misión</p>
-                    <button className='call-to-action solid bluish ms-[auto] me-[auto]'>Jugar</button>
+                    <Link to="/programs" className='call-to-action solid bluish ms-[auto] me-[auto]'>Jugar</Link>
                 </div>
             <img className='bouncing-object max-w-[80%] ms-[auto] me-[auto] z-[-1]' src={bears} alt="Osos" />
             </div>
@@ -91,7 +92,7 @@ export const IndexPage = () => {
             <div className="map-item artistas absolute xm:top-[200%] md:top-[970%] lg:top-[140%] right-[30%] z-[2]">
                 <div className="pop-up absolute z-[1] p-[2rem] right-[0%] top-[-8rem] rounded-tl-lg rounded-tr-lg rounded-br-lg rounded-bl-lg">
                     <p className=''>Completa la misión</p>
-                    <button className='call-to-action solid bluish ms-[auto] me-[auto]'>Jugar</button>
+                    <Link to="/programs" className='call-to-action solid bluish ms-[auto] me-[auto]'>Jugar</Link>
                 </div>
             <img className='bouncing-object max-w-[80%] ms-[auto] me-[auto]' src={artist} alt="Artistas" />
             </div>
@@ -100,20 +101,16 @@ export const IndexPage = () => {
             <div className="map-item mayas absolute xm:top-[350%] sm:top-[1000%] md:top-[1400%] lg:top-[190%]">
                 <div className="pop-up absolute z-[1] p-[2rem] xm:right-[-100%] top-[-8rem] rounded-tl-lg rounded-tr-lg rounded-br-lg rounded-bl-lg ">
                     <p className=''>Completa la misión</p>
-                    <button className='call-to-action solid bluish ms-[auto] me-[auto]'>Jugar</button>
+                    <Link to="/programs" className='call-to-action solid bluish ms-[auto] me-[auto]'>Jugar</Link>
                 </div>
             <img className='bouncing-object max-w-[80%] ms-[auto] me-[auto] z-[-1]' src={mayas} alt="Mayas" />
             </div>
 
             
-            
-            
-
-            
-            <div className="map-item deportes absolute xm:top-[160%] md:top-[900%] lg:top-[170%] right-[0%] z-[3]">
+            <div className="map-item deportes absolute xm:top-[260%] md:top-[700%] lg:top-[70%] right-[0%] z-[3]">
                 <div className="pop-up absolute z-[1] p-[2rem] right-[0%] top-[-8rem] rounded-tl-lg rounded-tr-lg rounded-br-lg rounded-bl-lg">
                     <p className=''>Completa la misión</p>
-                    <button className='call-to-action solid bluish ms-[auto] me-[auto]'>Jugar</button>
+                    <Link to="/programs" className='call-to-action solid bluish ms-[auto] me-[auto]'>Jugar</Link>
                 </div>
             <img className='bouncing-object max-w-[80%] ms-[auto] me-[auto]' src={sports} alt="Deportes" />
             </div>
@@ -121,9 +118,33 @@ export const IndexPage = () => {
             <div className="map-item arqueologia absolute xm:top-[550%] md:top-[2000%] lg:top-[220%] right-[30%]">
                 <div className="pop-up absolute z-[1] p-[2rem] right-[0%] top-[-8rem] rounded-tl-lg rounded-tr-lg rounded-br-lg rounded-bl-lg">
                     <p className=''>Completa la misión</p>
-                    <button className='call-to-action solid bluish ms-[auto] me-[auto]'>Jugar</button>
+                    <Link to="/programs" className='call-to-action solid bluish ms-[auto] me-[auto]'>Jugar</Link>
                 </div>
             <img className='bouncing-object max-w-[80%] ms-[auto] me-[auto]' src={fosil} alt="Fosil" />
+            </div>
+
+            <div className="map-item observatorio absolute xm:top-[800%] md:top-[1300%] lg:top-[130%] right-[0%] z-[3]">
+                <div className="pop-up absolute z-[1] p-[2rem] right-[0%] top-[-8rem] rounded-tl-lg rounded-tr-lg rounded-br-lg rounded-bl-lg">
+                    <p className=''>Completa la misión</p>
+                    <Link to="/programs" className='call-to-action solid bluish ms-[auto] me-[auto]'>Jugar</Link>
+                </div>
+            <img className='bouncing-object max-w-[80%] ms-[auto] me-[auto]' src={observatorio} alt="Observatorio" />
+            </div>
+
+            <div className="map-item submarino absolute xm:top-[850%] sm:top-[1500%] md:top-[2400%] lg:top-[250%] left-[30%]">
+                <div className="pop-up absolute z-[1] p-[2rem] xm:right-[-100%] top-[-8rem] rounded-tl-lg rounded-tr-lg rounded-br-lg rounded-bl-lg ">
+                    <p className=''>Completa la misión</p>
+                    <Link to="/programs" className='call-to-action solid bluish ms-[auto] me-[auto]'>Jugar</Link>
+                </div>
+            <img className='bouncing-object max-w-[80%] ms-[auto] me-[auto] z-[-1]' src={submarino} alt="Submarino" />
+            </div>
+
+            <div className="map-item expedicion absolute xm:top-[100%] sm:top-[300%] lg:top-[100%] left-[5%]">
+                <div className="pop-up absolute z-[1] p-[2rem] xm:right-[-100%] top-[-8rem] rounded-tl-lg rounded-tr-lg rounded-br-lg rounded-bl-lg ">
+                    <p className=''>Completa la misión</p>
+                    <Link to="/programs" className='call-to-action solid bluish ms-[auto] me-[auto]'>Jugar</Link>
+                </div>
+            <img className='bouncing-object max-w-[80%] ms-[auto] me-[auto] z-[-1]' src={expedicion} alt="Expedicion" />
             </div>
        
             
@@ -165,7 +186,7 @@ export const IndexPage = () => {
                     <div className="card">
                         <div className='card__content relative'>
                             <div className='cube front orange colored-cage absolute top-0'>
-                                <h4>Edades de 3 a 6</h4>
+                                <h4>Edades de 3 a 5</h4>
                                 <p>Potencializa la manera en que generan su propia opinión del mundo,  ampliando su desarrollo sensorial, motor y cognitivo.</p>
                             </div>
                             <div className='cube back orange colored-cage align-middle grid absolute top-0'>
@@ -176,7 +197,7 @@ export const IndexPage = () => {
                      <div className="card">
                         <div className='card__content relative'>
                             <div className='cube front blue colored-cage absolute top-0'>
-                                <h4>Edades de 7 a 10</h4>
+                                <h4>Edades de 6 a 9</h4>
                                 <p>Ampliar su campo de asertividad con un plano afectivo - emocional  contribuyendo al éxito en su desarrollo.</p>
                             </div>
                             <div className='cube back blue colored-cage align-middle grid absolute top-0'>
@@ -188,7 +209,7 @@ export const IndexPage = () => {
                      <div className="card">
                         <div className='card__content relative'>
                             <div className='cube front yellow colored-cage absolute top-0'>
-                                <h4>Edades de 11 a 14</h4>
+                                <h4>Edades de 10 a 12</h4>
                                 <p>El  autocontrol y el  liderazgo estarán presentes como un factor resolutivo durante toda su vida.</p>
                             </div>
                             <div className='cube back yellow colored-cage align-middle grid absolute top-0'>

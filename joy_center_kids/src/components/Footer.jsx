@@ -47,11 +47,11 @@ export const Footer = () => {
             <a href="http://">© 2023 JOY center KIDS</a>
           </div>
           <div>
-            <a href="http://">Built with love by Echoes Marketing</a>
+            <a href="http://">Diseñado por Echoes Marketing</a>
           </div>
           <div className='flex gap-2'>
-            <a href="http://">Term of use</a>
-            <a href="http://">Privacy Policy</a>
+            <a href="http://">Terminos y condiciones</a>
+            <a href="http://">Política de Privacidad</a>
           </div>
         </div>
       </div>

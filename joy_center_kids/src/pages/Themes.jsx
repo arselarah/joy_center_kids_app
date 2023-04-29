@@ -35,7 +35,7 @@ export const Themes = () => {
           <div className="coverpage__text-container ">
              <h3 className='xl-word'>Autodeterminación</h3>
              <p>Favorecer la autodeterminación en nuestros niños es desarrollar, extender y  ejercitar las propias capacidades a explorar y aprender. Logrando un bienestar en el transcurso de vida.</p>
-              <a className="call-to-action solid orange">Aprende más</a>
+              <Link to="/programs" className="call-to-action solid orange">Aprende más</Link>
           </div>
             <div className="coverpage__image-container">
               <div className="image grow-image">
@@ -53,7 +53,7 @@ export const Themes = () => {
             <div className="coverpage__text-container">
              <h3>Matemáticas - Maestría</h3>
               <p>Las matemáticas son fundamentales para el desarrollo intelectual de los niños, les ayuda a ser lógicos, a razonar ordenadamente y a tener una mente preparada para el pensamiento, la crítica y la abstracción.</p>
-              <a className="call-to-action solid orange">Aprende más</a>
+              <Link to="/programs" className="call-to-action solid orange">Aprende más</Link>
             </div>
           </div>
         </div>
@@ -69,7 +69,7 @@ export const Themes = () => {
           <div className="coverpage__text-container">
              <h3>Desarrollo de competencias</h3>
              <p>Dejar que descubran y  hagan cosas por sí mismos incrementa las capacidades generales que potencian el conocimiento. Mantener presente la búsqueda  de crecimiento en las habilidades SOFT - KILLS es clave para ejercer un liderazgo en el transcurso de la vida.</p>
-              <a className="call-to-action solid orange">Aprende más</a>
+              <Link to="/programs" className="call-to-action solid orange">Aprende más</Link>
           </div>
             <div className="coverpage__image-container">
               <div className="image grow-image">
@@ -87,7 +87,7 @@ export const Themes = () => {
             <div className="coverpage__text-container">
              <h3>Resolución de retos</h3>
               <p>Los retos son un motor muy importante para el aprendizaje de los niños, que los incita a “moverse” para conseguir una meta con significado para ellos y los estimula para conseguir sus objetivos. Para llegar a estos objetivos es fundamental la aparición de la motivación, que constituye, sin duda alguna, la clave del aprendizaje. La Gamificacion presente en juego y motivación.</p>
-              <a className="call-to-action solid orange">Aprende más</a>
+              <Link to="/programs" className="call-to-action solid orange">Aprende más</Link>
             </div>
           </div>
         </div>
@@ -102,7 +102,7 @@ export const Themes = () => {
           <div className="coverpage__text-container">
              <h3>Inteligencia emocional</h3>
              <p>Capacidad de ser inteligente con respecto a los sentimientos, los propios y los de otras personas.  Al estar en constante aprendizaje, un niño se enfrenta a retos todo el tiempo; a nivel escolar y personal, la inteligencia emocional ayudará al niño a que enfrente dichos retos de manera positiva y con un gran manejo de la frustración. La inteligencia emocional favorece el conocimiento de las emociones, ayudando a expresarlas de manera efectiva y así, encontrar soluciones.</p>
-              <a className="call-to-action solid blue">Aprende más</a>
+              <Link to="/programs" className="call-to-action solid blue">Aprende más</Link>
           </div>
             <div className="coverpage__image-container">
               <div className="image grow-image">

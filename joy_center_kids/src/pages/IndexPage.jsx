@@ -370,7 +370,7 @@ export const IndexPage = () => {
                 <div className="coverpage__text-container">
                     <h3>Vive la experiencia <span className='joy'><i>J</i><i>O</i><i>Y</i></span></h3>
                     <p>Donde compartiremos los valores que permiten en familia el desarrollo constante en los niños. De una manera divertida y estimulante obtendrán la seguridad necesaria en cada paso que den.</p>
-                    <Link to={'/programs'} className="call-to-action solid blue">Aprende más</Link>
+                    <Link to={'/themes'} className="call-to-action solid blue">Aprende más</Link>
                 </div>
                 <div className="coverpage__image-container">
                     <div className="clipped image rounded-[2rem]">

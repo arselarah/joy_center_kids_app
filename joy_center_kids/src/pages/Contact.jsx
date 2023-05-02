@@ -86,7 +86,7 @@ export const Contact = () => {
              <span>Email</span>
              <a>hola@joycenterkids.com</a>
              <span>Teléfono</span>
-             <a>871 256 8923</a>
+             <a>871 234 8792</a>
             </div>
             <div>
               <p className='xs-text'>By submitting this form, I acknowledge receipt of the Privacy Policy.</p>

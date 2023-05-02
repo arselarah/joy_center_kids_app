@@ -19,8 +19,8 @@
   --color-regular: #282828;
   --color-regular-text: #555555;
   --color-button-one: #3385ff;
-  --color-darkblue: hsl(226, 46%, 46%);
-  --color-bluish: hsl(182, 55%, 58%);
+  --color-darkblue: #3f59ab;
+  --color-bluish: #59cbcf;
   --color-green: #17a3b0;
   --color-magenta: #DE2C83;
   /* --color-footer: hsl(48, 45%, 86%); */
@@ -31,8 +31,8 @@
   --color-menu-icon: hsl(48, 45%, 86%);
   /* --color-orange: hsl(28, 98%, 48%); */
   --color-orange: #df5038;
-  --color-yellow: hsl(39, 87%, 60%);
-  --color-red: hsl(0, 88%, 53%);
+  --color-yellow: #f2b440;
+  --color-red: #f11e1e;
   --color-light: hsl(51, 20%, 93%);
 
   --ls-body: .5px;
@@ -49,7 +49,7 @@ body {
   font-family: var(--ff-body-text);
   font-size: 16px;
   background: rgb(255,255,255);
-  background: linear-gradient(0deg, rgba(255,255,255,1) 0%, rgba(245,249,251,1) 56%, rgba(201,219,233,1) 100%);
+  background: linear-gradient(0deg, rgba(255,255,255,1) 0%, rgba(245,249,251,1) 56%, #c9dbe9 100%);
 }
 
 h1, h2, h3, h4, h5, h6 {

@@ -116,7 +116,7 @@ export const Themes = () => {
     </section>
     <section className="section-page no-padding-bottom">
       <div className="centered side-padding">
-        <div className="coverpage__text-container center-text large">
+        <div className="coverpage__text-container center-text large xl-vertical-padding">
           <h4>JOY center KIDS</h4>
           <h3>¿Cómo formar niños competentes a través de la gamificación?</h3>
           <p>El juego es algo fundamental en las primeras etapas de la vida. Trasladando la mecánica de los juegos al ámbito educativo, los niños absorben de una mejor manera los conocimientos y habilidades. Se recurre así a la utilización de juegos como una forma de motivarlos en su proceso de aprendizaje, haciéndolo más divertido. Eso es la gamificación, técnica de aprendizaje en la que se usan las dinámicas propias del juego en entornos que no tienen por qué ser lúdicos, logrando así una mayor conexión con los niños y, como consecuencia, mejores resultados en su desarrollo.</p>

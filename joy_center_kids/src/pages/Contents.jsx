@@ -6,6 +6,7 @@ import { Themes } from '../pages/Themes'
 import { Programs } from '../pages/Programs'
 import { Contact } from '../pages/Contact'
 import { News } from './News'
+import { MiniGameOne } from '../components/MiniGameOne'
 
 // const routes = [
 //     {path: "/", name: "Inicio", component: IndexPage},
@@ -26,6 +27,7 @@ export const Contents = () => {
         <Route path={"/programs"} element={<Programs />}/>
         <Route path={"/contact"} element={<Contact />}/>
         <Route path={"/news/*"} element={<News />} />
+        <Route path={"/mini-game-one"} element={<MiniGameOne />} />
         </Routes>
     </section>
     </>

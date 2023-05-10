@@ -12,10 +12,11 @@ export const MiniGameOne = () => {
     const [score, setScore] = useState(0);
     const [currentQuestion, setCurrentQuestion] = useState(0);
     const [showBadge, setShowBadge] = useState(false)
+    //const [finalScore, setFinalScore] = useState(0)
     const questions = [
 
         {
-            text: "¿Cómo se llama el movimiento que hace la tierra sobre su propio eje?",
+            text: "¿Cómo se llama el movimiento que tiene la tierra sobre su propio eje, el cual es responsable del día y la noche?",
             options: [
                 {id: 0, text: "Orbitar", isCorrect: false},
                 {id: 1, text: "Traslación", isCorrect: false},
@@ -27,45 +28,45 @@ export const MiniGameOne = () => {
             text: "¿Cuánto tiempo le toma al Planeta Tierra girar sobre su propio eje?",
             options: [
                 {id: 0, text: "12 meses", isCorrect: false},
-                {id: 1, text: "1 día", isCorrect: true},
+                {id: 1, text: "24 horas", isCorrect: true},
                 {id: 2, text: "1 semana", isCorrect: false},
                 {id: 3, text: "1 mes", isCorrect: false},
             ],
         },
         {
-            text: "¿Por qué se dan las estaciones del año?",
+            text: "¿Cómo se le llama al movimiento en que la Tierra gira al rededor del sol?",
             options: [
-                {id: 0, text: "Por la inclinación en el eje de la tierra además del movimiento de traslación", isCorrect: true},
-                {id: 1, text: "Por el movimiento del sol en la órbita", isCorrect: true},
+                {id: 0, text: "Rotación", isCorrect: false},
+                {id: 1, text: "Traslación", isCorrect: true},
+                {id: 2, text: "Orbitar", isCorrect: false},
+                {id: 3, text: "Rectilíneo", isCorrect: false},
+            ],
+        },
+        {
+            text: "¿Cuánto tiempo le toma a la Tierra dar una vuelta al Sol?",
+            options: [
+                {id: 0, text: "2 semanas", isCorrect: false},
+                {id: 1, text: "1 día", isCorrect: false},
+                {id: 2, text: "24 meses", isCorrect: false},
+                {id: 3, text: "1 año", isCorrect: true},
+            ],
+        },
+        {
+            text: "¿Por qué se dan las estaciones del año (primavera, verano, otoño e invierno)?",
+            options: [
+                {id: 0, text: "Por la inclinación en el eje de la tierra combinado con el movimiento de traslación", isCorrect: true},
+                {id: 1, text: "Por el movimiento del sol en la órbita", isCorrect: false},
                 {id: 2, text: "Por la inclinación en el eje de la tierra además del movimiento de rotación", isCorrect: false},
                 {id: 3, text: "Por la traslación del sol", isCorrect: false},
             ],
         },
         {
-            text: "¿Cuánto tiempo le toma a la Tierra dar una vuelta al  Sol?",
+            text: "¿Cuántos días tiene un año bisiesto?",
             options: [
-                {id: 0, text: "2 semanas", isCorrect: false},
-                {id: 1, text: "1 día", isCorrect: false},
-                {id: 2, text: "30 años", isCorrect: false},
-                {id: 3, text: "1 año", isCorrect: true},
-            ],
-        },
-        {
-            text: "¿Cuántas estaciones tenemos en un año?",
-            options: [
-                {id: 0, text: "Tres", isCorrect: false},
-                {id: 1, text: "Cuatro", isCorrect: true},
-                {id: 2, text: "Cinco", isCorrect: false},
-                {id: 3, text: "Seis", isCorrect: false},
-            ],
-        },
-        {
-            text: "¿Qué movimiento de la Tierra produce el día y la noche?",
-            options: [
-                {id: 0, text: "Rotación", isCorrect: true},
-                {id: 1, text: "Traslación", isCorrect: false},
-                {id: 2, text: "Orbitar", isCorrect: false},
-                {id: 3, text: "Rectilíneo", isCorrect: false},
+                {id: 0, text: "Quinientos", isCorrect: false},
+                {id: 1, text: "366", isCorrect: true},
+                {id: 2, text: "12 meses", isCorrect: false},
+                {id: 3, text: "365", isCorrect: false},
             ],
         },
         
@@ -74,6 +75,10 @@ export const MiniGameOne = () => {
     const optionClicked = (isCorrect) => {
         if(isCorrect) {
             setScore(score + 1);
+            if(score + 1 === questions.length){
+                console.log('La suma es:', score + 1);
+                setShowBadge(true);
+            }
         }
 
         if(currentQuestion + 1 < questions.length) {
@@ -81,12 +86,12 @@ export const MiniGameOne = () => {
             
         } else {
             setFinalResults(true);
-            console.log(score + 1)
+           
         }
-
-        if(score + 1 == 6) {
-            setShowBadge(true);
-        }
+        // if(finalScore == questions.length) {
+        //         console.log('questions',  finalScore);
+        //         setShowBadge(true);
+        //     }
 
     }
 
@@ -124,7 +129,7 @@ export const MiniGameOne = () => {
     >
     
       <div className="centered side-padding">
-      <div className="pattern footer top"></div>
+      {/* <div className="pattern footer top"></div> */}
       <div className=" section-box flex flex-columns-rows nowrap gap-4 even-flex">
           <div className='flex flex-columns gap-4 zindex-1 green-bg padding-2 border-radius colored-cage'>
           <div className="coverpage__text-container">
@@ -141,12 +146,20 @@ export const MiniGameOne = () => {
             <div className="coverpage__text-container flex justify-center flex-col">
 
                 {showFinalResults ?
-                <div className="final-result yellow-bg py-[2rem] pt-[2rem] pb-[4rem] border-radius">
+                <m.div className="final-result yellow-bg py-[2rem] px-[2rem] pb-[4rem] border-radius"
+                initial={{opacity: 0}}
+                animate={{opacity: 1}}
+                transition={{delay: .25, duration: .5, ease: 'linear' }}
+                >
                     <h3 className='text-center'>Resultado:</h3>
                     <p className='text-center'>{score} de {questions.length} correctas ({Math.round((score/questions.length) * 100)}% de respuestas correctas)</p>            
                     <button onClick={() => restartGame()} className='call-to-action solid blue mx-[auto]'>Reiniciar misión</button>
                     {showBadge ?
-                    <div className="badge flex flex-col justify-center items-center">
+                    <m.div className="badge flex flex-col justify-center items-center"
+                    initial={{opacity: 0}}
+                    animate={{opacity: 1}}
+                    transition={{duration: .5, ease: 'linear' }}
+                    >
                         <div className="badge__container blue-bg border-radius p-[2rem]">
                             <h3 className='text-center'>¡Felicidades!</h3>
                             <p>Ganaste tu insignia JOY center Kids por haber salvado el planeta</p>
@@ -156,13 +169,13 @@ export const MiniGameOne = () => {
                             <button onClick={() => restartGame()} className='call-to-action solid orange mx-[auto]'>Salir</button>
                         </div>
                         <Confetti />
-                    </div>
+                    </m.div>
                     
                     :
                     
                     <h3 className='text-center'>Intenta nuevamente</h3>
                     }
-                </div>
+                </m.div>
 
                 :
 

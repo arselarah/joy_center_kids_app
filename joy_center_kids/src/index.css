@@ -2208,7 +2208,7 @@ nav.desktop-main-nav .close.button-mobile-toggle {
   margin-left: 1rem;
   border-radius: 5rem;
   background-color: var(--color-yellow);
-  display: inline-block;
+  display: block;
   width: fit-content;
   cursor: pointer;
 }
@@ -2230,6 +2230,19 @@ nav.desktop-main-nav .close.button-mobile-toggle {
 .badge__container {
   width: 90%;
   max-width: 550px;
+}
+
+.medal {
+  position: relative;
+  width: 100%;
+  padding: 1rem 1rem 3rem;
+}
+
+.medal img {
+  width: 100%;
+  max-width: 200px;
+  position: relative;
+  margin: 0px auto;
 }
 
 /*-------------- MEDIA QUERIES ------------------------------ */

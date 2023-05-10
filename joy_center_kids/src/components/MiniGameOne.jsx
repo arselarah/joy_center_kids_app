@@ -3,6 +3,8 @@ import { useState } from 'react'
 import { motion as m } from 'framer-motion'
 import { Link } from 'react-router-dom'
 import video_1 from '../assets/videos/rotacion.mp4'
+import medal from '../assets/images/medalla.png'
+import Confetti from 'react-confetti'
 
 export const MiniGameOne = () => {
 
@@ -11,40 +13,41 @@ export const MiniGameOne = () => {
     const [currentQuestion, setCurrentQuestion] = useState(0);
     const [showBadge, setShowBadge] = useState(false)
     const questions = [
+
+        {
+            text: "¿Cómo se llama el movimiento que hace la tierra sobre su propio eje?",
+            options: [
+                {id: 0, text: "Orbitar", isCorrect: false},
+                {id: 1, text: "Traslación", isCorrect: false},
+                {id: 2, text: "Rotación", isCorrect: true},
+                {id: 3, text: "Rectilíneo", isCorrect: false},
+            ],
+        },
         {
             text: "¿Cuánto tiempo le toma al Planeta Tierra girar sobre su propio eje?",
             options: [
-                {id: 0, text: "1 año", isCorrect: false},
+                {id: 0, text: "12 meses", isCorrect: false},
                 {id: 1, text: "1 día", isCorrect: true},
                 {id: 2, text: "1 semana", isCorrect: false},
                 {id: 3, text: "1 mes", isCorrect: false},
             ],
         },
         {
+            text: "¿Por qué se dan las estaciones del año?",
+            options: [
+                {id: 0, text: "Por la inclinación en el eje de la tierra además del movimiento de traslación", isCorrect: true},
+                {id: 1, text: "Por el movimiento del sol en la órbita", isCorrect: true},
+                {id: 2, text: "Por la inclinación en el eje de la tierra además del movimiento de rotación", isCorrect: false},
+                {id: 3, text: "Por la traslación del sol", isCorrect: false},
+            ],
+        },
+        {
             text: "¿Cuánto tiempo le toma a la Tierra dar una vuelta al  Sol?",
             options: [
-                {id: 0, text: "1 año", isCorrect: true},
+                {id: 0, text: "2 semanas", isCorrect: false},
                 {id: 1, text: "1 día", isCorrect: false},
-                {id: 2, text: "1 semana", isCorrect: false},
-                {id: 3, text: "1 mes", isCorrect: false},
-            ],
-        },
-        {
-            text: "¿Cómo se llama el movimiento que hace la tierra sobre su propio eje?",
-            options: [
-                {id: 0, text: "Rotación", isCorrect: true},
-                {id: 1, text: "Traslación", isCorrect: false},
-                {id: 2, text: "Orbitar", isCorrect: false},
-                {id: 3, text: "Rectilíneo", isCorrect: false},
-            ],
-        },
-        {
-            text: "¿Qué movimiento de la Tierra produce el día y la noche?",
-            options: [
-                {id: 0, text: "Rotación", isCorrect: true},
-                {id: 1, text: "Traslación", isCorrect: false},
-                {id: 2, text: "Orbitar", isCorrect: false},
-                {id: 3, text: "Rectilíneo", isCorrect: false},
+                {id: 2, text: "30 años", isCorrect: false},
+                {id: 3, text: "1 año", isCorrect: true},
             ],
         },
         {
@@ -57,12 +60,12 @@ export const MiniGameOne = () => {
             ],
         },
         {
-            text: "¿Por qué se dan las estaciones del año?",
+            text: "¿Qué movimiento de la Tierra produce el día y la noche?",
             options: [
-                {id: 0, text: "Por la inclinación en el eje de la tierra además del movimiento de traslación", isCorrect: true},
-                {id: 1, text: "Por el movimiento del sol en la órbita", isCorrect: true},
-                {id: 2, text: "Por la inclinación en el eje de la tierra además del movimiento de rotación", isCorrect: false},
-                {id: 3, text: "Por la traslación del sol", isCorrect: false},
+                {id: 0, text: "Rotación", isCorrect: true},
+                {id: 1, text: "Traslación", isCorrect: false},
+                {id: 2, text: "Orbitar", isCorrect: false},
+                {id: 3, text: "Rectilíneo", isCorrect: false},
             ],
         },
         
@@ -147,13 +150,17 @@ export const MiniGameOne = () => {
                         <div className="badge__container blue-bg border-radius p-[2rem]">
                             <h3 className='text-center'>¡Felicidades!</h3>
                             <p>Ganaste tu insignia JOY center Kids por haber salvado el planeta</p>
+                            <div className="medal">
+                                <img src={medal} alt="Medalla JOY" />
+                            </div>
                             <button onClick={() => restartGame()} className='call-to-action solid orange mx-[auto]'>Salir</button>
                         </div>
+                        <Confetti />
                     </div>
                     
                     :
                     
-                    <p>Loser</p>
+                    <h3 className='text-center'>Intenta nuevamente</h3>
                     }
                 </div>
 
@@ -163,7 +170,7 @@ export const MiniGameOne = () => {
                     <h3 className='text-center'>Pregunta {currentQuestion + 1} de {questions.length}</h3>
                     <p className='text-center questions'>{questions[currentQuestion].text}</p>
 
-                    <ul className='question-list'>
+                    <ul className='question-list flex flex-col items-center'>
                         {questions[currentQuestion].options.map((option) => {
                             return(
                                 <li onClick={() => optionClicked(option.isCorrect)} key={option.id}>{option.text}</li>

@@ -13,6 +13,7 @@ export const MiniGameOne = () => {
     const [currentQuestion, setCurrentQuestion] = useState(0);
     const [showBadge, setShowBadge] = useState(false)
     //const [finalScore, setFinalScore] = useState(0)
+    //const [finalScore, setFinalScore] = useState(0)
     const questions = [
 
         {

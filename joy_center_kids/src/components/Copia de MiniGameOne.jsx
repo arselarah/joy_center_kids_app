@@ -102,16 +102,6 @@ export const MiniGameOne = () => {
         setCurrentQuestion(0);
         setFinalResults(false);
         setShowBadge(false);
-        document.querySelector('.game').classList.add('hide-game');
-    }
-
-    //const gameBox = document.querySelectorAll('.game');
-    const showGame = () => {
-        //console.log('Mostar juego');
-        document.querySelector('.game').classList.remove('hide-game');
-        document.querySelector(".opacidad").style.opacity = "1";
-        document.getElementById("mini-game").scrollIntoView({ behavior: 'smooth', block: 'end'});
-
     }
  
 
@@ -132,100 +122,87 @@ export const MiniGameOne = () => {
             <div className="pattern footer righty"></div>
         </div>
     </m.div>
-
-    <m.section className="section-page themes xl-vertical-padding"
+ 
+    <m.section className="section-page themes overflow-hide xl-vertical-padding"
     initial={{opacity: 0}}
     animate={{opacity: 1}}
     transition={{delay: .25, duration: .5, ease: 'linear' }}
     >
-      <div className='centered side-padding'>
-        <div className="blue-bg section-box flex colored-cage side-padding vertical-padding position-rel overflow-hide flex-columns-rows wrap gap-4">
-        <div className="pattern bluish"></div>
-          <div className='flex align-items flex-columns-rows even-flex gap-4 zindex-1'>
-          <div className="coverpage__text-container ">
-            <h3 className='xl-word'>Un asteroide impactará la tierra</h3>
+    
+      <div className="centered side-padding">
+      {/* <div className="pattern footer top"></div> */}
+      <div className=" section-box flex flex-columns-rows nowrap gap-4 even-flex">
+          <div className='flex flex-columns gap-4 zindex-1 green-bg padding-2 border-radius colored-cage'>
+          <div className="coverpage__text-container">
+             <h3>Un asteroide impactará la tierra</h3>
              <p>Un asteroide impactará la tierra y necesitamos tu ayuda para evitarlo. En el siguiente video te explicamos como podríamos hacerlo.</p>
-             <button className='call-to-action solid orange' onClick={showGame}>Jugar</button>
           </div>
-          <div className="coverpage__image-container">
+            <div className="coverpage__image-container">
               <video src={video_1} controls></video>
             </div>
+
           </div>
-         
+          <div className='flex flex-columns even-flex gap-4 position-rel zindex-1 blue-bg padding-2 border-radius colored-cage'>
+            
+            <div className="coverpage__text-container flex justify-center flex-col">
+
+                {showFinalResults ?
+                <m.div className="final-result yellow-bg py-[2rem] px-[2rem] pb-[4rem] border-radius"
+                initial={{opacity: 0}}
+                animate={{opacity: 1}}
+                transition={{delay: .25, duration: .5, ease: 'linear' }}
+                >
+                    <h3 className='text-center'>Resultado:</h3>
+                    <p className='text-center'>{score} de {questions.length} correctas ({Math.round((score/questions.length) * 100)}% de respuestas correctas)</p>            
+                    <button onClick={() => restartGame()} className='call-to-action solid blue mx-[auto]'>Reiniciar misión</button>
+                    {showBadge ?
+                    <m.div className="badge flex flex-col justify-center items-center"
+                    initial={{opacity: 0}}
+                    animate={{opacity: 1}}
+                    transition={{duration: .5, ease: 'linear' }}
+                    >
+                        <div className="badge__container blue-bg border-radius p-[2rem]">
+                            <h3 className='text-center'>¡Felicidades!</h3>
+                            <p>Ganaste tu insignia JOY center Kids por haber salvado el planeta</p>
+                            <div className="medal">
+                                <img src={medal} alt="Medalla JOY" />
+                            </div>
+                            <button onClick={() => restartGame()} className='call-to-action solid orange mx-[auto]'>Salir</button>
+                        </div>
+                        <Confetti />
+                    </m.div>
+                    
+                    :
+                    
+                    <h3 className='text-center'>Intenta nuevamente</h3>
+                    }
+                </m.div>
+
+                :
+
+                <div className="question-card">
+                    <h3 className='text-center'>Pregunta {currentQuestion + 1} de {questions.length}</h3>
+                    <p className='text-center questions'>{questions[currentQuestion].text}</p>
+
+                    <ul className='question-list flex flex-col items-center'>
+                        {questions[currentQuestion].options.map((option) => {
+                            return(
+                                <li onClick={() => optionClicked(option.isCorrect)} key={option.id}>{option.text}</li>
+                            );
+                        })}
+                    </ul>
+
+                    <p className='text-center questions'>Puntuación: {score}</p>
+
+                </div>
+                
+                }
+            </div>
+          </div>
         </div>
         
       </div>
     </m.section>
-    <section id="mini-game" className="section-page themes xl-vertical-padding game hide-game">
-      <div className="centered side-padding">
-      <div className=" section-box flex colored-cage green-bg side-padding vertical-padding overflow-hide position-rel opacidad">
-      <div className="pattern bluish"></div>
-          <div className='flex align-items flex-columns-rows even-flex gap-4 position-rel zindex-1'>
-          <div className="coverpage__text-container">
-             <h3>Responde las siguientes preguntas</h3>
-             <p>Ayúdanos a salvar al planeta Tierra contestando estas preguntas.</p>
-          </div>
-          <div className="coverpage__text-container flex justify-center flex-col">
-
-{showFinalResults ?
-<m.div className="final-result yellow-bg py-[2rem] px-[2rem] pb-[4rem] border-radius"
-initial={{opacity: 0}}
-animate={{opacity: 1}}
-transition={{delay: .25, duration: .5, ease: 'linear' }}
->
-    <h3 className='text-center'>Resultado:</h3>
-    <p className='text-center'>{score} de {questions.length} correctas ({Math.round((score/questions.length) * 100)}% de respuestas correctas)</p>            
-    <button onClick={() => restartGame()} className='call-to-action solid blue mx-[auto]'>Reiniciar misión</button>
-    {showBadge ?
-    <m.div className="badge flex flex-col justify-center items-center"
-    initial={{opacity: 0}}
-    animate={{opacity: 1}}
-    transition={{duration: .5, ease: 'linear' }}
-    >
-        <div className="badge__container blue-bg border-radius p-[2rem]">
-            <h3 className='text-center'>¡Felicidades!</h3>
-            <p>Ganaste tu insignia JOY center Kids por haber salvado el planeta</p>
-            <div className="medal">
-                <img src={medal} alt="Medalla JOY" />
-            </div>
-            <button onClick={() => restartGame()} className='call-to-action solid orange mx-[auto]'>Salir</button>
-        </div>
-        <Confetti />
-    </m.div>
-    
-    :
-    
-    <h3 className='text-center'>Intenta nuevamente</h3>
-    }
-</m.div>
-
-:
-
-<div className="question-card">
-    <h3 className='text-center'>Pregunta {currentQuestion + 1} de {questions.length}</h3>
-    <p className='text-center questions'>{questions[currentQuestion].text}</p>
-
-    <ul className='question-list flex flex-col items-center'>
-        {questions[currentQuestion].options.map((option) => {
-            return(
-                <li onClick={() => optionClicked(option.isCorrect)} key={option.id}>{option.text}</li>
-            );
-        })}
-    </ul>
-
-    <p className='text-center questions'>Puntuación: {score}</p>
-
-</div>
-
-}
-</div>
-
-          </div>
-        </div>
-      </div>
-    </section>
-
- 
     
 
 

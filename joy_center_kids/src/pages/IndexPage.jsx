@@ -40,10 +40,10 @@ const slides = [
         url:"https://images.pexels.com/photos/5560522/pexels-photo-5560522.jpeg",
         title: "Conviértete en astronauta",
     },
-    {
-        url:"https://images.pexels.com/photos/8223960/pexels-photo-8223960.jpeg",
-        title: "Conviértete en un gran deportista",
-    },
+    // {
+    //     url:"https://images.pexels.com/photos/8223960/pexels-photo-8223960.jpeg",
+    //     title: "Conviértete en un gran deportista",
+    // },
 ];
 
 export const IndexPage = () => {

@@ -2245,6 +2245,24 @@ nav.desktop-main-nav .close.button-mobile-toggle {
   margin: 0px auto;
 }
 
+.game {
+  height: auto;
+  opacity: 1;
+  transition: opacity 1s ease-in 0.5s;
+}
+
+.hide-game {
+  opacity: 0;
+  height: 0;
+  overflow: hidden;
+  padding: 0;
+  transition: opacity 1s ease-out 0.5s;
+}
+.opacidad {
+  opacity: 0;
+  transition: opacity 1s ease-in 0.1s;
+}
+
 /*-------------- MEDIA QUERIES ------------------------------ */
 @media (min-width: 600px) {
   .coverpage__cubes-container {

@@ -68,7 +68,7 @@ export const Themes = () => {
           <div className='flex flex-columns gap-4 zindex-1 green-bg padding-2 border-radius colored-cage'>
           <div className="coverpage__text-container">
              <h3>Desarrollo de competencias</h3>
-             <p>Dejar que descubran y  hagan cosas por sí mismos incrementa las capacidades generales que potencian el conocimiento. Mantener presente la búsqueda  de crecimiento en las habilidades SOFT - KILLS es clave para ejercer un liderazgo en el transcurso de la vida.</p>
+             <p>Dejar que descubran y  hagan cosas por sí mismos incrementa las capacidades generales que potencian el conocimiento. Mantener presente la búsqueda  de crecimiento en las habilidades SOFT - SKILLS es clave para ejercer un liderazgo en el transcurso de la vida.</p>
               <Link to="/programs" className="call-to-action solid orange">Aprende más</Link>
           </div>
             <div className="coverpage__image-container">
@@ -108,6 +108,42 @@ export const Themes = () => {
               <div className="image grow-image">
                 <img src={image_5} />
                </div>
+            </div>
+
+          </div>
+        </div>
+      </div>
+    </section>
+    <section className="section-page themes xl-vertical-padding min-h-[40rem]">
+      <div className="centered side-padding min-h-[40rem]">
+      <div className=" section-box flex side-padding vertical-padding overflow-hide position-rel min-h-[40rem]">
+      
+          <div className='flex align-items flex-columns-rows even-flex gap-4 position-rel zindex-1'>
+          <div className="coverpage__text-container">
+             <h3>¿Qué es JOY?</h3>
+             <p>En JOY guiamos a los niños hacia un futuro prometedor, nutriendo su presente con alegría.</p>
+              
+          </div>
+            <div className="coverpage__image-container relative h-[20rem]">
+            <iframe class="pdf-embedded w-full relative top-0 min-h-full" src="https://drive.google.com/file/d/1Xi5a66_hiVdQFVothUziRjnPqS809js2/preview?usp=embed_googleplus" allowfullscreen></iframe>
+            </div>
+
+          </div>
+        </div>
+      </div>
+    </section>
+    <section className="section-page themes xl-vertical-padding min-h-[40rem]">
+      <div className="centered side-padding min-h-[40rem]">
+      <div className=" section-box flex side-padding vertical-padding overflow-hide position-rel min-h-[40rem]">
+      
+          <div className='flex align-items flex-columns-rows even-flex gap-4 position-rel zindex-1'>
+          <div className="coverpage__text-container">
+             <h3>JOY Presenta Mnemotecnia</h3>
+             <p>En JOY guiamos a los niños hacia un futuro prometedor, nutriendo su presente con alegría.</p>
+              
+          </div>
+            <div className="coverpage__image-container relative h-[20rem]">
+            <iframe class="pdf-embedded w-full relative top-0 min-h-full" src="https://drive.google.com/file/d/19yBsMd8iqtnNdYtTrub6E7afNfLMBJtr/preview?usp=embed_googleplus" allowfullscreen></iframe>
             </div>
 
           </div>

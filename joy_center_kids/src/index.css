@@ -412,6 +412,14 @@ svg {
   line-height: 1.7rem;
   font-size: var(--ff-body-text-size);
 }
+.coverpage__text-container li {
+  padding: .5rem 0rem;
+  letter-spacing: var(--ls-body);
+  line-height: 1.7rem;
+  font-size: var(--ff-body-text-size);
+  color: var(--color-light);
+  list-style: disc;
+}
 
 .coverpage__text-container p.questions {
   font-size: 1.3rem;

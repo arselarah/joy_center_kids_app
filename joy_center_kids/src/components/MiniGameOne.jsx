@@ -2,7 +2,7 @@ import React from 'react'
 import { useState } from 'react'
 import { motion as m } from 'framer-motion'
 import { Link } from 'react-router-dom'
-import video_1 from '../assets/videos/rotacion.mp4'
+// import video_1 from '../assets/videos/rotacion.mp4'
 import medal from '../assets/images/medalla.png'
 import Confetti from 'react-confetti'
 
@@ -125,7 +125,7 @@ export const MiniGameOne = () => {
         <div className="centered side-padding">
             <div className="hero__text-container z-[1]">
               <h1 className='text-[var(--color-button-one)]'>Misión 6 a 9 años</h1>
-              <h2>Un asteroide impactará la tierra ¡ayúdanos!</h2>
+              <h2>¿Te has preguntado por qué existen el día y la noche?</h2>
               
             </div>
             <div className="pattern bluish"></div>
@@ -143,12 +143,13 @@ export const MiniGameOne = () => {
         <div className="pattern bluish"></div>
           <div className='flex align-items flex-columns-rows even-flex gap-4 zindex-1'>
           <div className="coverpage__text-container ">
-            <h3 className='xl-word'>Un asteroide impactará la tierra</h3>
-             <p>Un asteroide impactará la tierra y necesitamos tu ayuda para evitarlo. En el siguiente video te explicamos como podríamos hacerlo.</p>
+            <h3 className='xl-word'>¿Te has preguntado por qué existen el día y la noche?</h3>
+             <p>Hola amiguitos. Hoy vamos a estudiar los movimientos de rotación y traslación del planeta tierra para ¿Me acompañas? ¿Sabes algo sobre el movimiento de rotación y traslación del planeta tierra? ¿No? Bueno, repasemos juntos:</p>
              <button className='call-to-action solid orange' onClick={showGame}>Jugar</button>
           </div>
           <div className="coverpage__image-container">
-              <video src={video_1} controls></video>
+              {/* <video src={video_1} controls></video> */}
+              <iframe width="560" height="315" src="https://www.youtube.com/embed/why7rP49sPY" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
             </div>
           </div>
          

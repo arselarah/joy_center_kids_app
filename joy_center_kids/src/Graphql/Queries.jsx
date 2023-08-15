@@ -42,7 +42,7 @@ export const QUERY_SLUG_CATEGORIES = gql`
 
 export const QUERY_POSTS = gql `
     {
-        posts(orderBy: updatedAt_DESC, first: 5){
+        posts(orderBy: updatedAt_DESC, first: 10){
             ${post}
             categories(){
                 ${category}

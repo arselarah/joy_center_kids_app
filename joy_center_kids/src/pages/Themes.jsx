@@ -125,7 +125,7 @@ export const Themes = () => {
               
           </div>
             <div className="coverpage__image-container relative h-[20rem]">
-            <iframe class="pdf-embedded w-full relative top-0 min-h-full" src="https://drive.google.com/file/d/1Xi5a66_hiVdQFVothUziRjnPqS809js2/preview?usp=embed_googleplus" allowfullscreen></iframe>
+            <iframe class="pdf-embedded w-full relative top-0 min-h-full" src="https://drive.google.com/file/d/1D-BwAaEmm5kpA5iOa-tBu03NIKWMMJZb/preview?usp=embed_googleplus" allowfullscreen></iframe>
             </div>
 
           </div>
@@ -143,7 +143,7 @@ export const Themes = () => {
               
           </div>
             <div className="coverpage__image-container relative h-[20rem]">
-            <iframe class="pdf-embedded w-full relative top-0 min-h-full" src="https://drive.google.com/file/d/19yBsMd8iqtnNdYtTrub6E7afNfLMBJtr/preview?usp=embed_googleplus" allowfullscreen></iframe>
+            <iframe class="pdf-embedded w-full relative top-0 min-h-full" src="https://drive.google.com/file/d/1Tg2KSLxIGDzvNAu1DxGLrUUoJf19EzCh/preview?usp=embed_googleplus" allowfullscreen></iframe>
             </div>
 
           </div>

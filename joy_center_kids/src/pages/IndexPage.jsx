@@ -152,7 +152,7 @@ export const IndexPage = () => {
             <div className="coverpage__container flex flex-columns-rows left-flex-xs gap-4 zindex-1 position-rel padding-top-2 justify-end">
                 <div className="coverpage__text-container even-flex xm:hidden lg:block">
                     <h3>¿Qué es <span className='joy'><i>J</i><i>O</i><i>Y</i></span>?</h3>
-                    <p>Es un centro de aprendizaje y motivación 3.0 donde nos encanta ver a los niños aprender. Nuestro sistema de trabajo enfocado a la Gamificación emplea técnicas de juegos, que otorgan la motivación necesaria para que los niños incrementen sus capacidades intelectuales, desarrollen autodeterminación, inteligencia emocional, pensamiento lógico y creativo. Todo de una manera divertida y muy emocionante.</p>
+                    <p>Es un centro de aprendizaje y motivación, donde nos encanta ver a los niños aprender. Nuestro sistema de trabajo enfocado a la Gamificación emplea técnicas de juegos, que otorgan la motivación necesaria para que los niños incrementen sus capacidades intelectuales, desarrollen autodeterminación, inteligencia emocional, pensamiento lógico y creativo. Todo de una manera divertida y muy emocionante.</p>
                     <Link to={'/themes'} className="call-to-action solid orange">Aprende más</Link>
                 </div>
                 <div className="coverpage__image-container even-flex">
@@ -173,7 +173,7 @@ export const IndexPage = () => {
 
                 <div className="coverpage__text-container pb-[8rem] pt-[2rem] md:hidden">
                 <h3>¿Qué es <span className='joy'><i>J</i><i>O</i><i>Y</i></span>?</h3>
-                    <p>Es un centro de aprendizaje y motivación 3.0 donde nos encanta ver a los niños aprender. Nuestro sistema de trabajo enfocado a la Gamificación emplea técnicas de juegos, que otorgan la motivación necesaria para que los niños incrementen sus capacidades intelectuales, desarrollen autodeterminación, inteligencia emocional, pensamiento lógico y creativo. Todo de una manera divertida y muy emocionante.</p>
+                    <p>Es un centro de aprendizaje y motivación, donde nos encanta ver a los niños aprender. Nuestro sistema de trabajo enfocado a la Gamificación emplea técnicas de juegos, que otorgan la motivación necesaria para que los niños incrementen sus capacidades intelectuales, desarrollen autodeterminación, inteligencia emocional, pensamiento lógico y creativo. Todo de una manera divertida y muy emocionante.</p>
                     <Link to={'/themes'} className="call-to-action solid orange">Aprende más</Link>
                 </div>
 

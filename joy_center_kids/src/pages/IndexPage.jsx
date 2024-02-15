@@ -11,6 +11,11 @@ import expedicion from '../assets/images/expedicion.png'
 import { Slider } from '../components/Slider'
 import { Rocket } from '../components/Rocket'
 import { Link, NavLink } from 'react-router-dom'
+import image_5 from '../assets/images/pexels-cottonbro-studio-6203476.jpg'
+import image_1 from '../assets/images/pexels-amina-filkins-5561177.jpg'
+import image_2 from '../assets/images/pexels-anna-shvets-11286122.jpg'
+import image_3 from '../assets/images/pexels-monstera-5063394.jpg'
+import image_4 from '../assets/images/pexels-hannah-grapp-9660876.jpg'
 
 
 
@@ -66,7 +71,7 @@ export const IndexPage = () => {
                 <div className="hero__text-container z-[4]">
                   <h1>JOY center KIDS</h1>
                   <h2 className='px-[.5rem]'>El único límite es tu imaginación</h2>
-                  <Link to={'/themes'} className='hero__learn-more call-to-action solid orange'>Aprende más</Link>
+                  <Link to={'/trainning'} className='hero__learn-more call-to-action solid orange'>Aprende más</Link>
                 </div>
             </div>
             
@@ -83,7 +88,7 @@ export const IndexPage = () => {
             <div className="map-item osos absolute xm:top-[30%] lg:top-[40%] left-[25%] z-[1]">
                 <div className="pop-up absolute z-[1] p-[2rem] right-[0%] top-[-8rem] rounded-tl-lg rounded-tr-lg rounded-br-lg rounded-bl-lg">
                     <p className=''>Completa la misión</p>
-                    <Link to="/programs" className='call-to-action solid bluish ms-[auto] me-[auto]'>Jugar</Link>
+                    <Link to="/dinamicas" className='call-to-action solid bluish ms-[auto] me-[auto]'>Jugar</Link>
                 </div>
             <img className='bouncing-object max-w-[80%] ms-[auto] me-[auto] z-[-1]' src={bears} alt="Osos" />
             </div>
@@ -92,7 +97,7 @@ export const IndexPage = () => {
             <div className="map-item artistas absolute xm:top-[200%] md:top-[970%] lg:top-[140%] right-[30%] z-[2]">
                 <div className="pop-up absolute z-[1] p-[2rem] right-[0%] top-[-8rem] rounded-tl-lg rounded-tr-lg rounded-br-lg rounded-bl-lg">
                     <p className=''>Completa la misión</p>
-                    <Link to="/programs" className='call-to-action solid bluish ms-[auto] me-[auto]'>Jugar</Link>
+                    <Link to="/dinamicas" className='call-to-action solid bluish ms-[auto] me-[auto]'>Jugar</Link>
                 </div>
             <img className='bouncing-object max-w-[80%] ms-[auto] me-[auto]' src={artist} alt="Artistas" />
             </div>
@@ -101,7 +106,7 @@ export const IndexPage = () => {
             <div className="map-item mayas absolute xm:top-[350%] sm:top-[1000%] md:top-[1400%] lg:top-[190%]">
                 <div className="pop-up absolute z-[1] p-[2rem] xm:right-[-100%] top-[-8rem] rounded-tl-lg rounded-tr-lg rounded-br-lg rounded-bl-lg ">
                     <p className=''>Completa la misión</p>
-                    <Link to="/programs" className='call-to-action solid bluish ms-[auto] me-[auto]'>Jugar</Link>
+                    <Link to="/dinamicas" className='call-to-action solid bluish ms-[auto] me-[auto]'>Jugar</Link>
                 </div>
             <img className='bouncing-object max-w-[80%] ms-[auto] me-[auto] z-[-1]' src={mayas} alt="Mayas" />
             </div>
@@ -110,7 +115,7 @@ export const IndexPage = () => {
             <div className="map-item deportes absolute xm:top-[260%] md:top-[700%] lg:top-[70%] right-[0%] z-[3]">
                 <div className="pop-up absolute z-[1] p-[2rem] right-[0%] top-[-8rem] rounded-tl-lg rounded-tr-lg rounded-br-lg rounded-bl-lg">
                     <p className=''>Completa la misión</p>
-                    <Link to="/programs" className='call-to-action solid bluish ms-[auto] me-[auto]'>Jugar</Link>
+                    <Link to="/dinamicas" className='call-to-action solid bluish ms-[auto] me-[auto]'>Jugar</Link>
                 </div>
             <img className='bouncing-object max-w-[80%] ms-[auto] me-[auto]' src={sports} alt="Deportes" />
             </div>
@@ -118,7 +123,7 @@ export const IndexPage = () => {
             <div className="map-item arqueologia absolute xm:top-[550%] md:top-[2000%] lg:top-[220%] right-[30%]">
                 <div className="pop-up absolute z-[1] p-[2rem] right-[0%] top-[-8rem] rounded-tl-lg rounded-tr-lg rounded-br-lg rounded-bl-lg">
                     <p className=''>Completa la misión</p>
-                    <Link to="/programs" className='call-to-action solid bluish ms-[auto] me-[auto]'>Jugar</Link>
+                    <Link to="/dinamicas" className='call-to-action solid bluish ms-[auto] me-[auto]'>Jugar</Link>
                 </div>
             <img className='bouncing-object max-w-[80%] ms-[auto] me-[auto]' src={fosil} alt="Fosil" />
             </div>
@@ -126,7 +131,7 @@ export const IndexPage = () => {
             <div className="map-item observatorio absolute xm:top-[800%] md:top-[1300%] lg:top-[130%] right-[0%] z-[3]">
                 <div className="pop-up absolute z-[1] p-[2rem] right-[0%] top-[-8rem] rounded-tl-lg rounded-tr-lg rounded-br-lg rounded-bl-lg">
                     <p className=''>Completa la misión</p>
-                    <Link to="/programs" className='call-to-action solid bluish ms-[auto] me-[auto]'>Jugar</Link>
+                    <Link to="/dinamicas" className='call-to-action solid bluish ms-[auto] me-[auto]'>Jugar</Link>
                 </div>
             <img className='bouncing-object max-w-[80%] ms-[auto] me-[auto]' src={observatorio} alt="Observatorio" />
             </div>
@@ -134,7 +139,7 @@ export const IndexPage = () => {
             <div className="map-item submarino absolute xm:top-[850%] sm:top-[1500%] md:top-[2400%] lg:top-[250%] left-[30%]">
                 <div className="pop-up absolute z-[1] p-[2rem] xm:right-[-100%] top-[-8rem] rounded-tl-lg rounded-tr-lg rounded-br-lg rounded-bl-lg ">
                     <p className=''>Completa la misión</p>
-                    <Link to="/programs" className='call-to-action solid bluish ms-[auto] me-[auto]'>Jugar</Link>
+                    <Link to="/dinamicas" className='call-to-action solid bluish ms-[auto] me-[auto]'>Jugar</Link>
                 </div>
             <img className='bouncing-object max-w-[80%] ms-[auto] me-[auto] z-[-1]' src={submarino} alt="Submarino" />
             </div>
@@ -142,7 +147,7 @@ export const IndexPage = () => {
             <div className="map-item expedicion absolute xm:top-[100%] sm:top-[300%] lg:top-[100%] left-[5%]">
                 <div className="pop-up absolute z-[1] p-[2rem] xm:right-[-100%] top-[-8rem] rounded-tl-lg rounded-tr-lg rounded-br-lg rounded-bl-lg ">
                     <p className=''>Completa la misión</p>
-                    <Link to="/programs" className='call-to-action solid bluish ms-[auto] me-[auto]'>Jugar</Link>
+                    <Link to="/dinamicas" className='call-to-action solid bluish ms-[auto] me-[auto]'>Jugar</Link>
                 </div>
             <img className='bouncing-object max-w-[80%] ms-[auto] me-[auto] z-[-1]' src={expedicion} alt="Expedicion" />
             </div>
@@ -153,7 +158,7 @@ export const IndexPage = () => {
                 <div className="coverpage__text-container even-flex xm:hidden lg:block">
                     <h3>¿Qué es <span className='joy'><i>J</i><i>O</i><i>Y</i></span>?</h3>
                     <p>Es un centro de aprendizaje y motivación, donde nos encanta ver a los niños aprender. Nuestro sistema de trabajo enfocado a la Gamificación emplea técnicas de juegos, que otorgan la motivación necesaria para que los niños incrementen sus capacidades intelectuales, desarrollen autodeterminación, inteligencia emocional, pensamiento lógico y creativo. Todo de una manera divertida y muy emocionante.</p>
-                    <Link to={'/themes'} className="call-to-action solid orange">Aprende más</Link>
+                    <Link to={'/trainning'} className="call-to-action solid orange">Aprende más</Link>
                 </div>
                 <div className="coverpage__image-container even-flex">
                     {/* <div className="clipped image">
@@ -174,7 +179,7 @@ export const IndexPage = () => {
                 <div className="coverpage__text-container pb-[8rem] pt-[2rem] md:hidden">
                 <h3>¿Qué es <span className='joy'><i>J</i><i>O</i><i>Y</i></span>?</h3>
                     <p>Es un centro de aprendizaje y motivación, donde nos encanta ver a los niños aprender. Nuestro sistema de trabajo enfocado a la Gamificación emplea técnicas de juegos, que otorgan la motivación necesaria para que los niños incrementen sus capacidades intelectuales, desarrollen autodeterminación, inteligencia emocional, pensamiento lógico y creativo. Todo de una manera divertida y muy emocionante.</p>
-                    <Link to={'/themes'} className="call-to-action solid orange">Aprende más</Link>
+                    <Link to={'/trainning'} className="call-to-action solid orange">Aprende más</Link>
                 </div>
 
                 <div className="coverpage__text-container center-text medium">
@@ -186,34 +191,47 @@ export const IndexPage = () => {
                     <div className="card">
                         <div className='card__content relative'>
                             <div className='cube front orange colored-cage absolute top-0'>
-                                <h4>Edades de 3 a 5</h4>
+                                <h4>0 a 2 años</h4>
                                 <p>Potencializa la manera en que generan su propia opinión del mundo,  ampliando su desarrollo sensorial, motor y cognitivo.</p>
                             </div>
                             <div className='cube back orange colored-cage align-middle grid absolute top-0'>
-                                <Link to="/programs" className='call-to-action solid blue my-[auto] mx-[auto]'>Aprende más</Link>
+                                <Link to="/trainning" className='call-to-action solid blue my-[auto] mx-[auto] text-[0.9rem]'>Aprende más</Link>
                             </div>
                         </div>
                      </div>
+
                      <div className="card">
                         <div className='card__content relative'>
                             <div className='cube front blue colored-cage absolute top-0'>
-                                <h4>Edades de 6 a 9</h4>
-                                <p>Ampliar su campo de asertividad con un plano afectivo - emocional  contribuyendo al éxito en su desarrollo.</p>
+                                <h4>2 a 7 años</h4>
+                                <p>Potencializa la manera en que generan su propia opinión del mundo,  ampliando su desarrollo sensorial, motor y cognitivo.</p>
                             </div>
                             <div className='cube back blue colored-cage align-middle grid absolute top-0'>
-                                <Link to="/programs" className='call-to-action solid orange my-[auto] mx-[auto]'>Aprende más</Link>
+                                <Link to="/trainning" className='call-to-action solid blue my-[auto] mx-[auto] text-[0.9rem]'>Aprende más</Link>
+                            </div>
+                        </div>
+                     </div>
+
+                     <div className="card">
+                        <div className='card__content relative'>
+                            <div className='cube front yellow colored-cage absolute top-0'>
+                                <h4>7 a 13 años</h4>
+                                <p>Ampliar su campo de asertividad con un plano afectivo - emocional  contribuyendo al éxito en su desarrollo.</p>
+                            </div>
+                            <div className='cube back yellow colored-cage align-middle grid absolute top-0'>
+                                <Link to="/trainning" className='call-to-action solid orange my-[auto] mx-[auto] text-[0.9rem]'>Aprende más</Link>
                             </div>
                         </div>
                      </div>
                     
                      <div className="card">
                         <div className='card__content relative'>
-                            <div className='cube front yellow colored-cage absolute top-0'>
-                                <h4>Edades de 10 a 12</h4>
+                            <div className='cube front orange colored-cage absolute top-0'>
+                                <h4>13 a 16 años</h4>
                                 <p>El  autocontrol y el  liderazgo estarán presentes como un factor resolutivo durante toda su vida.</p>
                             </div>
-                            <div className='cube back yellow colored-cage align-middle grid absolute top-0'>
-                                <Link to="/programs" className='call-to-action solid blue my-[auto] mx-[auto]'>Aprende más</Link>
+                            <div className='cube back orange colored-cage align-middle grid absolute top-0'>
+                                <Link to="/trainning" className='call-to-action solid blue my-[auto] mx-[auto] text-[0.9rem]'>Aprende más</Link>
                             </div>
                         </div>
                      </div>
@@ -366,11 +384,97 @@ export const IndexPage = () => {
 
                 </div>
             </div>
+            <section className="section-page themes xl-vertical-padding">
+            <div className='centered side-padding'>
+                <div className="blue-bg section-box flex colored-cage side-padding vertical-padding position-rel overflow-hide flex-columns-rows wrap gap-4">
+                <div className="pattern bluish"></div>
+                <div className='flex align-items flex-columns-rows even-flex gap-4 zindex-1'>
+                <div className="coverpage__text-container ">
+                    <h3 className='break-all'>Autodeterminación</h3>
+                    <p>Favorecer la autodeterminación en nuestros niños es desarrollar, extender y  ejercitar las propias capacidades a explorar y aprender. Logrando un bienestar en el transcurso de vida.</p>
+                    <Link to="/trainning" className="call-to-action solid orange">Aprende más</Link>
+                </div>
+                    <div className="coverpage__image-container">
+                    <div className="image grow-image">
+                        <img src={image_1} />
+                    </div>
+                    </div>
+
+                </div>
+                {/* <div className='flex align-items flex-columns-rows even-flex gap-4 zindex-1'>
+                    <div className="coverpage__image-container">
+                    <div className="image grow-image">
+                        <img src={image_3} />
+                    </div>
+                    </div>
+                    <div className="coverpage__text-container">
+                    <h3>Matemáticas - Maestría</h3>
+                    <p>Las matemáticas son fundamentales para el desarrollo intelectual de los niños, les ayuda a ser lógicos, a razonar ordenadamente y a tener una mente preparada para el pensamiento, la crítica y la abstracción.</p>
+                    <Link to="/programs" className="call-to-action solid orange">Aprende más</Link>
+                    </div>
+                </div> */}
+                </div>
+                
+            </div>
+            </section>
+             <section className="section-page themes overflow-hide">
+                <div className="centered side-padding">
+                <div className="pattern footer top"></div>
+                <div className=" section-box flex flex-columns-rows nowrap gap-4 even-flex">
+                    <div className='flex flex-columns gap-4 zindex-1 green-bg padding-2 border-radius colored-cage'>
+                    <div className="coverpage__text-container">
+                        <h3>Desarrollo de competencias</h3>
+                        <p>Dejar que descubran y  hagan cosas por sí mismos incrementa las capacidades generales que potencian el conocimiento. Mantener presente la búsqueda  de crecimiento en las habilidades SOFT - SKILLS es clave para ejercer un liderazgo en el transcurso de la vida.</p>
+                        <Link to="/trainning" className="call-to-action solid orange">Aprende más</Link>
+                    </div>
+                        <div className="coverpage__image-container">
+                        <div className="image grow-image">
+                            <img src={image_2} />
+                        </div>
+                        </div>
+
+                    </div>
+                    <div className='flex flex-columns columns-reverse even-flex gap-4 position-rel zindex-1 green-bg padding-2 border-radius colored-cage'>
+                        <div className="coverpage__image-container">
+                        <div className="image grow-image">
+                            <img src={image_3} />
+                        </div>
+                        </div>
+                        <div className="coverpage__text-container">
+                        <h3>Resolución de retos</h3>
+                        <p>Los retos son un motor muy importante para el aprendizaje de los niños, que los incita a “moverse” para conseguir una meta con significado para ellos y los estimula para conseguir sus objetivos. Para llegar a estos objetivos es fundamental la aparición de la motivación, que constituye, sin duda alguna, la clave del aprendizaje. La Gamificacion presente en juego y motivación.</p>
+                        <Link to="/trainning" className="call-to-action solid orange">Aprende más</Link>
+                        </div>
+                    </div>
+                    </div>
+                    
+                </div>
+            </section>
+            <section className="section-page themes xl-vertical-padding">
+                <div className="centered side-padding">
+                <div className=" section-box flex colored-cage magenta-bg side-padding vertical-padding overflow-hide position-rel">
+                <div className="pattern bluish"></div>
+                    <div className='flex align-items flex-columns-rows even-flex gap-4 position-rel zindex-1'>
+                    <div className="coverpage__text-container">
+                        <h3>Inteligencia emocional</h3>
+                        <p>Capacidad de ser inteligente con respecto a los sentimientos, los propios y los de otras personas.  Al estar en constante aprendizaje, un niño se enfrenta a retos todo el tiempo; a nivel escolar y personal, la inteligencia emocional ayudará al niño a que enfrente dichos retos de manera positiva y con un gran manejo de la frustración. La inteligencia emocional favorece el conocimiento de las emociones, ayudando a expresarlas de manera efectiva y así, encontrar soluciones.</p>
+                        <Link to="/trainning" className="call-to-action solid blue">Aprende más</Link>
+                    </div>
+                        <div className="coverpage__image-container">
+                        <div className="image grow-image">
+                            <img src={image_5} />
+                        </div>
+                        </div>
+
+                    </div>
+                    </div>
+                </div>
+            </section>
             <div className="coverpage__container flex align-items flex-columns-to-rows-reverse left-flex-xs gap-4 even-flex  position-rel zindex-1">
                 <div className="coverpage__text-container">
                     <h3>Vive la experiencia <span className='joy'><i>J</i><i>O</i><i>Y</i></span></h3>
                     <p>Donde compartiremos los valores que permiten en familia el desarrollo constante en los niños. De una manera divertida y estimulante obtendrán la seguridad necesaria en cada paso que den.</p>
-                    <Link to={'/themes'} className="call-to-action solid blue">Aprende más</Link>
+                    <Link to={'/trainning'} className="call-to-action solid blue">Aprende más</Link>
                 </div>
                 <div className="coverpage__image-container">
                     <div className="clipped image rounded-[2rem]">

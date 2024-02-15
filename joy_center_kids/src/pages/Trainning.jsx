@@ -7,10 +7,10 @@ import image_mentales from '../assets/images/mental.jpg'
 import image_cerebral from '../assets/images/cerebral.jpg'
 import image_sombreros from '../assets/images/sombreros.jpg'
 import { Link } from 'react-router-dom'
-// import image_4 from '../assets/images/pexels-porapak-apichodilok-346779.jpg'
+import image_mnemotecnia from '../assets/images/concepto-memoria-piezas-rompecabezas-cabeza_23-2149320948.jpg'
 // import image_5 from '../assets/images/pexels-artem-podrez-6941689.jpg'
 
-export const Programs = () => {
+export const Trainning = () => {
   return (
     <>
     <m.div className="hero inner-page"
@@ -20,8 +20,8 @@ export const Programs = () => {
     >
         <div className="centered side-padding">
             <div className="hero__text-container z-[1]">
-              <h1 className='text-[var(--color-button-one)]'>Talleres</h1>
-              <h2>Conoce nuestros Talleres</h2>
+              <h1 className='text-[var(--color-button-one)]'>Trainning</h1>
+              <h2>Conoce nuestros talleres de entrenamiento cerebral</h2>
               
             </div>
             <div className="pattern bluish"></div>
@@ -98,23 +98,24 @@ export const Programs = () => {
             </div>
 
           </div>
-          <div className='flex flex-columns columns-reverse even-flex gap-4 position-rel zindex-1 padding-2 border-radius colored-cage'>
+          <div className='flex flex-columns columns-reverse even-flex gap-4 position-rel zindex-1 padding-2 border-radius colored-cage orange-bg'>
             <div className="coverpage__image-container">
               <div className="image grow-image">
-                {/* <img src={image_4} /> */}
+                <img src={image_mnemotecnia} />
                </div>
             </div>
             <div className="coverpage__text-container">
-             {/* <h3>Gimnasia cerebral</h3>
-              <p>Los retos son un motor muy importante para el aprendizaje de los niños, que los incita a “moverse” para conseguir una meta con significado para ellos y los estimula para conseguir sus objetivos. Para llegar a estos objetivos es fundamental la aparición de la motivación, que constituye, sin duda alguna, la clave del aprendizaje. La Gamificacion presente en juego y motivación.</p>
-              <Link to="/programs" className="call-to-action solid orange">Aprende más</Link> */}
+             <h3>Mnemotecnias</h3>
+              <p>Es una técnica intelectual para facilitar la memorización, consiste en establecer una asociación o vinculo para recordar información con mayor facilidad.</p>
+              <p>Saber aprovechar los recursos que disponemos para facilitar y potenciar el aprendizaje es un indicativo de cultura e inteligencia.</p>
+              {/* <Link to="/programs" className="call-to-action solid orange">Aprende más</Link> */}
             </div>
           </div>
         </div>
         
       </div>
     </section>
-    <section className="section-page xl-vertical-padding">
+    {/* <section className="section-page xl-vertical-padding">
       <div className='centered side-padding'>
         <div className="section-box flex flex-columns-rows wrap gap-4">
           <div className='flex align-items flex-columns-rows even-flex-0 gap-4 zindex-1 wrap'>
@@ -125,21 +126,21 @@ export const Programs = () => {
               <h3 className='padding-top-2'>Edades de 3 a 5</h3>
                 <p>Potencializa la manera en que generan su propia opinión del mundo,  ampliando su desarrollo sensorial, motor y cognitivo.</p>
                 <Link to="/mini-game-one" className="call-to-action solid orange">Aprende jugando</Link>
-            </div>
+            </div> */}
           {/* </div>
           <div className='flex align-items flex-columns-rows even-flex gap-4 zindex-1'>   */}
-            <div className="coverpage__text-container">
+            {/* <div className="coverpage__text-container">
               <div className="image">
                 <img src={image_2} />
                </div>
                <h3 className='padding-top-2'>Edades de 6 a 9</h3>
               <p>Ampliar su campo de asertividad con un plano afectivo - emocional  contribuyendo al éxito en su desarrollo.</p>
               <Link to="/mini-game-one" className="call-to-action solid orange">Aprende jugando</Link>
-            </div>
+            </div> */}
           {/* </div>
 
           <div className='flex align-items flex-columns-rows even-flex gap-4 zindex-1'> */}
-            <div className="coverpage__text-container">
+            {/* <div className="coverpage__text-container">
                 <div className="image">
                   <img src={image_3} />
                 </div>
@@ -152,7 +153,7 @@ export const Programs = () => {
           </div>
         </div>
       </div>
-    </section>
+    </section> */}
     <section className="section-page no-padding-bottom">
       <div className="centered side-padding">
         <div className="coverpage__text-container center-text large xl-vertical-padding">

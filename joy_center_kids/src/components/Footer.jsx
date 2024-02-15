@@ -20,9 +20,11 @@ export const Footer = () => {
             <div>
               <h5>Menú</h5>
               <Link to="/">Inicio</Link>
-              <Link to="/themes">Temas</Link>
-              <Link to="/programs">Programas</Link>
+              <Link to="/desarrollo">Desarrollo</Link>
+              <Link to="/dinamicas">Dinámicas</Link>
+              <Link to="/trainning">Trainning</Link>
               <Link to="/news">News</Link>
+              <Link to="https://materiales.joycenterkids.com/">Materiales</Link>
               <Link to="/contact">Contacto</Link>
             </div>
           </div>

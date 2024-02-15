@@ -66,9 +66,18 @@ export const NavBar = () => {
                         <div className='nav-container'>
                             <ul>
                                 <li><NavLink to="/">Inicio</NavLink></li>
-                                <li><NavLink to="/themes">Temas</NavLink></li>
-                                <li><NavLink to="/programs">Talleres</NavLink></li>
+                                <li><NavLink to="/desarrollo">Desarrollo</NavLink></li>
+                                <li><NavLink to="/dinamicas">Dinámicas</NavLink></li>
+                                <li><NavLink to="/trainning">Trainning</NavLink>
+                                    <ul className='absolute w-full left-0 bg-white rounded-b-lg'>
+                                        <li><a href="">0 a 2 años</a></li>
+                                        <li><a href="">2 a 7 años</a></li>
+                                        <li><a href="">7 a 13 años</a></li>
+                                        <li><a href="">13 a 16 años</a></li>
+                                    </ul>
+                                </li>
                                 <li><NavLink to="/news">News</NavLink></li>
+                                <li><NavLink to="https://materiales.joycenterkids.com//">Materiales</NavLink></li>
                             </ul>
                         </div>
                         <div className="button-container top xm:hidden md:block">
@@ -89,9 +98,11 @@ export const NavBar = () => {
             <div className='nav-container flex flex-col gap-[2rem] justify-between content-center relative h-[100%] pt-[8rem] overflow-hidden'>
                <ul className='relative w-[100%] flex flex-col menu-objects'>
                     <li className='px-[2rem] pt-[1rem]'><NavLink onClick={hideNav} className="nav__link block text-3xl font-bold text-[#ffffff] tracking-[var(--ls-heading)]" to="/">Inicio</NavLink></li>
-                    <li className='px-[2rem] pt-[1rem]'><NavLink onClick={hideNav} className="nav__link block text-3xl font-bold text-[#ffffff] tracking-[var(--ls-heading)]" to="/themes">Temas</NavLink ></li>
-                    <li className='px-[2rem] pt-[1rem]'><NavLink onClick={hideNav} className="nav__link block text-3xl font-bold text-[#ffffff] tracking-[var(--ls-heading)]" to="/programs">Programas</NavLink></li>
+                    <li className='px-[2rem] pt-[1rem]'><NavLink onClick={hideNav} className="nav__link block text-3xl font-bold text-[#ffffff] tracking-[var(--ls-heading)]" to="/desarrollo">Desarrollo</NavLink ></li>
+                    <li className='px-[2rem] pt-[1rem]'><NavLink onClick={hideNav} className="nav__link block text-3xl font-bold text-[#ffffff] tracking-[var(--ls-heading)]" to="/dinamicas">Dinámicas</NavLink ></li>
+                    <li className='px-[2rem] pt-[1rem]'><NavLink onClick={hideNav} className="nav__link block text-3xl font-bold text-[#ffffff] tracking-[var(--ls-heading)]" to="/trainning">Trainning</NavLink></li>
                     <li className='px-[2rem] pt-[1rem]'><NavLink onClick={hideNav} className="nav__link block text-3xl font-bold text-[#ffffff] tracking-[var(--ls-heading)]" to="/news">News</NavLink></li>
+                    <li className='px-[2rem] pt-[1rem]'><NavLink onClick={hideNav} className="nav__link block text-3xl font-bold text-[#ffffff] tracking-[var(--ls-heading)]" to="https://materiales.joycenterkids.com/">Materiales</NavLink ></li>
                     <li className='px-[2rem] pt-[1rem]'><NavLink onClick={hideNav} className="nav__link block text-3xl font-bold text-[#ffffff] tracking-[var(--ls-heading)]" to="/contact">Contacto</NavLink></li>
                 </ul>
                 <div className='social-networks relative px-[2rem] pt-[2rem]'>

@@ -201,7 +201,23 @@ nav.desktop-main-nav .nav-container > ul {
 
 nav.desktop-main-nav .nav-container > ul li {
   margin: 0;
-  padding: 0 2rem;
+  padding: 0 0rem;
+  position: relative;
+}
+
+nav.desktop-main-nav .nav-container > ul li ul {
+  opacity: 0;
+  visibility: hidden;
+  transition: all 0.3s cubic-bezier(.43,.34,.28,.91) .1s;
+}
+
+nav.desktop-main-nav .nav-container > ul li:hover ul {
+  opacity: 1;
+  visibility: visible;
+}
+
+nav.desktop-main-nav .nav-container > ul li ul li {
+  padding: 0 .5rem;
   position: relative;
 }
 
@@ -217,6 +233,10 @@ nav.desktop-main-nav .nav-container > ul li a {
   position: relative;
 }
 
+/* nav.desktop-main-nav .nav-container > ul li ul > a{
+  padding: 0rem 0rem;
+}  */
+
 nav.desktop-main-nav .nav-container > ul li a.active,
 nav.desktop-main-nav .nav-container > ul li a:hover {
   color: var(--color-button-one);
@@ -227,6 +247,17 @@ nav.desktop-main-nav .nav-container > ul li a::before {
   content: ' ';
   position: absolute;
   bottom: 12px;
+  width: 0;
+  height: 4px;
+  background-color: var(--color-button-one);
+  transition: all 0.3s cubic-bezier(.43,.34,.28,.91) .1s;
+}
+
+nav.desktop-main-nav .nav-container > ul li ul li a::before {
+  content: ' ';
+  position: absolute;
+  bottom: 12px;
+  left: 0;
   width: 0;
   height: 4px;
   background-color: var(--color-button-one);
@@ -1477,7 +1508,7 @@ that they form a hexagon */
   padding: .4rem 2rem;
   border-radius: 2rem;
   font-weight: var(--ff-weight-heading);
-  font-size: 1rem;
+  /* font-size: 1rem; */
   letter-spacing: var(--ls-body);
   cursor: pointer;
   transition: all 0.3s cubic-bezier(.43,.34,.28,.91) .1s;
@@ -2305,6 +2336,8 @@ nav.desktop-main-nav .close.button-mobile-toggle {
 }
 
 @media (min-width: 1024px) {
+  
+
   .coverpage__cubes-container {
     width: 100%;
   }
@@ -2438,11 +2471,17 @@ nav.desktop-main-nav .close.button-mobile-toggle {
 }
 
 @media (min-width: 1244px) {
+  nav.desktop-main-nav .nav-container > ul li {
+    padding: 0 1rem;
+  }
   .coverpage__cubes-container {
     width: 80%;
   }
 }
 
 @media (min-width: 1920px) {
+  nav.desktop-main-nav .nav-container > ul li {
+    padding: 0 2rem;
+  }
 }
 

@@ -1,13 +1,13 @@
 import React from 'react'
 import { motion as m } from 'framer-motion'
 import { Link } from 'react-router-dom'
-import image_1 from '../assets/images/pexels-amina-filkins-5561177.jpg'
+import image_1 from '../assets/images/dianoche.jpeg'
 import image_2 from '../assets/images/pexels-anna-shvets-11286122.jpg'
 import image_3 from '../assets/images/pexels-monstera-5063394.jpg'
 import image_4 from '../assets/images/pexels-hannah-grapp-9660876.jpg'
 import image_5 from '../assets/images/pexels-cottonbro-studio-6203476.jpg'
 
-export const Themes = () => {
+export const Dinamicas = () => {
   return (
     <>
     <m.div className="hero inner-page"
@@ -17,8 +17,8 @@ export const Themes = () => {
     >
         <div className="centered side-padding">
             <div className="hero__text-container">
-              <h1 className='text-[var(--color-orange)]'>Temas</h1>
-              <h2>¿Cómo funcionan nuestras clases?</h2>
+              <h1 className='text-[var(--color-orange)]'>Dinámicas</h1>
+              <h2>Dinámicas JOY</h2>
               
             </div>
         </div>
@@ -33,9 +33,9 @@ export const Themes = () => {
         <div className="pattern bluish"></div>
           <div className='flex align-items flex-columns-rows even-flex gap-4 zindex-1'>
           <div className="coverpage__text-container ">
-             <h3 className='xl-word'>Autodeterminación</h3>
-             <p>Favorecer la autodeterminación en nuestros niños es desarrollar, extender y  ejercitar las propias capacidades a explorar y aprender. Logrando un bienestar en el transcurso de vida.</p>
-              <Link to="/programs" className="call-to-action solid orange">Aprende más</Link>
+             <h3 className='xl-word'>¿Te has preguntado por qué existen el día y la noche?</h3>
+             <p>Hola amiguitos. Hoy vamos a estudiar los movimientos de rotación y traslación del planeta tierra para ¿Me acompañas? ¿Sabes algo sobre el movimiento de rotación y traslación del planeta tierra? ¿No? Bueno, repasemos juntos:</p>
+              <Link to="/mini-game-one" className="call-to-action solid orange">Jugar</Link>
           </div>
             <div className="coverpage__image-container">
               <div className="image grow-image">
@@ -44,7 +44,7 @@ export const Themes = () => {
             </div>
 
           </div>
-          <div className='flex align-items flex-columns-rows even-flex gap-4 zindex-1'>
+          {/* <div className='flex align-items flex-columns-rows even-flex gap-4 zindex-1'>
             <div className="coverpage__image-container">
               <div className="image grow-image">
                 <img src={image_3} />
@@ -53,14 +53,14 @@ export const Themes = () => {
             <div className="coverpage__text-container">
              <h3>Matemáticas - Maestría</h3>
               <p>Las matemáticas son fundamentales para el desarrollo intelectual de los niños, les ayuda a ser lógicos, a razonar ordenadamente y a tener una mente preparada para el pensamiento, la crítica y la abstracción.</p>
-              <Link to="/programs" className="call-to-action solid orange">Aprende más</Link>
+              <Link to="/trainning" className="call-to-action solid orange">Aprende más</Link>
             </div>
-          </div>
+          </div> */}
         </div>
         
       </div>
     </m.section>
-    <section className="section-page themes overflow-hide">
+    {/* <section className="section-page themes overflow-hide">
     
       <div className="centered side-padding">
       <div className="pattern footer top"></div>
@@ -69,7 +69,7 @@ export const Themes = () => {
           <div className="coverpage__text-container">
              <h3>Desarrollo de competencias</h3>
              <p>Dejar que descubran y  hagan cosas por sí mismos incrementa las capacidades generales que potencian el conocimiento. Mantener presente la búsqueda  de crecimiento en las habilidades SOFT - SKILLS es clave para ejercer un liderazgo en el transcurso de la vida.</p>
-              <Link to="/programs" className="call-to-action solid orange">Aprende más</Link>
+              <Link to="/trainning" className="call-to-action solid orange">Aprende más</Link>
           </div>
             <div className="coverpage__image-container">
               <div className="image grow-image">
@@ -87,7 +87,7 @@ export const Themes = () => {
             <div className="coverpage__text-container">
              <h3>Resolución de retos</h3>
               <p>Los retos son un motor muy importante para el aprendizaje de los niños, que los incita a “moverse” para conseguir una meta con significado para ellos y los estimula para conseguir sus objetivos. Para llegar a estos objetivos es fundamental la aparición de la motivación, que constituye, sin duda alguna, la clave del aprendizaje. La Gamificacion presente en juego y motivación.</p>
-              <Link to="/programs" className="call-to-action solid orange">Aprende más</Link>
+              <Link to="/trainning" className="call-to-action solid orange">Aprende más</Link>
             </div>
           </div>
         </div>
@@ -102,7 +102,7 @@ export const Themes = () => {
           <div className="coverpage__text-container">
              <h3>Inteligencia emocional</h3>
              <p>Capacidad de ser inteligente con respecto a los sentimientos, los propios y los de otras personas.  Al estar en constante aprendizaje, un niño se enfrenta a retos todo el tiempo; a nivel escolar y personal, la inteligencia emocional ayudará al niño a que enfrente dichos retos de manera positiva y con un gran manejo de la frustración. La inteligencia emocional favorece el conocimiento de las emociones, ayudando a expresarlas de manera efectiva y así, encontrar soluciones.</p>
-              <Link to="/programs" className="call-to-action solid blue">Aprende más</Link>
+              <Link to="/trainning" className="call-to-action solid blue">Aprende más</Link>
           </div>
             <div className="coverpage__image-container">
               <div className="image grow-image">
@@ -113,8 +113,8 @@ export const Themes = () => {
           </div>
         </div>
       </div>
-    </section>
-    <section className="section-page themes xl-vertical-padding min-h-[40rem]">
+    </section> */}
+    {/* <section className="section-page themes xl-vertical-padding min-h-[40rem]">
       <div className="centered side-padding min-h-[40rem]">
       <div className=" section-box flex side-padding vertical-padding overflow-hide position-rel min-h-[40rem]">
       
@@ -149,7 +149,7 @@ export const Themes = () => {
           </div>
         </div>
       </div>
-    </section>
+    </section> */}
     <section className="section-page no-padding-bottom">
       <div className="centered side-padding">
         <div className="coverpage__text-container center-text large xl-vertical-padding">
@@ -167,7 +167,7 @@ export const Themes = () => {
           <div className='activities__text-container center-text'>
             <h4>Persistencia</h4>
           </div>
-        <Link to="/programs" className="call-to-action solid blue centered-button">Programas JOY</Link>
+        <Link to="/trainning" className="call-to-action solid blue centered-button">Programas JOY</Link>
         </div>
       </div>
     </section>
